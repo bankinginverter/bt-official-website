@@ -3,112 +3,111 @@ import Image from "next/image"
 
 export default function HomePage() {
   return (
-    <div>
-      <div>
-        <div className="flex flex-row justify-between items-center px-6 py-4 border-b border-gray-300 bg-white">
-          <div className="text-2xl font-bold tracking-wide text-gray-800">
-            BRIGHT VANTA
-          </div>
-          <nav className="flex gap-6 text-sm font-medium text-blue-600">
-            <a href="#" className="hover:text-blue-800 transition">
-              Home
-            </a>
-            <a href="#" className="hover:text-blue-800 transition">
-              Product
-            </a>
-            <a href="#" className="hover:text-blue-800 transition">
-              Price
-            </a>
-            <a href="#" className="hover:text-blue-800 transition">
-              Contact
-            </a>
-          </nav>
+    <div className="bg-gray-900 text-gray-100 min-h-screen">
+      {/* Navbar */}
+      <div className="flex flex-row justify-between items-center px-6 py-4 border-b border-gray-700 bg-gray-800">
+        <div className="text-2xl font-bold tracking-wide text-indigo-400">
+          BRIGHT VANTA
         </div>
+        <nav className="flex gap-6 text-sm font-medium text-indigo-300">
+          <a href="#" className="hover:text-indigo-500 transition">
+            Home
+          </a>
+          <a href="#" className="hover:text-indigo-500 transition">
+            Product
+          </a>
+          <a href="#" className="hover:text-indigo-500 transition">
+            Price
+          </a>
+          <a href="#" className="hover:text-indigo-500 transition">
+            Contact
+          </a>
+        </nav>
       </div>
-      <div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-6 py-20 justify-items-center">
-          {/* Card 1 - แดงสด */}
-          <div className="relative w-full max-w-[350px] h-[500px] bg-red-400 rounded-xl shadow-lg p-6 text-center overflow-visible transform transition-transform duration-300 ease-out hover:scale-105 hover:-translate-y-2">
-            {/* Floating Dashboard Image */}
-            <Image
-              src="/Backoffice.png"
-              alt="CMS Dashboard"
-              width={300}
-              height={300}
-              className="absolute -top-24 left-1/2 transform -translate-x-1/2 z-10"
-            />
 
-            {/* Card Content */}
-            <div className="mt-96 flex flex-col justify-items-start items-start">
-              <h3 className="text-lg font-semibold text-white">Full Website</h3>
-              <p className="text-sm mt-2 text-white">
-                Website and management system
-              </p>
-            </div>
+      {/* Cards Section */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-6 py-20 justify-items-center">
+        {/* Card 1 */}
+        <div className="relative w-full max-w-[350px] h-[500px] bg-gray-800 rounded-xl shadow-lg p-6 text-center overflow-visible transform transition-transform duration-300 ease-out hover:scale-105 hover:-translate-y-2 hover:shadow-indigo-500/50">
+          <Image
+            src="/Backoffice.png"
+            alt="CMS Dashboard"
+            width={300}
+            height={300}
+            className="absolute -top-24 left-1/2 transform -translate-x-1/2 z-10"
+          />
+          <div className="mt-96 flex flex-col items-start">
+            <h3 className="text-lg font-semibold text-indigo-400">
+              Full Website
+            </h3>
+            <p className="text-sm mt-2">Website and management system</p>
           </div>
-          {/* Card 2 - เขียวสด */}
-          <div className="relative w-full max-w-[350px] h-[500px] bg-green-400 rounded-xl shadow-lg p-6 text-center overflow-visible transform transition-transform duration-300 ease-out hover:scale-105 hover:-translate-y-2">
-            {/* Card Content */}
-            <Image
-              src="/ShopBack.png"
-              alt="CMS Dashboard"
-              width={500}
-              height={300}
-              className="absolute -top-20 left-1/2 transform -translate-x-1/2 z-10"
-            />
-            <div className="mt-96 flex flex-col justify-items-start items-start">
-              <h3 className="text-lg font-semibold text-white">
-                E - Commerce Website
-              </h3>
-              <p className="text-sm mt-2 text-white">
-                Website for online shopping mall
-              </p>
-            </div>
+        </div>
+
+        {/* Card 2 */}
+        <div className="relative w-full max-w-[350px] h-[500px] bg-gray-800 rounded-xl shadow-lg p-6 text-center overflow-visible transform transition-transform duration-300 ease-out hover:scale-105 hover:-translate-y-2 hover:shadow-green-400/50">
+          <Image
+            src="/ShopBack.png"
+            alt="CMS Dashboard"
+            width={500}
+            height={300}
+            className="absolute -top-20 left-1/2 transform -translate-x-1/2 z-10"
+          />
+          <div className="mt-96 flex flex-col items-start">
+            <h3 className="text-lg font-semibold text-green-400">
+              E-Commerce Website
+            </h3>
+            <p className="text-sm mt-2">Website for online shopping mall</p>
           </div>
-          {/* Card 3 - ฟ้าอ่อน */}
-          <div className="relative w-full max-w-[350px] h-[500px] bg-sky-400 rounded-xl shadow-lg p-6 text-center overflow-visible transform transition-transform duration-300 ease-out hover:scale-105 hover:-translate-y-2">
-            <Image
-              src="/ComLandingPage.png"
-              alt="CMS Dashboard"
-              width={500}
-              height={300}
-              className="absolute -top-14 left-1/2 transform -translate-x-1/2 z-10"
-            />
-            <div className="mt-96 flex flex-col justify-items-start items-start">
-              <h3 className="text-lg font-semibold text-white">
-                Landing Page Website
-              </h3>
-              <p className="text-sm mt-2 text-white">
-                Website for product or service promotion.
-              </p>
-            </div>
+        </div>
+
+        {/* Card 3 */}
+        <div className="relative w-full max-w-[350px] h-[500px] bg-gray-800 rounded-xl shadow-lg p-6 text-center overflow-visible transform transition-transform duration-300 ease-out hover:scale-105 hover:-translate-y-2 hover:shadow-sky-400/50">
+          <Image
+            src="/ComLandingPage.png"
+            alt="CMS Dashboard"
+            width={500}
+            height={300}
+            className="absolute -top-14 left-1/2 transform -translate-x-1/2 z-10"
+          />
+          <div className="mt-96 flex flex-col items-start">
+            <h3 className="text-lg font-semibold text-sky-400">
+              Landing Page Website
+            </h3>
+            <p className="text-sm mt-2">
+              Website for product or service promotion
+            </p>
           </div>
-          {/* Card 4 - ม่วงสดใส */}
-          <div className="relative w-full max-w-[350px] h-[500px] bg-purple-400 rounded-xl shadow-lg p-6 text-center overflow-visible transform transition-transform duration-300 ease-out hover:scale-105 hover:-translate-y-2">
-            <Image
-              src="/Trophy.png"
-              alt="CMS Dashboard"
-              width={500}
-              height={300}
-              className="absolute -top-6 left-1/2 transform -translate-x-1/2 z-10"
-            />
-            <div className="mt-96 flex flex-col justify-items-start items-start">
-              <h3 className="text-lg font-semibold text-white">
-                Mini Game & Game Event
-              </h3>
-              <p className="text-sm mt-2 text-white">
-                Website for game events and mini games.
-              </p>
-            </div>
+        </div>
+
+        {/* Card 4 */}
+        <div className="relative w-full max-w-[350px] h-[500px] bg-gray-800 rounded-xl shadow-lg p-6 text-center overflow-visible transform transition-transform duration-300 ease-out hover:scale-105 hover:-translate-y-2 hover:shadow-purple-400/50">
+          <Image
+            src="/Trophy.png"
+            alt="CMS Dashboard"
+            width={500}
+            height={300}
+            className="absolute -top-6 left-1/2 transform -translate-x-1/2 z-10"
+          />
+          <div className="mt-96 flex flex-col items-start">
+            <h3 className="text-lg font-semibold text-purple-400">
+              Mini Game & Game Event
+            </h3>
+            <p className="text-sm mt-2">
+              Website for game events and mini games
+            </p>
           </div>
         </div>
       </div>
+
+      {/* Expanded Detail Section (from your snippet, themed to Dark) */}
       <div>
         <div className="px-20 flex flex-col justify-items-center items-center">
-          <div className="my-6 w-full h-auto lg:min-h-[700px] bg-gray-50 text-black rounded-xl shadow-lg p-6 hover:shadow-lg transition card-xs">
+          {/* Full Website Detail */}
+          <div className="my-6 w-full h-auto lg:min-h-[700px] bg-gray-800 text-gray-100 rounded-xl shadow-lg p-6 hover:shadow-lg transition card-xs">
             <div className="m-4 flex flex-col xl:flex-row items-center gap-10">
               {/* Image Section */}
-              <div className="bg-white rounded-2xl shadow-lg p-4 text-center hover:shadow-lg transition w-full xl:w-[800px] card-image-xs">
+              <div className="bg-gray-700 rounded-2xl shadow-lg p-4 text-center hover:shadow-lg transition w-full xl:w-[800px] card-image-xs">
                 <Image
                   src="/Dashboard.png"
                   alt="CMS Dashboard"
@@ -119,7 +118,7 @@ export default function HomePage() {
               </div>
               {/* Text Section */}
               <div className="w-full xl:w-1/2 flex flex-col justify-center items-start">
-                <h3 className="text-2xl sm:text-xl lg:text-3xl font-bold py-4 text-left">
+                <h3 className="text-2xl sm:text-xl lg:text-3xl font-bold py-4 text-indigo-400">
                   Full Website
                 </h3>
                 <p className="text-sm sm:text-base lg:text-lg font-light text-left leading-relaxed max-w-[90%] sm:max-w-full line-clamp-6 sm:line-clamp-none">
@@ -145,10 +144,12 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          <div className="my-6 w-full h-auto lg:min-h-[700px] bg-gray-50 text-black rounded-xl shadow-lg p-6 hover:shadow-lg transition card-xs">
+
+          {/* E-Commerce Detail */}
+          <div className="my-6 w-full h-auto lg:min-h-[700px] bg-gray-800 text-gray-100 rounded-xl shadow-lg p-6 hover:shadow-lg transition card-xs">
             <div className="m-4 flex flex-col xl:flex-row items-center gap-10">
               <div className="w-full xl:w-1/2 flex flex-col justify-center items-start">
-                <h3 className="text-2xl sm:text-xl lg:text-3xl font-bold py-4 text-left">
+                <h3 className="text-2xl sm:text-xl lg:text-3xl font-bold py-4 text-green-400">
                   E - Commerce Website
                 </h3>
                 <p className="text-sm sm:text-base lg:text-lg font-light text-left leading-relaxed max-w-[90%] sm:max-w-full line-clamp-6 sm:line-clamp-none">
@@ -168,7 +169,7 @@ export default function HomePage() {
                   ทำให้ธุรกิจสามารถเติบโตและประสบความสำเร็จได้อย่างมั่นคงในโลกออนไลน์ที่เปลี่ยนแปลงอย่างรวดเร็ว
                 </p>
               </div>
-              <div className="bg-white rounded-2xl shadow-lg p-4 text-center hover:shadow-lg transition w-full xl:w-[800px] card-image-xs">
+              <div className="bg-gray-700 rounded-2xl shadow-lg p-4 text-center hover:shadow-lg transition w-full xl:w-[800px] card-image-xs">
                 <Image
                   src="/ECommerce.png"
                   alt="CMS Dashboard"
@@ -178,9 +179,11 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          <div className="my-6 w-full h-auto lg:min-h-[700px] bg-gray-50 text-black rounded-xl shadow-lg p-6 hover:shadow-lg transition card-xs">
+
+          {/* Landing Page Detail */}
+          <div className="my-6 w-full h-auto lg:min-h-[700px] bg-gray-800 text-gray-100 rounded-xl shadow-lg p-6 hover:shadow-lg transition card-xs">
             <div className="m-4 flex flex-col xl:flex-row items-center gap-10">
-              <div className="bg-white rounded-2xl shadow-lg p-4 text-center hover:shadow-lg transition w-full xl:w-[800px] card-image-xs">
+              <div className="bg-gray-700 rounded-2xl shadow-lg p-4 text-center hover:shadow-lg transition w-full xl:w-[800px] card-image-xs">
                 <Image
                   src="/Landing.png"
                   alt="CMS Dashboard"
@@ -189,7 +192,7 @@ export default function HomePage() {
                 />
               </div>
               <div className="w-full xl:w-1/2 flex flex-col justify-center items-start">
-                <h3 className="text-2xl sm:text-xl lg:text-3xl font-bold py-4 text-left">
+                <h3 className="text-2xl sm:text-xl lg:text-3xl font-bold py-4 text-sky-400">
                   Landing Page Website
                 </h3>
                 <p className="text-sm sm:text-base lg:text-lg font-light text-left leading-relaxed max-w-[90%] sm:max-w-full line-clamp-6 sm:line-clamp-none">
@@ -209,10 +212,12 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          <div className="my-6 w-full h-auto lg:min-h-[700px] bg-gray-50 text-black rounded-xl shadow-lg p-6 hover:shadow-lg transition card-xs">
+
+          {/* Mini Game Detail */}
+          <div className="my-6 w-full h-auto lg:min-h-[700px] bg-gray-800 text-gray-100 rounded-xl shadow-lg p-6 hover:shadow-lg transition card-xs">
             <div className="m-4 flex flex-col xl:flex-row items-center gap-10">
               <div className="w-full xl:w-1/2 flex flex-col justify-center items-start">
-                <h3 className="text-2xl sm:text-xl lg:text-3xl font-bold py-4 text-left">
+                <h3 className="text-2xl sm:text-xl lg:text-3xl font-bold py-4 text-purple-400">
                   Mini Game & Game Event
                 </h3>
                 <p className="text-sm sm:text-base lg:text-lg font-light text-left leading-relaxed max-w-[90%] sm:max-w-full line-clamp-6 sm:line-clamp-none">
@@ -234,7 +239,7 @@ export default function HomePage() {
                   แต่เป็นการสร้างคุณค่าและโอกาสทางธุรกิจที่ยั่งยืน
                 </p>
               </div>
-              <div className="bg-white rounded-2xl shadow-lg p-4 text-center hover:shadow-lg transition w-full xl:w-[800px] card-image-xs">
+              <div className="bg-gray-700 rounded-2xl shadow-lg p-4 text-center hover:shadow-lg transition w-full xl:w-[800px] card-image-xs">
                 <Image
                   src="/GameEvent.png"
                   alt="CMS Dashboard"
@@ -246,145 +251,154 @@ export default function HomePage() {
           </div>
         </div>
       </div>
+
+      {/* Pricing Section */}
       <div>
-        <div className="text-2xl font-bold text-center m-16">
+        <div className="text-2xl font-bold text-center m-16 text-indigo-400">
           Product Pricing
         </div>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 m-10 justify-items-center">
           {/* Full Web */}
-          <div className="bg-white rounded-xl shadow-lg p-6 w-full max-w-sm text-left border-t-4 border-orange-400 hover:shadow-xl transition">
-            <h3 className="text-xl font-bold text-orange-600 mb-2">
+          <div className="bg-gray-800 rounded-xl shadow-lg p-6 w-full max-w-sm text-left border-t-4 border-indigo-400 hover:shadow-xl transition">
+            <h3 className="text-xl font-bold text-indigo-400 mb-2">
               Full Website
             </h3>
-            <p className="text-lg text-gray-800 font-semibold mb-1">฿150,000</p>
-            <p className="text-sm text-gray-500 mb-4">started</p>
-            <ul className="text-sm text-gray-700 space-y-2">
+            <p className="text-lg text-gray-100 font-semibold mb-1">฿150,000</p>
+            <p className="text-sm text-gray-400 mb-4">started</p>
+            <ul className="text-sm text-gray-300 space-y-2">
               <li className="flex gap-2">
-                <span className="text-orange-500">✔</span> เว็บไซต์โปรโมท
+                <span className="text-indigo-400">✔</span> เว็บไซต์โปรโมท
                 เว็บไซต์สำหรับองค์กร
               </li>
               <li className="flex gap-2">
-                <span className="text-orange-500">✔</span> User Authentication
+                <span className="text-indigo-400">✔</span> User Authentication
               </li>
               <li className="flex gap-2">
-                <span className="text-orange-500">✔</span> Database
+                <span className="text-indigo-400">✔</span> Database
               </li>
               <li className="flex gap-2">
-                <span className="text-orange-500">✔</span> CMS template
+                <span className="text-indigo-400">✔</span> CMS template
               </li>
             </ul>
           </div>
 
           {/* E-com */}
-          <div className="bg-white rounded-xl shadow-lg p-6 w-full max-w-sm text-left border-t-4 border-orange-500 hover:shadow-xl transition">
-            <h3 className="text-xl font-bold text-orange-600 mb-2">
+          <div className="bg-gray-800 rounded-xl shadow-lg p-6 w-full max-w-sm text-left border-t-4 border-green-400 hover:shadow-xl transition">
+            <h3 className="text-xl font-bold text-green-400 mb-2">
               E-Commerce
             </h3>
-            <p className="text-lg text-gray-800 font-semibold mb-1">฿90,000</p>
-            <p className="text-sm text-gray-500 mb-4">started</p>
-            <ul className="text-sm text-gray-700 space-y-2">
+            <p className="text-lg text-gray-100 font-semibold mb-1">฿90,000</p>
+            <p className="text-sm text-gray-400 mb-4">started</p>
+            <ul className="text-sm text-gray-300 space-y-2">
               <li className="flex gap-2">
-                <span className="text-orange-500">✔</span> เว็บไซต์ขายของ
+                <span className="text-green-400">✔</span> เว็บไซต์ขายของ
               </li>
               <li className="flex gap-2">
-                <span className="text-orange-500">✔</span> User Authentication
+                <span className="text-green-400">✔</span> User Authentication
               </li>
               <li className="flex gap-2">
-                <span className="text-orange-500">✔</span> Payment
+                <span className="text-green-400">✔</span> Payment
               </li>
               <li className="flex gap-2">
-                <span className="text-orange-500">✔</span> Database + CMS
+                <span className="text-green-400">✔</span> Database + CMS
                 template
               </li>
             </ul>
           </div>
 
           {/* Landing page */}
-          <div className="bg-white rounded-xl shadow-lg p-6 w-full max-w-sm text-left border-t-4 border-orange-600 hover:shadow-xl transition">
-            <h3 className="text-xl font-bold text-orange-600 mb-2">
+          <div className="bg-gray-800 rounded-xl shadow-lg p-6 w-full max-w-sm text-left border-t-4 border-sky-400 hover:shadow-xl transition">
+            <h3 className="text-xl font-bold text-sky-400 mb-2">
               Landing page Website
             </h3>
-            <p className="text-lg text-gray-800 font-semibold mb-1">฿40,000</p>
-            <p className="text-sm text-gray-500 mb-4">started</p>
-            <ul className="text-sm text-gray-700 space-y-2">
+            <p className="text-lg text-gray-100 font-semibold mb-1">฿40,000</p>
+            <p className="text-sm text-gray-400 mb-4">started</p>
+            <ul className="text-sm text-gray-300 space-y-2">
               <li className="flex gap-2">
-                <span className="text-orange-500">✔</span> เว็บไซต์โปรโมท
+                <span className="text-sky-400">✔</span> เว็บไซต์โปรโมท
                 เว็บไซต์แนะนำตัวตนเอง
               </li>
               <li className="flex gap-2">
-                <span className="text-orange-500">✔</span> มี tamplate ให้เลือก
+                <span className="text-sky-400">✔</span> มี template ให้เลือก
               </li>
             </ul>
           </div>
-          {/* MiniMal game */}
-          <div className="bg-white rounded-xl shadow-lg p-6 w-full max-w-sm text-left border-t-4 border-orange-600 hover:shadow-xl transition">
-            <h3 className="text-xl font-bold text-orange-600 mb-2">
+
+          {/* Minimal game */}
+          <div className="bg-gray-800 rounded-xl shadow-lg p-6 w-full max-w-sm text-left border-t-4 border-purple-400 hover:shadow-xl transition">
+            <h3 className="text-xl font-bold text-purple-400 mb-2">
               Minimal Game & Game Event
             </h3>
-            <p className="text-lg text-gray-800 font-semibold mb-1">฿80,000</p>
-            <p className="text-sm text-gray-500 mb-4">started</p>
-            <ul className="text-sm text-gray-700 space-y-2">
+            <p className="text-lg text-gray-100 font-semibold mb-1">฿80,000</p>
+            <p className="text-sm text-gray-400 mb-4">started</p>
+            <ul className="text-sm text-gray-300 space-y-2">
               <li className="flex gap-2">
-                <span className="text-orange-500">✔</span> mini game or game
+                <span className="text-purple-400">✔</span> mini game or game
                 event
               </li>
               <li className="flex gap-2">
-                <span className="text-orange-500">✔</span> มี tamplate ให้เลือก
+                <span className="text-purple-400">✔</span> มี template ให้เลือก
               </li>
             </ul>
           </div>
         </div>
         <div className="text-center m-16">
-          <button className="px-6 py-3 bg-orange-500 text-white text-lg font-semibold rounded-full shadow-md hover:bg-orange-600 hover:shadow-lg transition duration-300">
+          <button className="px-6 py-3 bg-indigo-500 text-white text-lg font-semibold rounded-full shadow-md hover:bg-indigo-600 hover:shadow-lg transition duration-300">
             View More
           </button>
         </div>
       </div>
-      <div>
-        <footer className="bg-black text-white py-10 px-6">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* About */}
-            <div>
-              <h4 className="text-lg font-semibold mb-4">About</h4>
-              <p className="text-sm text-gray-300">
-                เราคือทีมพัฒนาเว็บไซต์ที่เน้นความเรียบง่าย ทันสมัย
-                และใช้งานได้จริง
-              </p>
-            </div>
 
-            {/* Menu */}
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Menu</h4>
-              <ul className="space-y-2 text-sm text-gray-300">
-                <li>Home</li>
-                <li>Product</li>
-                <li>Prices</li>
-                <li>Contact</li>
-              </ul>
-            </div>
-
-            {/* Services */}
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Services</h4>
-              <ul className="space-y-2 text-sm text-gray-300">
-                <li>CMS Installation</li>
-                <li>E-commerce Web</li>
-                <li>Landingpage Web</li>
-                <li>Server Rental</li>
-              </ul>
-            </div>
-
-            {/* Contact */}
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Contact</h4>
-              <ul className="space-y-2 text-sm text-gray-300">
-                <li>0896-888-1982</li>
-                <li>Email: info@example.com</li>
-              </ul>
-            </div>
+      {/* Footer */}
+      <footer className="bg-gray-800 text-gray-300 py-10 px-6">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* About */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-indigo-400">
+              About
+            </h4>
+            <p className="text-sm">
+              เราคือทีมพัฒนาเว็บไซต์ที่เน้นความเรียบง่าย ทันสมัย
+              และใช้งานได้จริง
+            </p>
           </div>
-        </footer>
-      </div>
+
+          {/* Menu */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-indigo-400">Menu</h4>
+            <ul className="space-y-2 text-sm">
+              <li>Home</li>
+              <li>Product</li>
+              <li>Prices</li>
+              <li>Contact</li>
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-indigo-400">
+              Services
+            </h4>
+            <ul className="space-y-2 text-sm">
+              <li>CMS Installation</li>
+              <li>E-commerce Web</li>
+              <li>Landingpage Web</li>
+              <li>Server Rental</li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-indigo-400">
+              Contact
+            </h4>
+            <ul className="space-y-2 text-sm">
+              <li>0896-888-1982</li>
+              <li>Email: info@example.com</li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }
