@@ -14,7 +14,7 @@ type NewsSectionProps = {
 export default function NewsSection({ news }: NewsSectionProps) {
   const [selectedCategory, setSelectedCategory] = useState<string>("All")
 
-  const categories = ["All", "Game Event", "AR", "VR", "Interactive"]
+  const categories = ["All", "Game Event", "Photo Booth", "Event Management"]
 
   const filteredNews =
     selectedCategory === "All"

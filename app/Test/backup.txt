@@ -1,8 +1,94 @@
+      {/* --- Product Section --- */}
+      <section className="py-20 px-6 max-w-7xl mx-auto">
+        <div className="flex justify-between items-end mb-10">
+          <h2 className="text-2xl font-black uppercase tracking-tight">
+            Currently Games Product
+          </h2>
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="text-xs font-bold text-white/40 hover:text-white uppercase tracking-widest"
+          >
+            {showAll ? "Hide All" : "See All"}
+          </button>
+        </div>
+
+        {showAll ? (
+          <GameShowAll games={games} onSelect={setSelectedGame} />
+        ) : (
+          <GamesCarousel games={games} onSelect={setSelectedGame} />
+        )}
+
+        {/* Modal */}
+        <GameModal game={selectedGame} onClose={() => setSelectedGame(null)} />
+      </section>
+
+
+
+//==============//
 "use client"
+import { useState } from "react"
 import Image from "next/image"
+import GameModal from "./components/GameModal"
+import GamesCarousel from "./components/GameCarousel"
+import GameShowAll from "./components/GameShowAll"
 import NewsSection from "./components/NewsSection"
 
+type Game = {
+  title: string
+  followers: string
+  image?: string
+}
+
 export default function GamingHub() {
+  const [selectedGame, setSelectedGame] = useState<Game | null>(null)
+  const [showAll, setShowAll] = useState(false)
+  const games = [
+    {
+      title: "Fruit Crash",
+      followers: "50 Followers",
+      image: "/FruitCrash.png",
+    },
+    {
+      title: "Help My Cat",
+      followers: "44 Followers",
+      image: "/HelpMyCat.jpg",
+    },
+    { title: "Tower", followers: "37 Followers", image: "/Tower.jpg" },
+    { title: "AR Monster", followers: "31 Followers" },
+    {
+      title: "Interactive Control",
+      followers: "17 Followers",
+    },
+    {
+      title: "INTERACTIVE PRESENT",
+      followers: "8 Followers",
+    },
+    {
+      title: "INTERACTIVE PRESENT",
+      followers: "8 Followers",
+    },
+    {
+      title: "INTERACTIVE PRESENT",
+      followers: "8 Followers",
+    },
+    {
+      title: "INTERACTIVE PRESENT",
+      followers: "8 Followers",
+    },
+    {
+      title: "INTERACTIVE PRESENT",
+      followers: "8 Followers",
+    },
+    {
+      title: "INTERACTIVE PRESENT",
+      followers: "8 Followers",
+    },
+    {
+      title: "INTERACTIVE PRESENT",
+      followers: "8 Followers",
+    },
+  ]
+
   const news = [
     {
       category: "Game Event",
