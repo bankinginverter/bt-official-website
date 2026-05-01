@@ -12,21 +12,14 @@ export default function GamingHub() {
       date: "KOTAKU • 2 HOURS AGO",
     },
     {
-      category: "AR",
+      category: "Photo Booth",
       title:
         "Racing Run เกมวิ่งแข่งสำหรับไวมันส์รองรับผู้เล่นสูงสุดได้ถึง 4 คน",
       detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       date: "KOTAKU • 2 HOURS AGO",
     },
     {
-      category: "VR",
-      title:
-        "Racing Run เกมวิ่งแข่งสำหรับไวมันส์รองรับผู้เล่นสูงสุดได้ถึง 4 คน",
-      detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      date: "KOTAKU • 2 HOURS AGO",
-    },
-    {
-      category: "Interactive",
+      category: "Event Management",
       title:
         "Racing Run เกมวิ่งแข่งสำหรับไวมันส์รองรับผู้เล่นสูงสุดได้ถึง 4 คน",
       detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
