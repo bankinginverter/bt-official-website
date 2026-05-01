@@ -13,15 +13,14 @@ export default function GamingHub() {
     },
     {
       category: "Photo Booth",
-      title:
-        "Racing Run เกมวิ่งแข่งสำหรับไวมันส์รองรับผู้เล่นสูงสุดได้ถึง 4 คน",
+      title: "Photo booth ตู้ถ่ายรูปสุดชิคที่สามารถถ่ายได้ทุกโอกาส",
       detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       date: "KOTAKU • 2 HOURS AGO",
     },
     {
       category: "Event Management",
       title:
-        "Racing Run เกมวิ่งแข่งสำหรับไวมันส์รองรับผู้เล่นสูงสุดได้ถึง 4 คน",
+        "Event Manage System ระบบดูแลงานอีเวนท์ ที่จะทำงานอีเวนท์ของคุณควบคุมได้แค่ปลายนิ้ว",
       detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       date: "KOTAKU • 2 HOURS AGO",
     },
@@ -220,6 +219,7 @@ export default function GamingHub() {
                     src={src}
                     alt={`Game product ${index + 1}`}
                     fill
+                    sizes="(max-width: 768px) 33vw, 250px"
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
@@ -251,6 +251,7 @@ export default function GamingHub() {
                   src="/photobooth1.jpeg"
                   alt="Photo Booth 1"
                   fill
+                  sizes="(max-width: 768px) 33vw, 250px"
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
@@ -260,6 +261,7 @@ export default function GamingHub() {
                   src="/photobooth2.jpeg"
                   alt="Photo Booth 2"
                   fill
+                  sizes="(max-width: 768px) 33vw, 250px"
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
@@ -269,6 +271,7 @@ export default function GamingHub() {
                   src="/photobooth3.jpeg"
                   alt="Photo Booth 3"
                   fill
+                  sizes="(max-width: 768px) 33vw, 250px"
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
@@ -308,6 +311,7 @@ export default function GamingHub() {
                       src={src}
                       alt={`Event Management ${index + 1}`}
                       fill
+                      sizes="(max-width: 768px) 33vw, 250px"
                       className="object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                   </div>
@@ -359,6 +363,7 @@ export default function GamingHub() {
                   "/catchfruit.png",
                   "/luckyspin.png",
                   "/matching.png",
+                  "/question.png",
                   "/photobooth1.jpeg",
                 ].map((src, index) => (
                   <div
@@ -369,6 +374,7 @@ export default function GamingHub() {
                       src={src}
                       alt={`Highlight Product ${index + 1}`}
                       fill
+                      sizes="(max-width: 768px) 240px, 300px"
                       className="object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
