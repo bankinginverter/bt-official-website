@@ -1,8 +1,12 @@
 "use client"
+import { useRef } from "react"
 import Image from "next/image"
 import NewsSection from "./components/NewsSection"
 
 export default function GamingHub() {
+  const aboutUsRef = useRef<HTMLElement>(null)
+  const gameEventRef = useRef<HTMLDivElement>(null)
+
   const toggleTheme = () => {
     if (document.documentElement.classList.contains("dark")) {
       document.documentElement.classList.remove("dark")
@@ -20,12 +24,7 @@ export default function GamingHub() {
         "Racing Run เกมวิ่งแข่งสำหรับไวมันส์รองรับผู้เล่นสูงสุดได้ถึง 4 คน",
       detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       date: "KOTAKU • 2 HOURS AGO",
-    },
-    {
-      category: "Photo Booth",
-      title: "Photo booth ตู้ถ่ายรูปสุดชิคที่สามารถถ่ายได้ทุกโอกาส",
-      detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      date: "KOTAKU • 2 HOURS AGO",
+      img: "/Racingrun.png",
     },
     {
       category: "Event Management",
@@ -33,6 +32,7 @@ export default function GamingHub() {
         "Event Manage System ระบบดูแลงานอีเวนท์ ที่จะทำงานอีเวนท์ของคุณควบคุมได้แค่ปลายนิ้ว",
       detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       date: "KOTAKU • 2 HOURS AGO",
+      img: "/event1.png",
     },
   ]
 
@@ -56,10 +56,10 @@ export default function GamingHub() {
             </div>
             <div className="hidden lg:flex gap-8 text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-white/60 transition-colors">
               <a href="#" className="hover:text-[#48C6EF] transition">
-                Explore
+                Home
               </a>
-              <a href="#" className="hover:text-[#48C6EF] transition">
-                Releases
+              <a href="#news" className="hover:text-[#48C6EF] transition">
+                Products
               </a>
             </div>
           </div>
@@ -68,13 +68,20 @@ export default function GamingHub() {
             {/* --- Theme Toggle Button --- */}
             <button
               onClick={toggleTheme}
-              className="w-10 h-10 flex items-center justify-center rounded-full bg-slate-200 dark:bg-white/10 text-slate-700 dark:text-white hover:bg-slate-300 dark:hover:bg-white/20 transition-all"
+              className="w-14 h-8 flex items-center rounded-full p-1 bg-slate-200 dark:bg-white/10 border border-slate-300 dark:border-white/10 transition-colors duration-300 focus:outline-none"
               aria-label="Toggle Theme"
             >
-              <span className="hidden dark:block">☀️</span>
-              <span className="block dark:hidden">🌙</span>
+              <div className="w-6 h-6 rounded-full bg-white dark:bg-slate-800 shadow-sm transform transition-transform duration-300 dark:translate-x-6 flex items-center justify-center">
+                <span className="hidden dark:block text-[10px]">☀️</span>
+                <span className="block dark:hidden text-[10px]">🌙</span>
+              </div>
             </button>
-            <button className="px-6 py-2 bg-[#2272FF] hover:bg-[#48C6EF] rounded-md text-xs font-bold uppercase tracking-widest shadow-lg shadow-[#2272FF]/20 transition-all text-white">
+            <button
+              onClick={() =>
+                aboutUsRef.current?.scrollIntoView({ behavior: "smooth" })
+              }
+              className="px-6 py-2 bg-[#2272FF] hover:bg-[#48C6EF] rounded-md text-xs font-bold uppercase tracking-widest shadow-lg shadow-[#2272FF]/20 transition-all text-white"
+            >
               About Us
             </button>
           </div>
@@ -111,7 +118,12 @@ export default function GamingHub() {
             <span className="text-[#48C6EF] text-xs font-bold uppercase tracking-[0.3em]">
               Play Innovate Elevate
             </span>
-            <button className="px-10 py-4 bg-[#2272FF] hover:bg-[#48C6EF] rounded-lg font-bold text-xs uppercase tracking-widest flex items-center gap-3 transition-all group text-white">
+            <button
+              onClick={() =>
+                gameEventRef.current?.scrollIntoView({ behavior: "smooth" })
+              }
+              className="px-10 py-4 bg-[#2272FF] hover:bg-[#48C6EF] rounded-lg font-bold text-xs uppercase tracking-widest flex items-center gap-3 transition-all group text-white"
+            >
               Start Exploring{" "}
               <span className="group-hover:translate-x-1 transition-transform">
                 →
@@ -120,9 +132,12 @@ export default function GamingHub() {
           </div>
         </div>
       </section>
-
       {/* --- About Company Section --- */}
-      <section className="py-20 px-6 max-w-7xl mx-auto relative z-10">
+      <section
+        id="about-us"
+        ref={aboutUsRef}
+        className="scroll-mt-28 py-20 px-6 max-w-7xl mx-auto relative z-10"
+      >
         <div className="text-center max-w-3xl mx-auto space-y-6">
           <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight">
             Why Choose <br />
@@ -177,7 +192,6 @@ export default function GamingHub() {
           </div>
         </div>
       </section>
-
       {/* --- Products & Services Section --- */}
       <section className="py-20 px-6 max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col items-center space-y-4 mb-16 text-center">
@@ -195,7 +209,11 @@ export default function GamingHub() {
 
         <div className="grid grid-cols-1 gap-8">
           {/* Card 1: Game Event */}
-          <div className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-3xl p-8 md:p-12 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 flex flex-col lg:flex-row items-center gap-8 md:gap-12 w-full">
+          <div
+            id="game-event"
+            ref={gameEventRef}
+            className="scroll-mt-28 bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-3xl p-8 md:p-12 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 flex flex-col lg:flex-row items-center gap-8 md:gap-12 w-full"
+          >
             <div className="flex-1 text-center lg:text-left">
               <div className="w-16 h-16 md:w-20 md:h-20 mx-auto lg:mx-0 bg-gradient-to-br from-[#48C6EF] to-[#2272FF] rounded-2xl flex items-center justify-center text-3xl md:text-4xl shadow-lg shadow-[#2272FF]/20 mb-6">
                 🕹️
@@ -237,7 +255,10 @@ export default function GamingHub() {
           </div>
 
           {/* Card 2: Photo Booth */}
-          <div className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-3xl p-8 md:p-12 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 flex flex-col lg:flex-row-reverse items-center gap-8 md:gap-12 w-full">
+          <div
+            id="photo-booth"
+            className="scroll-mt-28 bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-3xl p-8 md:p-12 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 flex flex-col lg:flex-row-reverse items-center gap-8 md:gap-12 w-full"
+          >
             <div className="flex-1 text-center lg:text-left">
               <div className="w-16 h-16 md:w-20 md:h-20 mx-auto lg:mx-0 bg-gradient-to-br from-[#2272FF] to-[#9B51E0] rounded-2xl flex items-center justify-center text-3xl md:text-4xl shadow-lg shadow-[#9B51E0]/20 mb-6">
                 📸
@@ -288,7 +309,10 @@ export default function GamingHub() {
           </div>
 
           {/* Card 3: Event Management System */}
-          <div className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-3xl p-8 md:p-12 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 flex flex-col lg:flex-row items-center gap-8 md:gap-12 w-full">
+          <div
+            id="event-management"
+            className="scroll-mt-28 bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-3xl p-8 md:p-12 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 flex flex-col lg:flex-row items-center gap-8 md:gap-12 w-full"
+          >
             <div className="flex-1 text-center lg:text-left">
               <div className="w-16 h-16 md:w-20 md:h-20 mx-auto lg:mx-0 bg-gradient-to-br from-[#9B51E0] to-[#48C6EF] rounded-2xl flex items-center justify-center text-3xl md:text-4xl shadow-lg shadow-[#48C6EF]/20 mb-6">
                 ⚙️
@@ -346,23 +370,8 @@ export default function GamingHub() {
           </p>
         </div>
 
-        <style>{`
-          @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-33.333333%); }
-          }
-          .animate-marquee {
-            animation: marquee 40s linear infinite;
-            display: flex;
-            width: max-content;
-          }
-          .animate-marquee:hover {
-            animation-play-state: paused;
-          }
-        `}</style>
-
         <div className="w-full overflow-hidden">
-          <div className="animate-marquee">
+          <div className="animate-marquee flex w-max hover:[animation-play-state:paused]">
             {/* ทำการ Duplicate ข้อมูล 3 ชุดเพื่อให้การ Loop ไร้รอยต่ออย่างสมบูรณ์ */}
             {[1, 2, 3].map((set) => (
               <div key={set} className="flex gap-4 md:gap-6 pr-4 md:pr-6">
@@ -395,13 +404,16 @@ export default function GamingHub() {
         </div>
       </section>
       {/* --- News Section --- */}
-      <div className="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-3 gap-16">
+      <div
+        id="news"
+        className="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-3 gap-16"
+      >
         <NewsSection news={news} />
 
         {/* --- Newsletter & Sidebar --- */}
         <div className="space-y-12">
           <div className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-2xl p-8 space-y-6 transition-all">
-            <h3 className="text-xl font-bold uppercase tracking-tight">
+            <h3 className="text-xl font-bold uppercase tracking-tight text-slate-900 dark:text-white transition-colors">
               หากต้องการรับข่าวสาร <br /> หรือเนื้อหาใหม่ๆจากทางเรา
             </h3>
             <p className="text-xs text-slate-500 dark:text-white/40 leading-relaxed uppercase tracking-wider transition-colors">
@@ -463,9 +475,9 @@ export default function GamingHub() {
                 key={i}
                 className="flex gap-4 items-center group cursor-pointer"
               >
-                <div className="w-16 h-16 rounded bg-slate-200 dark:bg-white/5 shrink-0 transition-colors" />
+                <div className="w-16 h-16 rounded bg-slate-200 dark:bg-white/5 border border-slate-300 dark:border-white/10 shadow-sm dark:shadow-none shrink-0 transition-colors" />
                 <div className="space-y-1">
-                  <h5 className="text-[11px] font-bold leading-tight line-clamp-2 uppercase group-hover:text-[#48C6EF]">
+                  <h5 className="text-[11px] font-bold leading-tight text-slate-900 dark:text-white line-clamp-2 uppercase group-hover:text-[#48C6EF] transition-colors">
                     Guerilla Games Hints At New Horizon Zero Dawn Sequel
                   </h5>
                   <span className="text-[9px] text-slate-400 dark:text-white/30 font-bold uppercase tracking-widest transition-colors">
@@ -478,25 +490,102 @@ export default function GamingHub() {
         </div>
       </div>
       {/* --- Footer --- */}
-      <footer className="border-t border-slate-200 dark:border-white/5 py-12 px-6 bg-white dark:bg-black transition-colors duration-500">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="text-xs font-bold text-slate-400 dark:text-white/20 uppercase tracking-[0.5em] transition-colors">
-            BRIGHT VANTA GAMING
+      <footer className="border-t border-slate-200 dark:border-white/5 py-16 px-6 bg-white dark:bg-black transition-colors duration-500">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+            {/* Brand Info */}
+            <div className="space-y-4">
+              <div className="text-sm font-black text-slate-900 dark:text-white uppercase tracking-[0.3em] transition-colors">
+                BRIGHT VANTA
+              </div>
+              <p className="text-xs text-slate-500 dark:text-white/60 leading-relaxed transition-colors">
+                เราคือบริษัทที่ผสานรวมเทคโนโลยีเข้ากับจินตนาการ
+                เพื่อสรรค์สร้างความสนุกในรูปแบบใหม่
+                พร้อมเปลี่ยนทุกประสบการณ์ให้ล้ำสมัย
+              </p>
+            </div>
+
+            {/* Services */}
+            <div className="space-y-4">
+              <h4 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-widest transition-colors">
+                Our Services
+              </h4>
+              <div className="flex flex-col gap-3 text-xs text-slate-500 dark:text-white/60 font-medium transition-colors">
+                <a
+                  href="#game-event"
+                  className="hover:text-[#48C6EF] transition"
+                >
+                  Game Event
+                </a>
+                <a
+                  href="#photo-booth"
+                  className="hover:text-[#48C6EF] transition"
+                >
+                  Photo Booth
+                </a>
+                <a
+                  href="#event-management"
+                  className="hover:text-[#48C6EF] transition"
+                >
+                  Event Management
+                </a>
+              </div>
+            </div>
+
+            {/* Company */}
+            <div className="space-y-4">
+              <h4 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-widest transition-colors">
+                Company
+              </h4>
+              <div className="flex flex-col gap-3 text-xs text-slate-500 dark:text-white/60 font-medium transition-colors">
+                <a href="#" className="hover:text-[#48C6EF] transition">
+                  About Us
+                </a>
+                <a href="#" className="hover:text-[#48C6EF] transition">
+                  Our Works / Portfolio
+                </a>
+                <a href="#news" className="hover:text-[#48C6EF] transition">
+                  News & Articles
+                </a>
+              </div>
+            </div>
+
+            {/* Contact */}
+            <div className="space-y-4">
+              <h4 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-widest transition-colors">
+                Contact Us
+              </h4>
+              <div className="flex flex-col gap-3 text-xs text-slate-500 dark:text-white/60 font-medium transition-colors">
+                <a
+                  href="mailto:hello@brightvanta.com"
+                  className="hover:text-[#48C6EF] transition"
+                >
+                  hello@brightvanta.com
+                </a>
+                <a
+                  href="tel:+66000000000"
+                  className="hover:text-[#48C6EF] transition"
+                >
+                  +66 (0) 00-000-0000
+                </a>
+              </div>
+            </div>
           </div>
-          <div className="flex gap-8 text-[10px] font-bold uppercase text-slate-500 dark:text-white/40 tracking-widest transition-colors">
-            <a href="#" className="hover:text-[#48C6EF] transition">
-              About
-            </a>
-            <a href="#" className="hover:text-[#48C6EF] transition">
-              Privacy
-            </a>
-            <a href="#" className="hover:text-[#48C6EF] transition">
-              Contact
-            </a>
+
+          {/* Bottom Bar */}
+          <div className="pt-8 border-t border-slate-200 dark:border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 transition-colors">
+            <p className="text-[10px] text-slate-400 dark:text-white/40 uppercase tracking-widest transition-colors">
+              © 2026 BRIGHT VANTA. ALL RIGHTS RESERVED.
+            </p>
+            <div className="flex gap-6 text-[10px] font-bold uppercase text-slate-400 dark:text-white/40 tracking-widest transition-colors">
+              <a href="#" className="hover:text-[#48C6EF] transition">
+                Terms of Service
+              </a>
+              <a href="#" className="hover:text-[#48C6EF] transition">
+                Privacy Policy
+              </a>
+            </div>
           </div>
-          <p className="text-[10px] text-slate-400 dark:text-white/20 uppercase tracking-widest transition-colors">
-            © 2026 ALL RIGHTS RESERVED.
-          </p>
         </div>
       </footer>
     </div>

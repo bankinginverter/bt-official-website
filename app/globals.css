@@ -13,6 +13,19 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* เพิ่มแอนิเมชัน Marquee ให้เป็น Utility Class ของ Tailwind */
+  --animate-marquee: marquee 40s linear infinite;
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-33.333333%);
+    }
+  }
 }
 
 @media (prefers-color-scheme: dark) {
