@@ -3,6 +3,16 @@ import Image from "next/image"
 import NewsSection from "./components/NewsSection"
 
 export default function GamingHub() {
+  const toggleTheme = () => {
+    if (document.documentElement.classList.contains("dark")) {
+      document.documentElement.classList.remove("dark")
+      localStorage.setItem("theme", "light")
+    } else {
+      document.documentElement.classList.add("dark")
+      localStorage.setItem("theme", "dark")
+    }
+  }
+
   const news = [
     {
       category: "Game Event",
@@ -27,9 +37,9 @@ export default function GamingHub() {
   ]
 
   return (
-    <div className="bg-black text-white min-h-screen font-sans selection:bg-[#2272FF] selection:text-white">
+    <div className="bg-slate-50 dark:bg-black text-slate-900 dark:text-white min-h-screen font-sans selection:bg-[#2272FF] selection:text-white transition-colors duration-500">
       {/* --- Navbar --- */}
-      <nav className="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/5">
+      <nav className="fixed top-0 left-0 w-full z-50 bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-slate-200 dark:border-white/5 transition-colors duration-500">
         <div className="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
           <div className="flex items-center gap-10">
             <div className="w-10 h-10 bg-gradient-to-br rounded-lg flex items-center justify-center transform rotate-45 shadow-lg shadow-[#2272FF]/20">
@@ -44,7 +54,7 @@ export default function GamingHub() {
                 />
               </span>
             </div>
-            <div className="hidden lg:flex gap-8 text-xs font-bold uppercase tracking-widest text-white/60">
+            <div className="hidden lg:flex gap-8 text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-white/60 transition-colors">
               <a href="#" className="hover:text-[#48C6EF] transition">
                 Explore
               </a>
@@ -54,8 +64,17 @@ export default function GamingHub() {
             </div>
           </div>
 
-          <div className="flex gap-4">
-            <button className="px-6 py-2 bg-[#2272FF] hover:bg-[#48C6EF] rounded-md text-xs font-bold uppercase tracking-widest shadow-lg shadow-[#2272FF]/20 transition-all">
+          <div className="flex gap-4 items-center">
+            {/* --- Theme Toggle Button --- */}
+            <button
+              onClick={toggleTheme}
+              className="w-10 h-10 flex items-center justify-center rounded-full bg-slate-200 dark:bg-white/10 text-slate-700 dark:text-white hover:bg-slate-300 dark:hover:bg-white/20 transition-all"
+              aria-label="Toggle Theme"
+            >
+              <span className="hidden dark:block">☀️</span>
+              <span className="block dark:hidden">🌙</span>
+            </button>
+            <button className="px-6 py-2 bg-[#2272FF] hover:bg-[#48C6EF] rounded-md text-xs font-bold uppercase tracking-widest shadow-lg shadow-[#2272FF]/20 transition-all text-white">
               About Us
             </button>
           </div>
@@ -74,8 +93,8 @@ export default function GamingHub() {
           >
             <source src="/videobackground.mp4" type="video/mp4" />
           </video>
-          {/* Overlay gradient to fade into the black background at the bottom */}
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black" />
+          {/* Overlay gradient to fade into the background at the bottom */}
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-50/50 dark:via-black/20 to-slate-50 dark:to-black transition-colors duration-500" />
         </div>
 
         <div className="relative z-10 px-6 max-w-7xl mx-auto">
@@ -92,7 +111,7 @@ export default function GamingHub() {
             <span className="text-[#48C6EF] text-xs font-bold uppercase tracking-[0.3em]">
               Play Innovate Elevate
             </span>
-            <button className="px-10 py-4 bg-[#2272FF] hover:bg-[#48C6EF] rounded-lg font-bold text-xs uppercase tracking-widest flex items-center gap-3 transition-all group">
+            <button className="px-10 py-4 bg-[#2272FF] hover:bg-[#48C6EF] rounded-lg font-bold text-xs uppercase tracking-widest flex items-center gap-3 transition-all group text-white">
               Start Exploring{" "}
               <span className="group-hover:translate-x-1 transition-transform">
                 →
@@ -111,7 +130,7 @@ export default function GamingHub() {
               Bright Vanta
             </span>
           </h2>
-          <p className="text-lg md:text-xl text-white/90 leading-relaxed font-medium">
+          <p className="text-lg md:text-xl text-slate-600 dark:text-white/90 leading-relaxed font-medium transition-colors">
             เราคือบริษัทที่ผสานรวมเทคโนโลยีเข้ากับจินตนาการ
             เพื่อสรรค์สร้างความสนุกในรูปแบบใหม่
             พร้อมเปลี่ยนทุกประสบการณ์ให้ล้ำสมัยและทำให้งานของคุณให้มีระดับน่าจดจำมากยิ่งขึ้น
@@ -119,38 +138,38 @@ export default function GamingHub() {
         </div>
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
+          <div className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-2xl p-8 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
             <div className="w-12 h-12 bg-gradient-to-br from-[#48C6EF] to-[#2272FF] rounded-lg mb-6 flex items-center justify-center text-2xl shadow-lg shadow-[#2272FF]/20">
               🚀
             </div>
             <h3 className="text-lg font-bold mb-3 uppercase tracking-tight">
               Cutting-Edge Tech
             </h3>
-            <p className="text-xs md:text-sm text-white/60 leading-relaxed">
+            <p className="text-xs md:text-sm text-slate-500 dark:text-white/60 leading-relaxed transition-colors">
               ใช้เทคโนโลยีที่เกี่ยวกับ Interactive
               เพื่อสร้างประสบการณ์ที่เหนือกว่าให้แก่ผลิตภัณฑ์และงาน Event ของคุณ
             </p>
           </div>
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
+          <div className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-2xl p-8 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
             <div className="w-12 h-12 bg-gradient-to-br from-[#2272FF] to-[#9B51E0] rounded-lg mb-6 flex items-center justify-center text-2xl shadow-lg shadow-[#9B51E0]/20">
               🎮
             </div>
             <h3 className="text-lg font-bold mb-3 uppercase tracking-tight">
               Customization
             </h3>
-            <p className="text-xs md:text-sm text-white/60 leading-relaxed">
+            <p className="text-xs md:text-sm text-slate-500 dark:text-white/60 leading-relaxed transition-colors">
               ผลิตภัณฑ์ของเราออกแบบมาเพื่อสร้างให้ตรงกับความต้องการของลูกค้า
               และลูกค้าสามารถปรับแต่งได้เพื่อให้เหมาะสมกับความสนุกที่ต้องการได้อย่างไม่มีขีดจำกัด
             </p>
           </div>
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
+          <div className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-2xl p-8 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
             <div className="w-12 h-12 bg-gradient-to-br from-[#9B51E0] to-[#48C6EF] rounded-lg mb-6 flex items-center justify-center text-2xl shadow-lg shadow-[#48C6EF]/20">
               ✨
             </div>
             <h3 className="text-lg font-bold mb-3 uppercase tracking-tight">
               Premium Experience
             </h3>
-            <p className="text-xs md:text-sm text-white/60 leading-relaxed">
+            <p className="text-xs md:text-sm text-slate-500 dark:text-white/60 leading-relaxed transition-colors">
               เราไม่ได้เพียงแค่สร้างผลิตภัณฑ์
               แต่เราช่วยยกระดับภาพลักษณ์ให้งานของคุณดูพรีเมียม เป็นมืออาชีพ
               และโดดเด่นกว่าที่เคย
@@ -168,7 +187,7 @@ export default function GamingHub() {
               & Services
             </span>
           </h2>
-          <p className="text-sm md:text-base text-white/60 max-w-2xl font-medium">
+          <p className="text-sm md:text-base text-slate-600 dark:text-white/60 max-w-2xl font-medium transition-colors">
             ผลิตภัณฑ์และบริการของเราถูกออกแบบมาเพื่อตอบโจทย์ทุกความสนุก
             และยกระดับการจัดการในงาน Event ของคุณให้สมบูรณ์แบบ
           </p>
@@ -176,15 +195,15 @@ export default function GamingHub() {
 
         <div className="grid grid-cols-1 gap-8">
           {/* Card 1: Game Event */}
-          <div className="bg-white/5 border border-white/10 rounded-3xl p-8 md:p-12 hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 flex flex-col lg:flex-row items-center gap-8 md:gap-12 w-full">
+          <div className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-3xl p-8 md:p-12 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 flex flex-col lg:flex-row items-center gap-8 md:gap-12 w-full">
             <div className="flex-1 text-center lg:text-left">
               <div className="w-16 h-16 md:w-20 md:h-20 mx-auto lg:mx-0 bg-gradient-to-br from-[#48C6EF] to-[#2272FF] rounded-2xl flex items-center justify-center text-3xl md:text-4xl shadow-lg shadow-[#2272FF]/20 mb-6">
                 🕹️
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 uppercase tracking-tight text-white">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4 uppercase tracking-tight text-slate-900 dark:text-white transition-colors">
                 Game Event
               </h3>
-              <p className="text-sm md:text-base text-white/60 leading-relaxed">
+              <p className="text-sm md:text-base text-slate-500 dark:text-white/60 leading-relaxed transition-colors">
                 เปลี่ยนพื้นที่ในงานของคุณให้เป็นโซนแห่งความสนุกด้วยเกมตู้ KIOSK
                 ที่หลากหลาย เล่นง่าย
                 ดึงดูดผู้เข้าร่วมงานและสร้างสีสันได้อย่างยอดเยี่ยม
@@ -203,7 +222,7 @@ export default function GamingHub() {
               ].map((src, index) => (
                 <div
                   key={index}
-                  className="relative aspect-square rounded-xl md:rounded-2xl overflow-hidden border border-white/10 group shadow-lg"
+                  className="relative aspect-square rounded-xl md:rounded-2xl overflow-hidden border border-slate-200 dark:border-white/10 group shadow-lg bg-white dark:bg-transparent"
                 >
                   <Image
                     src={src}
@@ -218,15 +237,15 @@ export default function GamingHub() {
           </div>
 
           {/* Card 2: Photo Booth */}
-          <div className="bg-white/5 border border-white/10 rounded-3xl p-8 md:p-12 hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 flex flex-col lg:flex-row-reverse items-center gap-8 md:gap-12 w-full">
+          <div className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-3xl p-8 md:p-12 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 flex flex-col lg:flex-row-reverse items-center gap-8 md:gap-12 w-full">
             <div className="flex-1 text-center lg:text-left">
               <div className="w-16 h-16 md:w-20 md:h-20 mx-auto lg:mx-0 bg-gradient-to-br from-[#2272FF] to-[#9B51E0] rounded-2xl flex items-center justify-center text-3xl md:text-4xl shadow-lg shadow-[#9B51E0]/20 mb-6">
                 📸
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 uppercase tracking-tight text-white">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4 uppercase tracking-tight text-slate-900 dark:text-white transition-colors">
                 Photo Booth
               </h3>
-              <p className="text-sm md:text-base text-white/60 leading-relaxed">
+              <p className="text-sm md:text-base text-slate-500 dark:text-white/60 leading-relaxed transition-colors">
                 เก็บบันทึกความทรงจำสุดประทับใจด้วย PhotoBooth
                 ที่มาพร้อมกรอบรูปพิเศษ เอฟเฟกต์ตกแต่งมากมาย และแชร์ลง Social
                 Media ได้ทันที
@@ -236,7 +255,7 @@ export default function GamingHub() {
             {/* 3 Images Grid */}
             <div className="w-full lg:w-1/2 grid grid-cols-3 gap-3 md:gap-4 shrink-0">
               {/* รูปที่ 1 */}
-              <div className="relative aspect-[9/16] rounded-xl md:rounded-2xl overflow-hidden border border-white/10 group shadow-lg">
+              <div className="relative aspect-[9/16] rounded-xl md:rounded-2xl overflow-hidden border border-slate-200 dark:border-white/10 group shadow-lg bg-white dark:bg-transparent">
                 <Image
                   src="/photobooth1.jpeg"
                   alt="Photo Booth 1"
@@ -246,7 +265,7 @@ export default function GamingHub() {
                 />
               </div>
               {/* รูปที่ 2 */}
-              <div className="relative aspect-[9/16] rounded-xl md:rounded-2xl overflow-hidden border border-white/10 group shadow-lg">
+              <div className="relative aspect-[9/16] rounded-xl md:rounded-2xl overflow-hidden border border-slate-200 dark:border-white/10 group shadow-lg bg-white dark:bg-transparent">
                 <Image
                   src="/photobooth2.jpeg"
                   alt="Photo Booth 2"
@@ -256,7 +275,7 @@ export default function GamingHub() {
                 />
               </div>
               {/* รูปที่ 3 */}
-              <div className="relative aspect-[9/16] rounded-xl md:rounded-2xl overflow-hidden border border-white/10 group shadow-lg">
+              <div className="relative aspect-[9/16] rounded-xl md:rounded-2xl overflow-hidden border border-slate-200 dark:border-white/10 group shadow-lg bg-white dark:bg-transparent">
                 <Image
                   src="/photobooth3.jpeg"
                   alt="Photo Booth 3"
@@ -269,20 +288,20 @@ export default function GamingHub() {
           </div>
 
           {/* Card 3: Event Management System */}
-          <div className="bg-white/5 border border-white/10 rounded-3xl p-8 md:p-12 hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 flex flex-col lg:flex-row items-center gap-8 md:gap-12 w-full">
+          <div className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-3xl p-8 md:p-12 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 flex flex-col lg:flex-row items-center gap-8 md:gap-12 w-full">
             <div className="flex-1 text-center lg:text-left">
               <div className="w-16 h-16 md:w-20 md:h-20 mx-auto lg:mx-0 bg-gradient-to-br from-[#9B51E0] to-[#48C6EF] rounded-2xl flex items-center justify-center text-3xl md:text-4xl shadow-lg shadow-[#48C6EF]/20 mb-6">
                 ⚙️
               </div>
               <div className="flex flex-col md:flex-row items-center justify-center lg:justify-start gap-3 mb-4">
-                <h3 className="text-2xl md:text-3xl font-bold uppercase tracking-tight text-white">
+                <h3 className="text-2xl md:text-3xl font-bold uppercase tracking-tight text-slate-900 dark:text-white transition-colors">
                   Event Management
                 </h3>
                 <span className="px-3 py-1 bg-gradient-to-r from-[#9B51E0] to-[#48C6EF] text-white rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg shadow-[#48C6EF]/20">
                   Coming Soon
                 </span>
               </div>
-              <p className="text-sm md:text-base text-white/60 leading-relaxed">
+              <p className="text-sm md:text-base text-slate-500 dark:text-white/60 leading-relaxed transition-colors">
                 ระบบจัดการงาน Event แบบครบวงจร ทั้งระบบลงทะเบียนหน้างาน
                 ระบบจองคิว และการดูแล User
                 เพื่อให้การดำเนินงานลื่นไหลและเป็นมืออาชีพ
@@ -295,7 +314,7 @@ export default function GamingHub() {
                 (src, index) => (
                   <div
                     key={index}
-                    className={`relative col-span-2 aspect-[9/16] rounded-xl md:rounded-2xl overflow-hidden border border-white/10 group shadow-lg ${index === 3 ? "col-start-2" : ""}`}
+                    className={`relative col-span-2 aspect-[9/16] rounded-xl md:rounded-2xl overflow-hidden border border-slate-200 dark:border-white/10 group shadow-lg bg-white dark:bg-transparent ${index === 3 ? "col-start-2" : ""}`}
                   >
                     <Image
                       src={src}
@@ -313,7 +332,7 @@ export default function GamingHub() {
       </section>
 
       {/* --- Product Section --- */}
-      <section className="py-20 overflow-hidden relative border-t border-white/5">
+      <section className="py-20 overflow-hidden relative border-t border-slate-200 dark:border-white/5 transition-colors">
         <div className="max-w-7xl mx-auto px-6 mb-12">
           <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight text-center md:text-left">
             Highlight <br className="md:hidden" />
@@ -321,7 +340,7 @@ export default function GamingHub() {
               Products
             </span>
           </h2>
-          <p className="text-sm md:text-base text-white/60 mt-4 text-center md:text-left font-medium">
+          <p className="text-sm md:text-base text-slate-600 dark:text-white/60 mt-4 text-center md:text-left font-medium transition-colors">
             สัมผัสประสบการณ์ความสนุกจากผลิตภัณฑ์ยอดฮิตของเรา
             ที่พร้อมยกระดับงานของคุณ
           </p>
@@ -358,7 +377,7 @@ export default function GamingHub() {
                 ].map((src, index) => (
                   <div
                     key={index}
-                    className="relative w-[240px] h-[360px] md:w-[300px] md:h-[450px] shrink-0 rounded-2xl md:rounded-3xl overflow-hidden border border-white/10 group shadow-lg cursor-pointer"
+                    className="relative w-[240px] h-[360px] md:w-[300px] md:h-[450px] shrink-0 rounded-2xl md:rounded-3xl overflow-hidden border border-slate-200 dark:border-white/10 group shadow-lg cursor-pointer bg-white dark:bg-transparent transition-colors"
                   >
                     <Image
                       src={src}
@@ -381,11 +400,11 @@ export default function GamingHub() {
 
         {/* --- Newsletter & Sidebar --- */}
         <div className="space-y-12">
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-8 space-y-6">
+          <div className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-2xl p-8 space-y-6 transition-all">
             <h3 className="text-xl font-bold uppercase tracking-tight">
               หากต้องการรับข่าวสาร <br /> หรือเนื้อหาใหม่ๆจากทางเรา
             </h3>
-            <p className="text-xs text-white/40 leading-relaxed uppercase tracking-wider">
+            <p className="text-xs text-slate-500 dark:text-white/40 leading-relaxed uppercase tracking-wider transition-colors">
               สามารถส่ง email มาหาเราได้เลย หรือเลือกช่องทางอื่น ๆ ด้านล่าง
             </p>
 
@@ -394,9 +413,9 @@ export default function GamingHub() {
               <input
                 type="email"
                 placeholder="Your email address"
-                className="w-full bg-white/5 border border-white/10 rounded-lg py-3 px-4 text-xs focus:outline-none focus:border-[#48C6EF]"
+                className="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-lg py-3 px-4 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-[#48C6EF] transition-colors"
               />
-              <button className="w-full py-3 bg-[#2272FF] hover:bg-[#48C6EF] rounded-lg text-xs font-black uppercase tracking-widest transition-all shadow-lg shadow-[#2272FF]/20">
+              <button className="w-full py-3 bg-[#2272FF] hover:bg-[#48C6EF] rounded-lg text-xs font-black uppercase tracking-widest transition-all shadow-lg shadow-[#2272FF]/20 text-white">
                 ส่ง Email
               </button>
             </div>
@@ -406,7 +425,7 @@ export default function GamingHub() {
               <a
                 href="https://line.me/R/ti/p/YOUR_LINE_ID"
                 target="_blank"
-                className="flex items-center gap-3 text-xs font-bold text-white/60 hover:text-[#48C6EF] transition-colors"
+                className="flex items-center gap-3 text-xs font-bold text-slate-600 dark:text-white/60 hover:text-[#48C6EF] transition-colors"
               >
                 <Image
                   src="/lineIcon.png"
@@ -421,7 +440,7 @@ export default function GamingHub() {
               <a
                 href="https://instagram.com/YOUR_INSTAGRAM"
                 target="_blank"
-                className="flex items-center gap-3 text-xs font-bold text-white/60 hover:text-[#48C6EF] transition-colors"
+                className="flex items-center gap-3 text-xs font-bold text-slate-600 dark:text-white/60 hover:text-[#48C6EF] transition-colors"
               >
                 <Image
                   src="/instagramIcon.png"
@@ -436,7 +455,7 @@ export default function GamingHub() {
           </div>
 
           <div className="space-y-4">
-            <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-white/40">
+            <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-white/40 transition-colors">
               Review From Customer
             </h3>
             {[1, 2].map((i) => (
@@ -444,12 +463,12 @@ export default function GamingHub() {
                 key={i}
                 className="flex gap-4 items-center group cursor-pointer"
               >
-                <div className="w-16 h-16 rounded bg-white/5 shrink-0" />
+                <div className="w-16 h-16 rounded bg-slate-200 dark:bg-white/5 shrink-0 transition-colors" />
                 <div className="space-y-1">
                   <h5 className="text-[11px] font-bold leading-tight line-clamp-2 uppercase group-hover:text-[#48C6EF]">
                     Guerilla Games Hints At New Horizon Zero Dawn Sequel
                   </h5>
-                  <span className="text-[9px] text-white/30 font-bold uppercase tracking-widest">
+                  <span className="text-[9px] text-slate-400 dark:text-white/30 font-bold uppercase tracking-widest transition-colors">
                     22.04.2026
                   </span>
                 </div>
@@ -459,12 +478,12 @@ export default function GamingHub() {
         </div>
       </div>
       {/* --- Footer --- */}
-      <footer className="border-t border-white/5 py-12 px-6 bg-black">
+      <footer className="border-t border-slate-200 dark:border-white/5 py-12 px-6 bg-white dark:bg-black transition-colors duration-500">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="text-xs font-bold text-white/20 uppercase tracking-[0.5em]">
+          <div className="text-xs font-bold text-slate-400 dark:text-white/20 uppercase tracking-[0.5em] transition-colors">
             BRIGHT VANTA GAMING
           </div>
-          <div className="flex gap-8 text-[10px] font-bold uppercase text-white/40 tracking-widest">
+          <div className="flex gap-8 text-[10px] font-bold uppercase text-slate-500 dark:text-white/40 tracking-widest transition-colors">
             <a href="#" className="hover:text-[#48C6EF] transition">
               About
             </a>
@@ -475,7 +494,7 @@ export default function GamingHub() {
               Contact
             </a>
           </div>
-          <p className="text-[10px] text-white/20 uppercase tracking-widest">
+          <p className="text-[10px] text-slate-400 dark:text-white/20 uppercase tracking-widest transition-colors">
             © 2026 ALL RIGHTS RESERVED.
           </p>
         </div>
