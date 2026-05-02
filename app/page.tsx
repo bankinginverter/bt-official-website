@@ -32,13 +32,14 @@ export default function GamingHub() {
       <nav className="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/5">
         <div className="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
           <div className="flex items-center gap-10">
-            <div className="w-10 h-10 bg-gradient-to-br from-[#48C6EF] via-[#2272FF] to-[#9B51E0] rounded-lg flex items-center justify-center transform rotate-45 shadow-lg shadow-[#2272FF]/20">
+            <div className="w-10 h-10 bg-gradient-to-br rounded-lg flex items-center justify-center transform rotate-45 shadow-lg shadow-[#2272FF]/20">
               <span className="transform -rotate-45 font-black text-xl">
                 <Image
                   src="/Logo.png"
                   alt="Logo"
-                  width={400}
-                  height={600}
+                  width={600}
+                  height={700}
+                  sizes="(max-width: 768px) 33vw, 250px"
                   className="object-contain"
                 />
               </span>
@@ -78,36 +79,25 @@ export default function GamingHub() {
         </div>
 
         <div className="relative z-10 px-6 max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-            <div className="max-w-xl space-y-8 z-10">
-              <span className="text-[#48C6EF] text-xs font-bold uppercase tracking-[0.3em]">
-                Discover Products You Will Love
+          <div className="flex flex-col items-center justify-center text-center max-w-4xl mx-auto space-y-8 z-10 py-12 md:py-24">
+            <h1 className="text-5xl md:text-7xl font-black leading-tight tracking-tight">
+              <span>Create Innovation</span>
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#48C6EF] via-[#2272FF] to-[#9B51E0]">
+                Elevate Your Experience
               </span>
-              <h1 className="text-5xl md:text-7xl font-black leading-tight tracking-tight">
-                Crafting Joy <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#48C6EF] via-[#2272FF] to-[#9B51E0]">
-                  In Every Moment With Our Products
-                </span>
-              </h1>
-              <button className="px-10 py-4 bg-[#2272FF] hover:bg-[#48C6EF] rounded-lg font-bold text-xs uppercase tracking-widest flex items-center gap-3 transition-all group">
-                Start Exploring{" "}
-                <span className="group-hover:translate-x-1 transition-transform">
-                  →
-                </span>
-              </button>
-            </div>
-            <div className="relative w-full lg:w-1/2 h-[400px] md:h-[500px]">
-              <div className="absolute inset-0 bg-gradient-to-r from-[#2272FF]/20 to-[#9B51E0]/20 blur-[120px] rounded-full" />
-              <div className="relative z-10 w-full h-full flex items-center justify-center">
-                <Image
-                  src="/Chetar.png"
-                  alt="Chetar character"
-                  width={400}
-                  height={600}
-                  className="object-contain"
-                />
-              </div>
-            </div>
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#48C6EF] via-[#2272FF] to-[#9B51E0]"></span>
+            </h1>
+            <span className="text-[#48C6EF] text-xs font-bold uppercase tracking-[0.3em]">
+              Play Innovate Elevate
+            </span>
+            <button className="px-10 py-4 bg-[#2272FF] hover:bg-[#48C6EF] rounded-lg font-bold text-xs uppercase tracking-widest flex items-center gap-3 transition-all group">
+              Start Exploring{" "}
+              <span className="group-hover:translate-x-1 transition-transform">
+                →
+              </span>
+            </button>
           </div>
         </div>
       </section>
