@@ -51,7 +51,7 @@ export default function Photobooth() {
               {/* Left Image (Matching) */}
               <div className="absolute left-[5%] md:left-[10%] top-1/2 -translate-y-1/2 -rotate-12 w-[40%] sm:w-[35%] max-w-[220px] aspect-[9/16] rounded-2xl md:rounded-3xl overflow-hidden border border-slate-200 dark:border-white/10 shadow-2xl transition-all duration-500 hover:rotate-0 hover:z-30 hover:scale-105 bg-white dark:bg-black/50">
                 <Image
-                  src="/matching.png"
+                  src="/photobooth1.jpeg"
                   alt="Matching Game"
                   fill
                   className="object-cover"
@@ -62,7 +62,7 @@ export default function Photobooth() {
               {/* Right Image (Catch Fruit) */}
               <div className="absolute right-[5%] md:right-[10%] top-1/2 -translate-y-1/2 rotate-12 w-[40%] sm:w-[35%] max-w-[220px] aspect-[9/16] rounded-2xl md:rounded-3xl overflow-hidden border border-slate-200 dark:border-white/10 shadow-2xl transition-all duration-500 hover:rotate-0 hover:z-30 hover:scale-105 bg-white dark:bg-black/50">
                 <Image
-                  src="/catchfruit.png"
+                  src="/photobooth2.jpeg"
                   alt="Catch Fruit Game"
                   fill
                   className="object-cover"
@@ -73,7 +73,7 @@ export default function Photobooth() {
               {/* Center Image (Bubble Baby) */}
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-[45%] sm:w-[40%] max-w-[260px] aspect-[9/16] rounded-2xl md:rounded-3xl overflow-hidden border border-slate-200 dark:border-white/20 shadow-2xl shadow-[#2272FF]/30 transition-all duration-500 hover:scale-105 bg-white dark:bg-black/50">
                 <Image
-                  src="/bubblebaby.png"
+                  src="/photobooth3.jpeg"
                   alt="Bubble Baby Game"
                   fill
                   className="object-cover"
