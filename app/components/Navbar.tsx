@@ -28,14 +28,13 @@ export default function Navbar({ aboutUsRef }: NavbarProps) {
         <div className="flex items-center gap-10">
           <Link href="/">
             <div className="w-10 h-10 bg-gradient-to-br rounded-lg flex items-center justify-center transform rotate-45 shadow-lg shadow-[#2272FF]/20 cursor-pointer">
-              <span className="transform -rotate-45 font-black text-xl">
+              <span className="transform -rotate-45 font-black text-xl w-full h-full flex items-center justify-center">
                 <Image
                   src="/Logo.png"
                   alt="Logo"
-                  width={600}
-                  height={700}
-                  sizes="(max-width: 768px) 33vw, 250px"
-                  className="object-contain"
+                  width={100}
+                  height={100}
+                  className="object-contain w-12 h-12"
                 />
               </span>
             </div>
@@ -45,7 +44,10 @@ export default function Navbar({ aboutUsRef }: NavbarProps) {
               Home
             </Link>
             <div className="relative group">
-              <div className="hover:text-[#48C6EF] transition py-2 flex items-center gap-1 cursor-pointer">
+              <div
+                tabIndex={0}
+                className="hover:text-[#48C6EF] transition py-2 flex items-center gap-1 cursor-pointer focus:outline-none"
+              >
                 Products
                 <svg
                   className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180"
@@ -62,7 +64,7 @@ export default function Navbar({ aboutUsRef }: NavbarProps) {
                 </svg>
               </div>
               {/* Dropdown Menu */}
-              <div className="absolute top-full left-0 w-48 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+              <div className="absolute top-full left-0 w-48 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-300 z-50">
                 <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 rounded-lg shadow-xl flex flex-col py-2">
                   <Link
                     href="/Products/Games"
