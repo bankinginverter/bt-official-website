@@ -37,16 +37,51 @@ export default function Navbar({ aboutUsRef }: NavbarProps) {
               </span>
             </div>
           </Link>
-          <div className="hidden lg:flex gap-8 text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-white/60 transition-colors">
-            <Link href="/" className="hover:text-[#48C6EF] transition">
+          <div className="hidden lg:flex items-center gap-8 text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-white/60 transition-colors">
+            <Link href="/" className="hover:text-[#48C6EF] transition py-2">
               Home
             </Link>
-            <Link
-              href="/Products/Games"
-              className="hover:text-[#48C6EF] transition"
-            >
-              Products
-            </Link>
+            <div className="relative group">
+              <div className="hover:text-[#48C6EF] transition py-2 flex items-center gap-1 cursor-pointer">
+                Products
+                <svg
+                  className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </div>
+              {/* Dropdown Menu */}
+              <div className="absolute top-full left-0 w-48 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 rounded-lg shadow-xl flex flex-col py-2">
+                  <Link
+                    href="/Products/Games"
+                    className="px-4 py-2 hover:bg-slate-50 dark:hover:bg-white/5 hover:text-[#48C6EF] transition-colors"
+                  >
+                    Games
+                  </Link>
+                  <Link
+                    href="/Products/PhotoBooth"
+                    className="px-4 py-2 hover:bg-slate-50 dark:hover:bg-white/5 hover:text-[#48C6EF] transition-colors"
+                  >
+                    PhotoBooth
+                  </Link>
+                  <Link
+                    href="/Products/EventManagement"
+                    className="px-4 py-2 hover:bg-slate-50 dark:hover:bg-white/5 hover:text-[#48C6EF] transition-colors"
+                  >
+                    Event Management
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
