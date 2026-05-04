@@ -376,11 +376,6 @@ export default function GamingHub() {
 
             {/* ช่องทาง Email */}
             <div className="space-y-3">
-              <input
-                type="email"
-                placeholder="Your email address"
-                className="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-lg py-3 px-4 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-[#48C6EF] transition-colors"
-              />
               <button className="w-full py-3 bg-[#2272FF] hover:bg-[#48C6EF] rounded-lg text-xs font-black uppercase tracking-widest transition-all shadow-lg shadow-[#2272FF]/20 text-white">
                 ส่ง Email
               </button>
