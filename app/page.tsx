@@ -2,11 +2,13 @@
 import { useRef } from "react"
 import Image from "next/image"
 import NewsSection from "./components/NewsSection"
+import ContactForm from "./components/ContactForm"
 import Navbar from "./components/Navbar"
 
 export default function GamingHub() {
   const aboutUsRef = useRef<HTMLElement>(null)
   const gameEventRef = useRef<HTMLDivElement>(null)
+  const contactus = useRef<HTMLDivElement>(null)
 
   const toggleTheme = () => {
     if (document.documentElement.classList.contains("dark")) {
@@ -74,11 +76,11 @@ export default function GamingHub() {
             </span>
             <button
               onClick={() =>
-                gameEventRef.current?.scrollIntoView({ behavior: "smooth" })
+                contactus.current?.scrollIntoView({ behavior: "smooth" })
               }
               className="px-10 py-4 bg-[#2272FF] hover:bg-[#48C6EF] rounded-lg font-bold text-xs uppercase tracking-widest flex items-center gap-3 transition-all group text-white"
             >
-              Start Exploring{" "}
+              Start Project
               <span className="group-hover:translate-x-1 transition-transform">
                 →
               </span>
@@ -437,6 +439,10 @@ export default function GamingHub() {
             ))}
           </div>
         </div>
+      </div>
+      {/* --- Contact Us Section --- */}
+      <div id="contact-us" ref={contactus}>
+        <ContactForm />
       </div>
       {/* --- Footer --- */}
       <footer className="border-t border-slate-200 dark:border-white/5 py-16 px-6 bg-white dark:bg-black transition-colors duration-500">

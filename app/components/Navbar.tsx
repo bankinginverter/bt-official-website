@@ -3,6 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { RefObject, useState } from "react"
+import { useRouter } from "next/navigation"
 
 type NavbarProps = {
   aboutUsRef?: RefObject<HTMLElement | null>
@@ -11,6 +12,7 @@ type NavbarProps = {
 export default function Navbar({ aboutUsRef }: NavbarProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isMobileProductsOpen, setIsMobileProductsOpen] = useState(false)
+  const router = useRouter()
 
   const toggleTheme = () => {
     if (document.documentElement.classList.contains("dark")) {
@@ -103,16 +105,10 @@ export default function Navbar({ aboutUsRef }: NavbarProps) {
             </div>
           </button>
           <button
-            onClick={() => {
-              if (aboutUsRef?.current) {
-                aboutUsRef.current.scrollIntoView({ behavior: "smooth" })
-              } else {
-                window.location.href = "/#about-us"
-              }
-            }}
+            onClick={() => router.push("/contact-us")}
             className="hidden sm:block px-6 py-2 bg-[#2272FF] hover:bg-[#48C6EF] rounded-md text-xs font-bold uppercase tracking-widest shadow-lg shadow-[#2272FF]/20 transition-all text-white"
           >
-            About Us
+            Contact Us
           </button>
 
           {/* --- Hamburger Menu Button --- */}
@@ -230,15 +226,11 @@ export default function Navbar({ aboutUsRef }: NavbarProps) {
           <button
             onClick={() => {
               setIsMobileMenuOpen(false)
-              if (aboutUsRef?.current) {
-                aboutUsRef.current.scrollIntoView({ behavior: "smooth" })
-              } else {
-                window.location.href = "/#about-us"
-              }
+              router.push("/contact-us")
             }}
             className="mt-2 py-3 bg-[#2272FF] hover:bg-[#48C6EF] rounded-md text-xs font-bold uppercase tracking-widest shadow-lg shadow-[#2272FF]/20 transition-all text-white w-full sm:hidden"
           >
-            About Us
+            Contact Us
           </button>
         </div>
       </div>
