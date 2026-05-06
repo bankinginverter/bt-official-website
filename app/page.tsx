@@ -20,7 +20,7 @@ export default function GamingHub() {
 
     const scroll = () => {
       if (marquee && !isHovered.current) {
-        marquee.scrollLeft += 1
+        marquee.scrollLeft += 0.5
         if (marquee.scrollLeft >= marquee.scrollWidth / 3) {
           marquee.scrollLeft -= marquee.scrollWidth / 3
         }
@@ -192,6 +192,13 @@ export default function GamingHub() {
                 ที่หลากหลาย เล่นง่าย
                 ดึงดูดผู้เข้าร่วมงานและสร้างสีสันได้อย่างยอดเยี่ยม
               </p>
+              <div className="inline-block mt-4">
+                <div className="px-6 py-2.5 bg-gradient-to-r from-[#48C6EF] via-[#2272FF] to-[#9B51E0] rounded-full shadow-lg shadow-[#2272FF]/30 hover:shadow-xl hover:shadow-[#2272FF]/40 hover:-translate-y-1 transition-all duration-300 cursor-default group relative overflow-hidden">
+                  <span className="text-lg md:text-xl font-black text-white inline-block group-hover:scale-105 transition-transform duration-300 drop-shadow-md">
+                    เริ่มต้นที่ 20,000 บาท
+                  </span>
+                </div>
+              </div>
             </div>
 
             {/* 6 Images Grid */}
@@ -236,6 +243,13 @@ export default function GamingHub() {
                 ที่มาพร้อมกรอบรูปพิเศษ เอฟเฟกต์ตกแต่งมากมาย และแชร์ลง Social
                 Media ได้ทันที
               </p>
+              <div className="inline-block mt-4">
+                <div className="px-6 py-2.5 bg-gradient-to-r from-[#48C6EF] via-[#2272FF] to-[#9B51E0] rounded-full shadow-lg shadow-[#2272FF]/30 hover:shadow-xl hover:shadow-[#2272FF]/40 hover:-translate-y-1 transition-all duration-300 cursor-default group relative overflow-hidden">
+                  <span className="text-lg md:text-xl font-black text-white inline-block group-hover:scale-105 transition-transform duration-300 drop-shadow-md">
+                    เริ่มต้นที่ 9,000 บาท
+                  </span>
+                </div>
+              </div>
             </div>
 
             {/* 3 Images Grid */}
