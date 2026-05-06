@@ -5,6 +5,7 @@ import NewsSection from "./components/NewsSection"
 import ContactForm from "./components/ContactForm"
 import Navbar from "./components/Navbar"
 import { useRef, useEffect } from "react"
+import { news } from "@/app/data-collection/gameData"
 
 export default function GamingHub() {
   const aboutUsRef = useRef<HTMLElement>(null)
@@ -31,25 +32,6 @@ export default function GamingHub() {
     animationId = requestAnimationFrame(scroll)
     return () => cancelAnimationFrame(animationId)
   }, [])
-
-  const news = [
-    {
-      category: "Game Event",
-      title:
-        "Racing Run เกมวิ่งแข่งสำหรับไวมันส์รองรับผู้เล่นสูงสุดได้ถึง 4 คน",
-      detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      date: "KOTAKU • 2 HOURS AGO",
-      img: "/Racingrun.png",
-    },
-    {
-      category: "Event Management",
-      title:
-        "Event Manage System ระบบดูแลงานอีเวนท์ ที่จะทำงานอีเวนท์ของคุณควบคุมได้แค่ปลายนิ้ว",
-      detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      date: "KOTAKU • 2 HOURS AGO",
-      img: "/event1.png",
-    },
-  ]
 
   return (
     <div className="bg-slate-50 dark:bg-black text-slate-900 dark:text-white min-h-screen font-sans selection:bg-[#2272FF] selection:text-white transition-colors duration-500">

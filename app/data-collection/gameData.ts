@@ -5,6 +5,14 @@ export type GameItem = {
   description: string
 }
 
+interface NewsItem {
+  category: string
+  title: string
+  detail: string
+  date: string
+  img: string
+}
+
 export const games: GameItem[] = [
   {
     src: "/bubblebaby.png",
@@ -47,5 +55,23 @@ export const games: GameItem[] = [
     title: "Question",
     description:
       "ทดสอบความรู้กับเกมตอบคำถามสุดท้าทาย ชิงรางวัลมากมาย เพิ่มความมีส่วนร่วมให้ผู้ใช้งาน",
+  },
+]
+
+export const news: NewsItem[] = [
+  {
+    category: "Game Event",
+    title: "Racing Run เกมวิ่งแข่งสำหรับไวมันส์รองรับผู้เล่นสูงสุดได้ถึง 4 คน",
+    detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    date: "KOTAKU • 2 HOURS AGO",
+    img: "/Racingrun.png",
+  },
+  {
+    category: "Event Management",
+    title:
+      "Event Manage System ระบบดูแลงานอีเวนท์ ที่จะทำงานอีเวนท์ของคุณควบคุมได้แค่ปลายนิ้ว",
+    detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    date: "KOTAKU • 2 HOURS AGO",
+    img: "/event1.png",
   },
 ]
