@@ -159,8 +159,6 @@ export default function GamingHub() {
         </div>
       </section>
       {/* --- Products & Services Section --- */}
-
-      {/* --- Product Section --- */}
       <section className="py-20 px-6 max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col items-center space-y-4 mb-16 text-center">
           <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight">
@@ -285,9 +283,9 @@ export default function GamingHub() {
               </div>
               <div className="flex flex-col md:flex-row items-center justify-center lg:justify-start gap-3 mb-4">
                 <h3 className="text-2xl md:text-3xl font-bold uppercase tracking-tight text-slate-900 dark:text-white transition-colors">
-                  Event Management
+                  Event Management Software
                 </h3>
-                <span className="px-3 py-1 bg-gradient-to-r from-[#9B51E0] to-[#48C6EF] text-white rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg shadow-[#48C6EF]/20">
+                <span className="shrink-0 whitespace-nowrap px-3 py-1 bg-gradient-to-r from-[#9B51E0] to-[#48C6EF] text-white rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg shadow-[#48C6EF]/20">
                   Coming Soon
                 </span>
               </div>
