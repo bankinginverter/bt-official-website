@@ -2,9 +2,15 @@
 import Image from "next/image"
 import Navbar from "../../components/Navbar"
 import ContactForm from "@/app/components/ContactForm"
-import { useRef } from "react"
+import { useRef, useState } from "react"
+import GameModal from "@/app/components/GameModal"
+
+// นำเข้าตัวแปร games และโครงสร้าง GameItem จากไฟล์ ts (ปรับ Path ให้ตรงกับที่คุณเก็บไฟล์ไว้)
+import { games, type GameItem } from "@/app/data-collection/gameData"
+
 export default function Game() {
   const contactus = useRef<HTMLDivElement>(null)
+  const [selectedGame, setSelectedGame] = useState<GameItem | null>(null)
   return (
     <div className="bg-slate-50 dark:bg-black text-slate-900 dark:text-white min-h-screen font-sans selection:bg-[#2272FF] selection:text-white transition-colors duration-500">
       {/* --- Navbar --- */}
@@ -152,8 +158,6 @@ export default function Game() {
           </div>
         </div>
       </section>
-      {/* --- Products & Services Section --- */}
-
       {/* --- Product Section --- */}
       <section className="py-20 px-6 max-w-7xl mx-auto relative z-10">
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-12">
@@ -170,17 +174,11 @@ export default function Game() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
-          {[
-            { src: "/bubblebaby.png", alt: "Bubble Baby" },
-            { src: "/bubbleshooter.png", alt: "Bubble Shooter" },
-            { src: "/catchfruit.png", alt: "Catch Fruit" },
-            { src: "/luckyspin.png", alt: "Lucky Spin" },
-            { src: "/matching.png", alt: "Matching" },
-            { src: "/question.png", alt: "Question" },
-          ].map((item, index) => (
+          {games.map((item, index) => (
             <div
               key={index}
-              className="relative aspect-[9/16] rounded-2xl md:rounded-3xl overflow-hidden border border-slate-200 dark:border-white/10 shadow-lg hover:shadow-2xl transition-all duration-500 bg-white dark:bg-white/5 hover:-translate-y-2 group"
+              onClick={() => setSelectedGame(item)}
+              className="relative aspect-[9/16] cursor-pointer rounded-2xl md:rounded-3xl overflow-hidden border border-slate-200 dark:border-white/10 shadow-lg hover:shadow-2xl transition-all duration-500 bg-white dark:bg-white/5 hover:-translate-y-2 group"
             >
               <Image
                 src={item.src}
@@ -193,6 +191,10 @@ export default function Game() {
           ))}
         </div>
       </section>
+
+      {/* --- Game Modal --- */}
+      <GameModal game={selectedGame} onClose={() => setSelectedGame(null)} />
+
       {/* --- Contact Us Section --- */}
       <div id="contact-us" ref={contactus}>
         <ContactForm />
