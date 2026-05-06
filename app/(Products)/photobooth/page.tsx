@@ -1,6 +1,10 @@
+"use client"
+import { useRef } from "react"
 import Image from "next/image"
 import Navbar from "../../components/Navbar"
+import ContactForm from "@/app/components/ContactForm"
 export default function Photobooth() {
+  const contactus = useRef<HTMLDivElement>(null)
   return (
     <div className="bg-slate-50 dark:bg-black text-slate-900 dark:text-white min-h-screen font-sans selection:bg-[#2272FF] selection:text-white transition-colors duration-500">
       {/* --- Navbar --- */}
@@ -38,8 +42,13 @@ export default function Photobooth() {
               <span className="text-[#48C6EF] text-xs font-bold uppercase tracking-[0.3em]">
                 Play Innovate Elevate
               </span>
-              <button className="px-10 py-4 bg-[#2272FF] hover:bg-[#48C6EF] rounded-lg font-bold text-xs uppercase tracking-widest flex items-center gap-3 transition-all group text-white">
-                Start Exploring{" "}
+              <button
+                onClick={() =>
+                  contactus.current?.scrollIntoView({ behavior: "smooth" })
+                }
+                className="px-10 py-4 bg-[#2272FF] hover:bg-[#48C6EF] rounded-lg font-bold text-xs uppercase tracking-widest flex items-center gap-3 transition-all group text-white"
+              >
+                Start Exploring
                 <span className="group-hover:translate-x-1 transition-transform">
                   →
                 </span>
@@ -315,7 +324,10 @@ export default function Photobooth() {
           </div>
         </div>
       </section>
-
+      {/* --- Contact Us Section --- */}
+      <div id="contact-us" ref={contactus}>
+        <ContactForm />
+      </div>
       {/* --- Footer --- */}
       <footer className="border-t border-slate-200 dark:border-white/5 py-16 px-6 bg-white dark:bg-black transition-colors duration-500">
         <div className="max-w-7xl mx-auto">
