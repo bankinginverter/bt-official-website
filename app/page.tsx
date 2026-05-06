@@ -1,24 +1,36 @@
 "use client"
-import { useRef } from "react"
+
 import Image from "next/image"
 import NewsSection from "./components/NewsSection"
 import ContactForm from "./components/ContactForm"
 import Navbar from "./components/Navbar"
+import { useRef, useEffect } from "react"
 
 export default function GamingHub() {
   const aboutUsRef = useRef<HTMLElement>(null)
   const gameEventRef = useRef<HTMLDivElement>(null)
   const contactus = useRef<HTMLDivElement>(null)
+  const marqueeRef = useRef<HTMLDivElement>(null)
+  const isHovered = useRef(false)
 
-  const toggleTheme = () => {
-    if (document.documentElement.classList.contains("dark")) {
-      document.documentElement.classList.remove("dark")
-      localStorage.setItem("theme", "light")
-    } else {
-      document.documentElement.classList.add("dark")
-      localStorage.setItem("theme", "dark")
+  useEffect(() => {
+    let animationId: number
+    const marquee = marqueeRef.current
+    if (!marquee) return
+
+    const scroll = () => {
+      if (marquee && !isHovered.current) {
+        marquee.scrollLeft += 1
+        if (marquee.scrollLeft >= marquee.scrollWidth / 3) {
+          marquee.scrollLeft -= marquee.scrollWidth / 3
+        }
+      }
+      animationId = requestAnimationFrame(scroll)
     }
-  }
+
+    animationId = requestAnimationFrame(scroll)
+    return () => cancelAnimationFrame(animationId)
+  }, [])
 
   const news = [
     {
@@ -68,8 +80,6 @@ export default function GamingHub() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#48C6EF] via-[#2272FF] to-[#9B51E0]">
                 Elevate Your Experience
               </span>
-              <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#48C6EF] via-[#2272FF] to-[#9B51E0]"></span>
             </h1>
             <span className="text-[#48C6EF] text-xs font-bold uppercase tracking-[0.3em]">
               Play Innovate Elevate
@@ -149,6 +159,8 @@ export default function GamingHub() {
         </div>
       </section>
       {/* --- Products & Services Section --- */}
+
+      {/* --- Product Section --- */}
       <section className="py-20 px-6 max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col items-center space-y-4 mb-16 text-center">
           <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight">
@@ -209,7 +221,6 @@ export default function GamingHub() {
               ))}
             </div>
           </div>
-
           {/* Card 2: Photo Booth */}
           <div
             id="photo-booth"
@@ -263,7 +274,6 @@ export default function GamingHub() {
               </div>
             </div>
           </div>
-
           {/* Card 3: Event Management System */}
           <div
             id="event-management"
@@ -326,8 +336,13 @@ export default function GamingHub() {
           </p>
         </div>
 
-        <div className="w-full overflow-hidden">
-          <div className="animate-marquee flex w-max hover:[animation-play-state:paused]">
+        <div
+          ref={marqueeRef}
+          onMouseEnter={() => (isHovered.current = true)}
+          onMouseLeave={() => (isHovered.current = false)}
+          className="w-full overflow-x-auto flex [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']"
+        >
+          <div className="flex w-max">
             {/* ทำการ Duplicate ข้อมูล 3 ชุดเพื่อให้การ Loop ไร้รอยต่ออย่างสมบูรณ์ */}
             {[1, 2, 3].map((set) => (
               <div key={set} className="flex gap-4 md:gap-6 pr-4 md:pr-6">
