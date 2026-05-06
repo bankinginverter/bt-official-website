@@ -102,7 +102,7 @@ export default function Photobooth() {
           <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight">
             Why Choose <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#48C6EF] via-[#2272FF] to-[#9B51E0]">
-              Bright Vanta
+              JORJOY
             </span>
           </h2>
           <p className="text-lg md:text-xl text-slate-600 dark:text-white/90 leading-relaxed font-medium transition-colors">
@@ -335,7 +335,7 @@ export default function Photobooth() {
             {/* Brand Info */}
             <div className="space-y-4">
               <div className="text-sm font-black text-slate-900 dark:text-white uppercase tracking-[0.3em] transition-colors">
-                BRIGHT VANTA
+                JORJOY
               </div>
               <p className="text-xs text-slate-500 dark:text-white/60 leading-relaxed transition-colors">
                 เราคือบริษัทที่ผสานรวมเทคโนโลยีเข้ากับจินตนาการ
@@ -414,7 +414,7 @@ export default function Photobooth() {
           {/* Bottom Bar */}
           <div className="pt-8 border-t border-slate-200 dark:border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 transition-colors">
             <p className="text-[10px] text-slate-400 dark:text-white/40 uppercase tracking-widest transition-colors">
-              © 2026 BRIGHT VANTA. ALL RIGHTS RESERVED.
+              © 2026 JORJOY. ALL RIGHTS RESERVED.
             </p>
             <div className="flex gap-6 text-[10px] font-bold uppercase text-slate-400 dark:text-white/40 tracking-widest transition-colors">
               <a href="#" className="hover:text-[#48C6EF] transition">

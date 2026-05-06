@@ -108,7 +108,7 @@ export default function GamingHub() {
           <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight">
             Why Choose <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#48C6EF] via-[#2272FF] to-[#9B51E0]">
-              Bright Vanta
+              JORJOY
             </span>
           </h2>
           <p className="text-lg md:text-xl text-slate-600 dark:text-white/90 leading-relaxed font-medium transition-colors">
