@@ -28,18 +28,14 @@ export default function Navbar({ aboutUsRef }: NavbarProps) {
     <nav className="fixed top-0 left-0 w-full z-50 bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-slate-200 dark:border-white/5 transition-colors duration-500">
       <div className="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
         <div className="flex items-center gap-10">
-          <Link href="/">
-            <div className="w-10 h-10 bg-gradient-to-br rounded-lg flex items-center justify-center transform rotate-45 shadow-lg shadow-[#2272FF]/20 cursor-pointer">
-              <span className="transform -rotate-45 font-black text-xl w-full h-full flex items-center justify-center">
-                <Image
-                  src="/Logo.png"
-                  alt="Logo"
-                  width={100}
-                  height={100}
-                  className="object-contain w-12 h-12"
-                />
-              </span>
-            </div>
+          <Link href="/" className="cursor-pointer block">
+            <Image
+              src="/NewLogo.png"
+              alt="Logo Light Mode"
+              width={100}
+              height={100}
+              className="object-contain w-12 h-12 block"
+            />
           </Link>
           <div className="hidden lg:flex items-center gap-8 text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-white/60 transition-colors">
             <Link href="/" className="hover:text-[#48C6EF] transition py-2">
