@@ -1,16 +1,26 @@
-"use client"
-import { useRef } from "react"
+import type { Metadata } from "next"
 import Image from "next/image"
+import Link from "next/link"
 import Navbar from "../../components/Navbar"
 import ContactForm from "@/app/components/ContactForm"
+import { PhotoBoothData } from "@/app/data-collection/gameData"
+
+export const metadata: Metadata = {
+  title: "ตู้ถ่ายรูป (Photo Booth) | JORJOY",
+  description:
+    "เก็บบันทึกความทรงจำสุดประทับใจด้วย PhotoBooth ที่มาพร้อมกรอบรูปพิเศษ เอฟเฟกต์ตกแต่งมากมาย และแชร์ลง Social Media ได้ทันที พร้อมปรับแต่งธีมให้เข้ากับงานของคุณ",
+  alternates: {
+    canonical: "/photobooth",
+  },
+}
+
 export default function Photobooth() {
-  const contactus = useRef<HTMLDivElement>(null)
   return (
-    <div className="bg-slate-50 dark:bg-black text-slate-900 dark:text-white min-h-screen font-sans selection:bg-[#2272FF] selection:text-white transition-colors duration-500">
+    <main className="bg-slate-50 dark:bg-black text-slate-900 dark:text-white min-h-screen font-sans selection:bg-[#2272FF] selection:text-white transition-colors duration-500">
       {/* --- Navbar --- */}
       <Navbar />
       {/* --- Hero Section --- */}
-      <section className="relative pt-40 pb-20 overflow-hidden">
+      <header className="relative pt-40 pb-20 overflow-hidden">
         {/* Background Video */}
         <div className="absolute inset-0 z-0">
           <video
@@ -42,17 +52,15 @@ export default function Photobooth() {
               <span className="text-[#48C6EF] text-xs font-bold uppercase tracking-[0.3em]">
                 Play Innovate Elevate
               </span>
-              <button
-                onClick={() =>
-                  contactus.current?.scrollIntoView({ behavior: "smooth" })
-                }
+              <Link
+                href="#contact-us"
                 className="px-10 py-4 bg-[#2272FF] hover:bg-[#48C6EF] rounded-lg font-bold text-xs uppercase tracking-widest flex items-center gap-3 transition-all group text-white"
               >
                 Start Exploring
                 <span className="group-hover:translate-x-1 transition-transform">
                   →
                 </span>
-              </button>
+              </Link>
             </div>
 
             {/* Right Column: Overlapping Images */}
@@ -92,7 +100,7 @@ export default function Photobooth() {
             </div>
           </div>
         </div>
-      </section>
+      </header>
       {/* --- About Company Section --- */}
       <section
         id="about-us"
@@ -113,7 +121,7 @@ export default function Photobooth() {
         </div>
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-2xl p-8 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
+          <article className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-2xl p-8 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
             <div className="w-12 h-12 bg-gradient-to-br from-[#48C6EF] to-[#2272FF] rounded-lg mb-6 flex items-center justify-center text-2xl shadow-lg shadow-[#2272FF]/20">
               🚀
             </div>
@@ -124,8 +132,8 @@ export default function Photobooth() {
               ใช้เทคโนโลยีที่เกี่ยวกับ Interactive
               เพื่อสร้างประสบการณ์ที่เหนือกว่าให้แก่ผลิตภัณฑ์และงาน Event ของคุณ
             </p>
-          </div>
-          <div className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-2xl p-8 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
+          </article>
+          <article className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-2xl p-8 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
             <div className="w-12 h-12 bg-gradient-to-br from-[#2272FF] to-[#9B51E0] rounded-lg mb-6 flex items-center justify-center text-2xl shadow-lg shadow-[#9B51E0]/20">
               🎮
             </div>
@@ -136,8 +144,8 @@ export default function Photobooth() {
               ผลิตภัณฑ์ของเราออกแบบมาเพื่อสร้างให้ตรงกับความต้องการของลูกค้า
               และลูกค้าสามารถปรับแต่งได้เพื่อให้เหมาะสมกับความสนุกที่ต้องการได้อย่างไม่มีขีดจำกัด
             </p>
-          </div>
-          <div className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-2xl p-8 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
+          </article>
+          <article className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-2xl p-8 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
             <div className="w-12 h-12 bg-gradient-to-br from-[#9B51E0] to-[#48C6EF] rounded-lg mb-6 flex items-center justify-center text-2xl shadow-lg shadow-[#48C6EF]/20">
               ✨
             </div>
@@ -149,7 +157,7 @@ export default function Photobooth() {
               แต่เราช่วยยกระดับภาพลักษณ์ให้งานของคุณดูพรีเมียม เป็นมืออาชีพ
               และโดดเด่นกว่าที่เคย
             </p>
-          </div>
+          </article>
         </div>
       </section>
       {/* --- Product Section --- */}
@@ -168,24 +176,8 @@ export default function Photobooth() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-12">
-          {[
-            {
-              src: "/photobooth1.jpeg",
-              title: "Custom Frames & Stickers",
-              desc: "ตกแต่งภาพถ่ายของคุณด้วยกรอบรูปและสติ๊กเกอร์ที่ออกแบบมาเฉพาะสำหรับงานของคุณ เพื่อให้เข้ากับธีมงานได้อย่างลงตัว และสร้างเอกลักษณ์ที่ไม่ซ้ำใคร",
-            },
-            {
-              src: "/photobooth2.jpeg",
-              title: "Instant Print & Digital Share",
-              desc: "รับภาพพิมพ์คุณภาพสูงได้ทันทีที่หน้างาน พร้อมระบบสแกน QR Code เพื่อดาวน์โหลดไฟล์ภาพดิจิทัลและแชร์ลง Social Media ได้อย่างรวดเร็ว",
-            },
-            {
-              src: "/photobooth3.jpeg",
-              title: "Interactive Props & Effects",
-              desc: "เพิ่มสีสันให้กับการถ่ายภาพด้วยพร็อพสนุกๆ และเอฟเฟกต์สุดล้ำที่จะทำให้ทุกรูปถ่ายเต็มไปด้วยรอยยิ้มและประสบการณ์ที่น่าประทับใจ",
-            },
-          ].map((item, index) => (
-            <div
+          {PhotoBoothData.map((item, index) => (
+            <article
               key={index}
               className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-3xl overflow-hidden hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 flex flex-col group"
             >
@@ -206,7 +198,7 @@ export default function Photobooth() {
                   {item.desc}
                 </p>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </section>
@@ -325,9 +317,9 @@ export default function Photobooth() {
         </div>
       </section>
       {/* --- Contact Us Section --- */}
-      <div id="contact-us" ref={contactus}>
+      <section id="contact-us">
         <ContactForm />
-      </div>
+      </section>
       {/* --- Footer --- */}
       <footer className="border-t border-slate-200 dark:border-white/5 py-16 px-6 bg-white dark:bg-black transition-colors duration-500">
         <div className="max-w-7xl mx-auto">
@@ -346,47 +338,62 @@ export default function Photobooth() {
 
             {/* Services */}
             <div className="space-y-4">
-              <h4 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-widest transition-colors">
+              <h4
+                id="footer-services-heading"
+                className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-widest transition-colors"
+              >
                 Our Services
               </h4>
-              <div className="flex flex-col gap-3 text-xs text-slate-500 dark:text-white/60 font-medium transition-colors">
-                <a
+              <nav
+                aria-labelledby="footer-services-heading"
+                className="flex flex-col gap-3 text-xs text-slate-500 dark:text-white/60 font-medium transition-colors"
+              >
+                <Link
                   href="#game-event"
                   className="hover:text-[#48C6EF] transition"
                 >
                   Game Event
-                </a>
-                <a
+                </Link>
+                <Link
                   href="#photo-booth"
                   className="hover:text-[#48C6EF] transition"
                 >
                   Photo Booth
-                </a>
-                <a
+                </Link>
+                <Link
                   href="#event-management"
                   className="hover:text-[#48C6EF] transition"
                 >
                   Event Management
-                </a>
-              </div>
+                </Link>
+              </nav>
             </div>
 
             {/* Company */}
             <div className="space-y-4">
-              <h4 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-widest transition-colors">
+              <h4
+                id="footer-company-heading"
+                className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-widest transition-colors"
+              >
                 Company
               </h4>
-              <div className="flex flex-col gap-3 text-xs text-slate-500 dark:text-white/60 font-medium transition-colors">
-                <a href="#" className="hover:text-[#48C6EF] transition">
+              <nav
+                aria-labelledby="footer-company-heading"
+                className="flex flex-col gap-3 text-xs text-slate-500 dark:text-white/60 font-medium transition-colors"
+              >
+                <Link href="/about" className="hover:text-[#48C6EF] transition">
                   About Us
-                </a>
-                <a href="#" className="hover:text-[#48C6EF] transition">
+                </Link>
+                <Link
+                  href="/portfolio"
+                  className="hover:text-[#48C6EF] transition"
+                >
                   Our Works / Portfolio
-                </a>
-                <a href="#news" className="hover:text-[#48C6EF] transition">
+                </Link>
+                <Link href="/#news" className="hover:text-[#48C6EF] transition">
                   News & Articles
-                </a>
-              </div>
+                </Link>
+              </nav>
             </div>
 
             {/* Contact */}
@@ -394,7 +401,7 @@ export default function Photobooth() {
               <h4 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-widest transition-colors">
                 Contact Us
               </h4>
-              <div className="flex flex-col gap-3 text-xs text-slate-500 dark:text-white/60 font-medium transition-colors">
+              <address className="flex flex-col gap-3 text-xs text-slate-500 dark:text-white/60 font-medium transition-colors not-italic">
                 <a
                   href="mailto:hello@brightvanta.com"
                   className="hover:text-[#48C6EF] transition"
@@ -407,7 +414,7 @@ export default function Photobooth() {
                 >
                   +66 (0) 00-000-0000
                 </a>
-              </div>
+              </address>
             </div>
           </div>
 
@@ -416,17 +423,20 @@ export default function Photobooth() {
             <p className="text-[10px] text-slate-400 dark:text-white/40 uppercase tracking-widest transition-colors">
               © 2026 JORJOY. ALL RIGHTS RESERVED.
             </p>
-            <div className="flex gap-6 text-[10px] font-bold uppercase text-slate-400 dark:text-white/40 tracking-widest transition-colors">
-              <a href="#" className="hover:text-[#48C6EF] transition">
+            <nav
+              aria-label="Legal Policies"
+              className="flex gap-6 text-[10px] font-bold uppercase text-slate-400 dark:text-white/40 tracking-widest transition-colors"
+            >
+              <Link href="/terms" className="hover:text-[#48C6EF] transition">
                 Terms of Service
-              </a>
-              <a href="#" className="hover:text-[#48C6EF] transition">
+              </Link>
+              <Link href="/privacy" className="hover:text-[#48C6EF] transition">
                 Privacy Policy
-              </a>
-            </div>
+              </Link>
+            </nav>
           </div>
         </div>
       </footer>
-    </div>
+    </main>
   )
 }
