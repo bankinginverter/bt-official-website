@@ -1,4 +1,8 @@
+"use client"
+
 import Image from "next/image"
+import { useEffect } from "react"
+import { createPortal } from "react-dom"
 
 type Game = {
   title: string
@@ -12,15 +16,26 @@ type GameModalProps = {
 }
 
 export default function GameModal({ game, onClose }: GameModalProps) {
-  if (!game) return null
+  // ป้องกันการ Scroll หน้าเว็บตอน Modal ถูกเปิด
+  useEffect(() => {
+    if (game) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = ""
+    }
+    return () => {
+      document.body.style.overflow = ""
+    }
+  }, [game])
 
-  return (
+  if (!game) return null
+  return createPortal(
     <div
-      className="fixed inset-0 bg-black/70 flex items-center justify-center z-[100]"
+      className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-[9999] p-4 sm:p-6"
       onClick={onClose}
     >
       <div
-        className="bg-white dark:bg-slate-900 dark:text-white rounded-xl max-w-md w-full px-6 pb-6 pt-14 relative shadow-2xl"
+        className="bg-white dark:bg-slate-900 dark:text-white rounded-3xl max-w-[340px] sm:max-w-[400px] w-full min-h-[75vh] px-6 pb-6 pt-14 relative shadow-2xl max-h-[95dvh] overflow-y-auto flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -47,14 +62,19 @@ export default function GameModal({ game, onClose }: GameModalProps) {
             alt={game.title}
             width={400}
             height={600}
-            className="w-full h-auto rounded-lg mb-4 object-contain"
+            className="w-full max-h-[70vh] h-auto rounded-xl mb-6 object-contain bg-slate-50 dark:bg-black/20"
           />
         )}
-        <h2 className="text-lg font-bold mb-2">{game.title}</h2>
-        <p className="text-sm text-slate-600 dark:text-slate-300">
-          {game.description}
-        </p>
+        <div className="text-center px-2 shrink-0">
+          <h2 className="text-2xl font-black mb-3 text-slate-900 dark:text-white uppercase tracking-tight">
+            {game.title}
+          </h2>
+          <p className="text-sm md:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-medium">
+            {game.description}
+          </p>
+        </div>
       </div>
-    </div>
+    </div>,
+    document.body,
   )
 }

@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import NewsSection from "./components/NewsSection"
@@ -5,6 +6,15 @@ import ContactForm from "./components/ContactForm"
 import Navbar from "./components/Navbar"
 import { news } from "@/app/data-collection/gameData"
 import HighlightMarquee from "./components/HighlightMarquee"
+
+export const metadata: Metadata = {
+  title: "JORJOY | ผู้นำด้านเทคโนโลยีจัดงานอีเวนท์ Game Event & Photo Booth",
+  description:
+    "ยกระดับงานอีเวนท์ของคุณด้วยบริการตู้เกม Interactive (Game Event), ตู้ถ่ายรูปสุดล้ำ (Photo Booth) และระบบ Event Management ครบวงจรแบบพรีเมียม จาก JORJOY",
+  alternates: {
+    canonical: "/",
+  },
+}
 
 export default function GamingHub() {
   return (
@@ -303,14 +313,14 @@ export default function GamingHub() {
         <HighlightMarquee />
       </section>
       {/* --- News Section --- */}
-      <div
+      <section
         id="news"
         className="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-3 gap-16"
       >
         <NewsSection news={news} />
 
         {/* --- Newsletter & Sidebar --- */}
-        <div className="space-y-12">
+        <aside className="space-y-12">
           <div className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-2xl p-8 space-y-6 transition-all">
             <h3 className="text-xl font-bold uppercase tracking-tight text-slate-900 dark:text-white transition-colors">
               หากต้องการรับข่าวสาร <br /> หรือเนื้อหาใหม่ๆจากทางเรา
@@ -365,7 +375,7 @@ export default function GamingHub() {
               Review From Customer
             </h3>
             {[1, 2].map((i) => (
-              <div
+              <article
                 key={i}
                 className="flex gap-4 items-center group cursor-pointer"
               >
@@ -378,11 +388,11 @@ export default function GamingHub() {
                     22.04.2026
                   </span>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
-        </div>
-      </div>
+        </aside>
+      </section>
       {/* --- Contact Us Section --- */}
       <div id="contact-us">
         <ContactForm />
@@ -394,7 +404,7 @@ export default function GamingHub() {
             {/* Brand Info */}
             <div className="space-y-4">
               <div className="text-sm font-black text-slate-900 dark:text-white uppercase tracking-[0.3em] transition-colors">
-                BRIGHT VANTA
+                JORJOY
               </div>
               <p className="text-xs text-slate-500 dark:text-white/60 leading-relaxed transition-colors">
                 เราคือบริษัทที่ผสานรวมเทคโนโลยีเข้ากับจินตนาการ
@@ -456,12 +466,12 @@ export default function GamingHub() {
               <h4 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-widest transition-colors">
                 Contact Us
               </h4>
-              <div className="flex flex-col gap-3 text-xs text-slate-500 dark:text-white/60 font-medium transition-colors">
+              <address className="flex flex-col gap-3 text-xs text-slate-500 dark:text-white/60 font-medium transition-colors not-italic">
                 <a
-                  href="mailto:hello@brightvanta.com"
+                  href="mailto:hello@jorjoy.com"
                   className="hover:text-[#48C6EF] transition"
                 >
-                  hello@brightvanta.com
+                  hello@jorjoy.com
                 </a>
                 <a
                   href="tel:+66000000000"
@@ -469,14 +479,14 @@ export default function GamingHub() {
                 >
                   +66 (0) 00-000-0000
                 </a>
-              </div>
+              </address>
             </div>
           </div>
 
           {/* Bottom Bar */}
           <div className="pt-8 border-t border-slate-200 dark:border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 transition-colors">
             <p className="text-[10px] text-slate-400 dark:text-white/40 uppercase tracking-widest transition-colors">
-              © 2026 BRIGHT VANTA. ALL RIGHTS RESERVED.
+              © 2026 JORJOY. ALL RIGHTS RESERVED.
             </p>
             <div className="flex gap-6 text-[10px] font-bold uppercase text-slate-400 dark:text-white/40 tracking-widest transition-colors">
               <Link href="/terms" className="hover:text-[#48C6EF] transition">

@@ -1,22 +1,26 @@
-"use client"
+import type { Metadata } from "next"
 import Image from "next/image"
-import Navbar from "../../components/Navbar"
+import Navbar from "@/app/components/Navbar"
 import ContactForm from "@/app/components/ContactForm"
-import { useRef, useState } from "react"
-import GameModal from "@/app/components/GameModal"
+import GameProducts from "@/app/components/GameProducts"
+import Link from "next/link"
 
-// นำเข้าตัวแปร games และโครงสร้าง GameItem จากไฟล์ ts (ปรับ Path ให้ตรงกับที่คุณเก็บไฟล์ไว้)
-import { games, type GameItem } from "@/app/data-collection/gameData"
+export const metadata: Metadata = {
+  title: "เกมอีเวนท์ (Game Event) | JORJOY",
+  description:
+    "สำรวจเกมสำหรับงานอีเวนท์ที่หลากหลายของเรา สร้างความสนุกและประสบการณ์ที่น่าจดจำให้กับผู้ร่วมงานด้วยเทคโนโลยี Interactive สุดล้ำ",
+  alternates: {
+    canonical: "/games",
+  },
+}
 
-export default function Game() {
-  const contactus = useRef<HTMLDivElement>(null)
-  const [selectedGame, setSelectedGame] = useState<GameItem | null>(null)
+export default function GamePage() {
   return (
-    <div className="bg-slate-50 dark:bg-black text-slate-900 dark:text-white min-h-screen font-sans selection:bg-[#2272FF] selection:text-white transition-colors duration-500">
+    <main className="bg-slate-50 dark:bg-black text-slate-900 dark:text-white min-h-screen font-sans selection:bg-[#2272FF] selection:text-white transition-colors duration-500">
       {/* --- Navbar --- */}
       <Navbar />
       {/* --- Hero Section --- */}
-      <section className="relative pt-40 pb-20 overflow-hidden">
+      <header className="relative pt-40 pb-20 overflow-hidden">
         {/* Background Video */}
         <div className="absolute inset-0 z-0">
           <video
@@ -42,23 +46,19 @@ export default function Game() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#48C6EF] via-[#2272FF] to-[#9B51E0]">
                   Elevate Your Experience
                 </span>
-                <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#48C6EF] via-[#2272FF] to-[#9B51E0]"></span>
               </h1>
               <span className="text-[#48C6EF] text-xs font-bold uppercase tracking-[0.3em]">
                 Play Innovate Elevate
               </span>
-              <button
-                onClick={() =>
-                  contactus.current?.scrollIntoView({ behavior: "smooth" })
-                }
+              <a
+                href="#contact-us"
                 className="px-10 py-4 bg-[#2272FF] hover:bg-[#48C6EF] rounded-lg font-bold text-xs uppercase tracking-widest flex items-center gap-3 transition-all group text-white"
               >
                 Start Exploring
                 <span className="group-hover:translate-x-1 transition-transform">
                   →
                 </span>
-              </button>
+              </a>
             </div>
 
             {/* Right Column: Overlapping Images */}
@@ -98,7 +98,7 @@ export default function Game() {
             </div>
           </div>
         </div>
-      </section>
+      </header>
       {/* --- About Company Section --- */}
       <section
         id="about-us"
@@ -119,7 +119,7 @@ export default function Game() {
         </div>
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-2xl p-8 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
+          <article className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-2xl p-8 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
             <div className="w-12 h-12 bg-gradient-to-br from-[#48C6EF] to-[#2272FF] rounded-lg mb-6 flex items-center justify-center text-2xl shadow-lg shadow-[#2272FF]/20">
               🚀
             </div>
@@ -130,8 +130,8 @@ export default function Game() {
               ใช้เทคโนโลยีที่เกี่ยวกับ Interactive
               เพื่อสร้างประสบการณ์ที่เหนือกว่าให้แก่ผลิตภัณฑ์และงาน Event ของคุณ
             </p>
-          </div>
-          <div className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-2xl p-8 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
+          </article>
+          <article className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-2xl p-8 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
             <div className="w-12 h-12 bg-gradient-to-br from-[#2272FF] to-[#9B51E0] rounded-lg mb-6 flex items-center justify-center text-2xl shadow-lg shadow-[#9B51E0]/20">
               🎮
             </div>
@@ -142,8 +142,8 @@ export default function Game() {
               ผลิตภัณฑ์ของเราออกแบบมาเพื่อสร้างให้ตรงกับความต้องการของลูกค้า
               และลูกค้าสามารถปรับแต่งได้เพื่อให้เหมาะสมกับความสนุกที่ต้องการได้อย่างไม่มีขีดจำกัด
             </p>
-          </div>
-          <div className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-2xl p-8 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
+          </article>
+          <article className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-2xl p-8 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
             <div className="w-12 h-12 bg-gradient-to-br from-[#9B51E0] to-[#48C6EF] rounded-lg mb-6 flex items-center justify-center text-2xl shadow-lg shadow-[#48C6EF]/20">
               ✨
             </div>
@@ -155,7 +155,7 @@ export default function Game() {
               แต่เราช่วยยกระดับภาพลักษณ์ให้งานของคุณดูพรีเมียม เป็นมืออาชีพ
               และโดดเด่นกว่าที่เคย
             </p>
-          </div>
+          </article>
         </div>
       </section>
       {/* --- Product Section --- */}
@@ -172,33 +172,13 @@ export default function Game() {
             ออกแบบมาเพื่อสร้างประสบการณ์สุดพิเศษให้กับงานของคุณ
           </p>
         </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
-          {games.map((item, index) => (
-            <div
-              key={index}
-              onClick={() => setSelectedGame(item)}
-              className="relative aspect-[9/16] cursor-pointer rounded-2xl md:rounded-3xl overflow-hidden border border-slate-200 dark:border-white/10 shadow-lg hover:shadow-2xl transition-all duration-500 bg-white dark:bg-white/5 hover:-translate-y-2 group"
-            >
-              <Image
-                src={item.src}
-                alt={item.alt}
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-500"
-                sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 16vw"
-              />
-            </div>
-          ))}
-        </div>
+        <GameProducts />
       </section>
 
-      {/* --- Game Modal --- */}
-      <GameModal game={selectedGame} onClose={() => setSelectedGame(null)} />
-
       {/* --- Contact Us Section --- */}
-      <div id="contact-us" ref={contactus}>
+      <section id="contact-us">
         <ContactForm />
-      </div>
+      </section>
       {/* --- Footer --- */}
       <footer className="border-t border-slate-200 dark:border-white/5 py-16 px-6 bg-white dark:bg-black transition-colors duration-500">
         <div className="max-w-7xl mx-auto">
@@ -217,47 +197,62 @@ export default function Game() {
 
             {/* Services */}
             <div className="space-y-4">
-              <h4 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-widest transition-colors">
+              <h4
+                id="footer-services-heading"
+                className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-widest transition-colors"
+              >
                 Our Services
               </h4>
-              <div className="flex flex-col gap-3 text-xs text-slate-500 dark:text-white/60 font-medium transition-colors">
-                <a
+              <nav
+                aria-labelledby="footer-services-heading"
+                className="flex flex-col gap-3 text-xs text-slate-500 dark:text-white/60 font-medium transition-colors"
+              >
+                <Link
                   href="#game-event"
                   className="hover:text-[#48C6EF] transition"
                 >
                   Game Event
-                </a>
-                <a
+                </Link>
+                <Link
                   href="#photo-booth"
                   className="hover:text-[#48C6EF] transition"
                 >
                   Photo Booth
-                </a>
-                <a
+                </Link>
+                <Link
                   href="#event-management"
                   className="hover:text-[#48C6EF] transition"
                 >
                   Event Management
-                </a>
-              </div>
+                </Link>
+              </nav>
             </div>
 
             {/* Company */}
             <div className="space-y-4">
-              <h4 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-widest transition-colors">
+              <h4
+                id="footer-company-heading"
+                className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-widest transition-colors"
+              >
                 Company
               </h4>
-              <div className="flex flex-col gap-3 text-xs text-slate-500 dark:text-white/60 font-medium transition-colors">
-                <a href="#" className="hover:text-[#48C6EF] transition">
+              <nav
+                aria-labelledby="footer-company-heading"
+                className="flex flex-col gap-3 text-xs text-slate-500 dark:text-white/60 font-medium transition-colors"
+              >
+                <Link href="/about" className="hover:text-[#48C6EF] transition">
                   About Us
-                </a>
-                <a href="#" className="hover:text-[#48C6EF] transition">
+                </Link>
+                <Link
+                  href="/portfolio"
+                  className="hover:text-[#48C6EF] transition"
+                >
                   Our Works / Portfolio
-                </a>
-                <a href="#news" className="hover:text-[#48C6EF] transition">
+                </Link>
+                <Link href="/#news" className="hover:text-[#48C6EF] transition">
                   News & Articles
-                </a>
-              </div>
+                </Link>
+              </nav>
             </div>
 
             {/* Contact */}
@@ -265,7 +260,7 @@ export default function Game() {
               <h4 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-widest transition-colors">
                 Contact Us
               </h4>
-              <div className="flex flex-col gap-3 text-xs text-slate-500 dark:text-white/60 font-medium transition-colors">
+              <address className="flex flex-col gap-3 text-xs text-slate-500 dark:text-white/60 font-medium transition-colors not-italic">
                 <a
                   href="mailto:hello@brightvanta.com"
                   className="hover:text-[#48C6EF] transition"
@@ -278,7 +273,7 @@ export default function Game() {
                 >
                   +66 (0) 00-000-0000
                 </a>
-              </div>
+              </address>
             </div>
           </div>
 
@@ -287,17 +282,20 @@ export default function Game() {
             <p className="text-[10px] text-slate-400 dark:text-white/40 uppercase tracking-widest transition-colors">
               © 2026 JORJOY. ALL RIGHTS RESERVED.
             </p>
-            <div className="flex gap-6 text-[10px] font-bold uppercase text-slate-400 dark:text-white/40 tracking-widest transition-colors">
-              <a href="#" className="hover:text-[#48C6EF] transition">
+            <nav
+              aria-label="Legal Policies"
+              className="flex gap-6 text-[10px] font-bold uppercase text-slate-400 dark:text-white/40 tracking-widest transition-colors"
+            >
+              <Link href="/terms" className="hover:text-[#48C6EF] transition">
                 Terms of Service
-              </a>
-              <a href="#" className="hover:text-[#48C6EF] transition">
+              </Link>
+              <Link href="/privacy" className="hover:text-[#48C6EF] transition">
                 Privacy Policy
-              </a>
-            </div>
+              </Link>
+            </nav>
           </div>
         </div>
       </footer>
-    </div>
+    </main>
   )
 }

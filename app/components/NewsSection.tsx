@@ -1,3 +1,4 @@
+"use client"
 import { useState } from "react"
 import Image from "next/image"
 
@@ -24,9 +25,15 @@ export default function NewsSection({ news }: NewsSectionProps) {
       : news.filter((item) => item.category === selectedCategory)
 
   return (
-    <div className="lg:col-span-2 space-y-12">
+    <section
+      aria-labelledby="news-heading"
+      className="lg:col-span-2 space-y-12"
+    >
       <div className="flex justify-between items-end">
-        <h2 className="text-2xl font-black uppercase tracking-tight text-slate-900 dark:text-white transition-colors">
+        <h2
+          id="news-heading"
+          className="text-2xl font-black uppercase tracking-tight text-slate-900 dark:text-white transition-colors"
+        >
           What New
         </h2>
         <div className="flex gap-4 text-xs font-bold text-slate-400 dark:text-white/40 transition-colors">
@@ -46,7 +53,7 @@ export default function NewsSection({ news }: NewsSectionProps) {
 
       <div className="space-y-8">
         {filteredNews.map((item, i) => (
-          <div key={i} className="flex gap-6 group cursor-pointer">
+          <article key={i} className="flex gap-6 group cursor-pointer">
             <div className="relative w-48 h-32 rounded-lg bg-slate-200 dark:bg-white/5 border border-slate-300 dark:border-white/10 shadow-sm dark:shadow-none shrink-0 overflow-hidden transition-colors">
               {item.img ? (
                 <Image
@@ -75,9 +82,9 @@ export default function NewsSection({ news }: NewsSectionProps) {
                 {item.date}
               </div>
             </div>
-          </div>
+          </article>
         ))}
       </div>
-    </div>
+    </section>
   )
 }
