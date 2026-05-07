@@ -1,40 +1,14 @@
-"use client"
-
 import Image from "next/image"
+import Link from "next/link"
 import NewsSection from "./components/NewsSection"
 import ContactForm from "./components/ContactForm"
 import Navbar from "./components/Navbar"
-import { useRef, useEffect } from "react"
 import { news } from "@/app/data-collection/gameData"
+import HighlightMarquee from "./components/HighlightMarquee"
 
 export default function GamingHub() {
-  const aboutUsRef = useRef<HTMLElement>(null)
-  const gameEventRef = useRef<HTMLDivElement>(null)
-  const contactus = useRef<HTMLDivElement>(null)
-  const marqueeRef = useRef<HTMLDivElement>(null)
-  const isHovered = useRef(false)
-
-  useEffect(() => {
-    let animationId: number
-    const marquee = marqueeRef.current
-    if (!marquee) return
-
-    const scroll = () => {
-      if (marquee && !isHovered.current) {
-        marquee.scrollLeft += 0.5
-        if (marquee.scrollLeft >= marquee.scrollWidth / 3) {
-          marquee.scrollLeft -= marquee.scrollWidth / 3
-        }
-      }
-      animationId = requestAnimationFrame(scroll)
-    }
-
-    animationId = requestAnimationFrame(scroll)
-    return () => cancelAnimationFrame(animationId)
-  }, [])
-
   return (
-    <div className="bg-slate-50 dark:bg-black text-slate-900 dark:text-white min-h-screen font-sans selection:bg-[#2272FF] selection:text-white transition-colors duration-500">
+    <main className="bg-slate-50 dark:bg-black text-slate-900 dark:text-white min-h-screen font-sans selection:bg-[#2272FF] selection:text-white transition-colors duration-500">
       {/* --- Navbar --- */}
       <Navbar />
       {/* --- Hero Section --- */}
@@ -66,24 +40,21 @@ export default function GamingHub() {
             <span className="text-[#48C6EF] text-xs font-bold uppercase tracking-[0.3em]">
               Play Innovate Elevate
             </span>
-            <button
-              onClick={() =>
-                contactus.current?.scrollIntoView({ behavior: "smooth" })
-              }
+            <Link
+              href="#contact-us"
               className="px-10 py-4 bg-[#2272FF] hover:bg-[#48C6EF] rounded-lg font-bold text-xs uppercase tracking-widest flex items-center gap-3 transition-all group text-white"
             >
               Start Project
               <span className="group-hover:translate-x-1 transition-transform">
                 →
               </span>
-            </button>
+            </Link>
           </div>
         </div>
       </section>
       {/* --- About Company Section --- */}
       <section
         id="about-us"
-        ref={aboutUsRef}
         className="scroll-mt-28 py-20 px-6 max-w-7xl mx-auto relative z-10"
       >
         <div className="text-center max-w-3xl mx-auto space-y-6">
@@ -159,7 +130,6 @@ export default function GamingHub() {
           {/* Card 1: Game Event */}
           <div
             id="game-event"
-            ref={gameEventRef}
             className="scroll-mt-28 bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-3xl p-8 md:p-12 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 flex flex-col lg:flex-row items-center gap-8 md:gap-12 w-full"
           >
             <div className="flex-1 text-center lg:text-left">
@@ -330,43 +300,7 @@ export default function GamingHub() {
           </p>
         </div>
 
-        <div
-          ref={marqueeRef}
-          onMouseEnter={() => (isHovered.current = true)}
-          onMouseLeave={() => (isHovered.current = false)}
-          className="w-full overflow-x-auto flex [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']"
-        >
-          <div className="flex w-max">
-            {/* ทำการ Duplicate ข้อมูล 3 ชุดเพื่อให้การ Loop ไร้รอยต่ออย่างสมบูรณ์ */}
-            {[1, 2, 3].map((set) => (
-              <div key={set} className="flex gap-4 md:gap-6 pr-4 md:pr-6">
-                {[
-                  "/bubblebaby.png",
-                  "/bubbleshooter.png",
-                  "/catchfruit.png",
-                  "/luckyspin.png",
-                  "/matching.png",
-                  "/question.png",
-                  "/photobooth1.jpeg",
-                ].map((src, index) => (
-                  <div
-                    key={index}
-                    className="relative w-[240px] h-[360px] md:w-[300px] md:h-[450px] shrink-0 rounded-2xl md:rounded-3xl overflow-hidden border border-slate-200 dark:border-white/10 group shadow-lg cursor-pointer bg-white dark:bg-transparent transition-colors"
-                  >
-                    <Image
-                      src={src}
-                      alt={`Highlight Product ${index + 1}`}
-                      fill
-                      sizes="(max-width: 768px) 240px, 300px"
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  </div>
-                ))}
-              </div>
-            ))}
-          </div>
-        </div>
+        <HighlightMarquee />
       </section>
       {/* --- News Section --- */}
       <div
@@ -450,7 +384,7 @@ export default function GamingHub() {
         </div>
       </div>
       {/* --- Contact Us Section --- */}
-      <div id="contact-us" ref={contactus}>
+      <div id="contact-us">
         <ContactForm />
       </div>
       {/* --- Footer --- */}
@@ -502,15 +436,18 @@ export default function GamingHub() {
                 Company
               </h4>
               <div className="flex flex-col gap-3 text-xs text-slate-500 dark:text-white/60 font-medium transition-colors">
-                <a href="#" className="hover:text-[#48C6EF] transition">
+                <Link href="/about" className="hover:text-[#48C6EF] transition">
                   About Us
-                </a>
-                <a href="#" className="hover:text-[#48C6EF] transition">
+                </Link>
+                <Link
+                  href="/portfolio"
+                  className="hover:text-[#48C6EF] transition"
+                >
                   Our Works / Portfolio
-                </a>
-                <a href="#news" className="hover:text-[#48C6EF] transition">
+                </Link>
+                <Link href="#news" className="hover:text-[#48C6EF] transition">
                   News & Articles
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -542,16 +479,16 @@ export default function GamingHub() {
               © 2026 BRIGHT VANTA. ALL RIGHTS RESERVED.
             </p>
             <div className="flex gap-6 text-[10px] font-bold uppercase text-slate-400 dark:text-white/40 tracking-widest transition-colors">
-              <a href="#" className="hover:text-[#48C6EF] transition">
+              <Link href="/terms" className="hover:text-[#48C6EF] transition">
                 Terms of Service
-              </a>
-              <a href="#" className="hover:text-[#48C6EF] transition">
+              </Link>
+              <Link href="/privacy" className="hover:text-[#48C6EF] transition">
                 Privacy Policy
-              </a>
+              </Link>
             </div>
           </div>
         </div>
       </footer>
-    </div>
+    </main>
   )
 }
