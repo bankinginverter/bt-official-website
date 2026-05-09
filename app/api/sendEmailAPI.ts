@@ -17,18 +17,24 @@ function createTransporter() {
 
 export async function sendEmail({
   to = process.env.SMTP_EMAIL,
+  cc,
+  bcc,
   subject,
   html,
 }: {
-  to?: string
+  to?: string | string[]
+  cc?: string | string[]
+  bcc?: string | string[]
   subject: string
   html: string
 }) {
   const transporter = createTransporter()
 
   return await transporter.sendMail({
-    from: "test@example.com",
+    from: process.env.SMTP_EMAIL,
     to,
+    cc,
+    bcc,
     subject,
     html,
   })
