@@ -32,7 +32,7 @@ export default function GamingHub() {
             playsInline
             className="w-full h-full object-cover opacity-30"
           >
-            <source src="/videobackground.mp4" type="video/mp4" />
+            <source src="/testvideo.mp4" type="video/mp4" />
           </video>
           {/* Overlay gradient to fade into the background at the bottom */}
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-50/50 dark:via-black/20 to-slate-50 dark:to-black transition-colors duration-500" />
