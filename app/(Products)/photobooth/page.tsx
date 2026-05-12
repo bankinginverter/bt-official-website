@@ -316,10 +316,6 @@ export default function Photobooth() {
           </div>
         </div>
       </section>
-      {/* --- Contact Us Section --- */}
-      <section id="contact-us">
-        <ContactForm />
-      </section>
       {/* --- Footer --- */}
       <footer className="border-t border-slate-200 dark:border-white/5 py-16 px-6 bg-white dark:bg-black transition-colors duration-500">
         <div className="max-w-7xl mx-auto">

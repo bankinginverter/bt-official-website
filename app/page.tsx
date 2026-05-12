@@ -393,10 +393,6 @@ export default function GamingHub() {
           </div>
         </aside>
       </section>
-      {/* --- Contact Us Section --- */}
-      <div id="contact-us">
-        <ContactForm />
-      </div>
       {/* --- Footer --- */}
       <footer className="border-t border-slate-200 dark:border-white/5 py-16 px-6 bg-white dark:bg-black transition-colors duration-500">
         <div className="max-w-7xl mx-auto">
