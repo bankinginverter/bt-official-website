@@ -235,14 +235,11 @@ export default function GamePage() {
                 aria-labelledby="footer-company-heading"
                 className="flex flex-col gap-3 text-xs text-slate-500 dark:text-white/60 font-medium transition-colors"
               >
-                <Link href="/about" className="hover:text-[#48C6EF] transition">
-                  About Us
-                </Link>
                 <Link
-                  href="/portfolio"
+                  href="/contact-us"
                   className="hover:text-[#48C6EF] transition"
                 >
-                  Our Works / Portfolio
+                  Contact Us
                 </Link>
                 <Link href="/#news" className="hover:text-[#48C6EF] transition">
                   News & Articles
@@ -257,10 +254,10 @@ export default function GamePage() {
               </h4>
               <address className="flex flex-col gap-3 text-xs text-slate-500 dark:text-white/60 font-medium transition-colors not-italic">
                 <a
-                  href="mailto:hello@brightvanta.com"
+                  href="mailto:jorjoy@gmail.com"
                   className="hover:text-[#48C6EF] transition"
                 >
-                  hello@brightvanta.com
+                  jorjoy@gmail.com
                 </a>
                 <a
                   href="tel:+66000000000"

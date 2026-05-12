@@ -61,10 +61,7 @@ export default function ContactUs() {
               </h4>
               <div className="flex flex-col gap-3 text-xs text-slate-500 dark:text-white/60 font-medium transition-colors">
                 <a href="#" className="hover:text-[#48C6EF] transition">
-                  About Us
-                </a>
-                <a href="#" className="hover:text-[#48C6EF] transition">
-                  Our Works / Portfolio
+                  Contact Us
                 </a>
                 <a href="#news" className="hover:text-[#48C6EF] transition">
                   News & Articles
@@ -79,10 +76,10 @@ export default function ContactUs() {
               </h4>
               <div className="flex flex-col gap-3 text-xs text-slate-500 dark:text-white/60 font-medium transition-colors">
                 <a
-                  href="mailto:hello@brightvanta.com"
+                  href="mailto:jorjoy@gmail.com"
                   className="hover:text-[#48C6EF] transition"
                 >
-                  hello@brightvanta.com
+                  jorjoy@gmail.com
                 </a>
                 <a
                   href="tel:+66000000000"

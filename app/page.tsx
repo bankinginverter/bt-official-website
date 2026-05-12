@@ -442,14 +442,11 @@ export default function GamingHub() {
                 Company
               </h4>
               <div className="flex flex-col gap-3 text-xs text-slate-500 dark:text-white/60 font-medium transition-colors">
-                <Link href="/about" className="hover:text-[#48C6EF] transition">
-                  About Us
-                </Link>
                 <Link
-                  href="/portfolio"
+                  href="/contact-us"
                   className="hover:text-[#48C6EF] transition"
                 >
-                  Our Works / Portfolio
+                  Contact Us
                 </Link>
                 <Link href="#news" className="hover:text-[#48C6EF] transition">
                   News & Articles
@@ -464,10 +461,10 @@ export default function GamingHub() {
               </h4>
               <address className="flex flex-col gap-3 text-xs text-slate-500 dark:text-white/60 font-medium transition-colors not-italic">
                 <a
-                  href="mailto:hello@jorjoy.com"
+                  href="mailto:jorjoy@gmail.com"
                   className="hover:text-[#48C6EF] transition"
                 >
-                  hello@jorjoy.com
+                  jorjoy@gmail.com.com
                 </a>
                 <a
                   href="tel:+66000000000"

@@ -3,6 +3,7 @@ import Image from "next/image"
 import Navbar from "../../components/Navbar"
 import ContactForm from "@/app/components/ContactForm"
 import { useRef } from "react"
+import Link from "next/link"
 export default function EventManagement() {
   const contactus = useRef<HTMLDivElement>(null)
 
@@ -289,15 +290,15 @@ export default function EventManagement() {
                 Company
               </h4>
               <div className="flex flex-col gap-3 text-xs text-slate-500 dark:text-white/60 font-medium transition-colors">
-                <a href="#" className="hover:text-[#48C6EF] transition">
-                  About Us
-                </a>
-                <a href="#" className="hover:text-[#48C6EF] transition">
-                  Our Works / Portfolio
-                </a>
-                <a href="#news" className="hover:text-[#48C6EF] transition">
+                <Link
+                  href="/contact-us"
+                  className="hover:text-[#48C6EF] transition"
+                >
+                  Contact Us
+                </Link>
+                <Link href="#news" className="hover:text-[#48C6EF] transition">
                   News & Articles
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -308,10 +309,10 @@ export default function EventManagement() {
               </h4>
               <div className="flex flex-col gap-3 text-xs text-slate-500 dark:text-white/60 font-medium transition-colors">
                 <a
-                  href="mailto:hello@brightvanta.com"
+                  href="mailto:jorjoy@gmail.com"
                   className="hover:text-[#48C6EF] transition"
                 >
-                  hello@brightvanta.com
+                  jorjoy@gmail.com
                 </a>
                 <a
                   href="tel:+66000000000"
