@@ -39,26 +39,31 @@ export default function GamingHub() {
         </div>
 
         <div className="relative z-10 px-6 max-w-7xl mx-auto">
-          <div className="flex flex-col items-center justify-center text-center max-w-4xl mx-auto space-y-8 z-10 py-12 md:py-24">
-            <h1 className="text-5xl md:text-7xl font-black leading-tight tracking-tight">
-              <span>Create Innovation</span>
-              <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#48C6EF] via-[#2272FF] to-[#9B51E0]">
-                Elevate Your Experience
+          <div className="flex flex-col items-center justify-center text-center max-w-4xl mx-auto space-y-8 md:space-y-10 z-10 py-12 md:py-24">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-normal md:leading-[1.4] tracking-tight py-2">
+              <span className="block mb-2 md:mb-4 pt-2">
+                เปลี่ยนทุกงานอีเวนท์ ให้สนุก
+              </span>
+              <span className="inline-block py-2 text-transparent bg-clip-text bg-gradient-to-r from-[#48C6EF] via-[#2272FF] to-[#9B51E0]">
+                ล้ำสมัย และน่าจดจำกว่าที่เคย
               </span>
             </h1>
-            <span className="text-[#48C6EF] text-xs font-bold uppercase tracking-[0.3em]">
-              Play Innovate Elevate
-            </span>
-            <Link
-              href="#contact-us"
-              className="px-10 py-4 bg-[#2272FF] hover:bg-[#48C6EF] rounded-lg font-bold text-xs uppercase tracking-widest flex items-center gap-3 transition-all group text-white"
-            >
-              Start Project
-              <span className="group-hover:translate-x-1 transition-transform">
-                →
-              </span>
-            </Link>
+            <p className="text-[#2272FF] dark:text-[#48C6EF] text-sm md:text-base font-bold tracking-wide max-w-2xl leading-relaxed">
+              บริการเช่าตู้เกม Interactive และ Photo Booth{" "}
+              <br className="hidden md:block" />
+              ยกระดับความสนุกสำหรับงานแต่ง งานองค์กร และปาร์ตี้ทุกรูปแบบ
+            </p>
+            <div className="pt-4">
+              <Link
+                href="#contact-us"
+                className="px-10 py-4 bg-[#2272FF] hover:bg-[#48C6EF] rounded-lg font-bold text-sm uppercase tracking-widest flex items-center gap-3 transition-all group text-white shadow-xl shadow-[#2272FF]/20"
+              >
+                Start Project
+                <span className="group-hover:translate-x-1 transition-transform">
+                  →
+                </span>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
