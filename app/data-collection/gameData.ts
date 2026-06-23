@@ -5,7 +5,7 @@ export type GameItem = {
   description: string
 }
 
-interface NewsItem {
+interface AllItem {
   category: string
   title: string
   detail: string
@@ -17,6 +17,13 @@ interface PhotoBoothDataItem {
   src: string
   title: string
   desc: string
+}
+
+interface NewsItem {
+  src: string
+  alt: string
+  title: string
+  description: string
 }
 
 export const games: GameItem[] = [
@@ -64,7 +71,7 @@ export const games: GameItem[] = [
   },
 ]
 
-export const news: NewsItem[] = [
+export const all: AllItem[] = [
   {
     category: "Game Event",
     title: "Racing Run เกมวิ่งแข่งสำหรับไวมันส์รองรับผู้เล่นสูงสุดได้ถึง 4 คน",
@@ -97,5 +104,24 @@ export const PhotoBoothData: PhotoBoothDataItem[] = [
     src: "/photobooth3.jpeg",
     title: "Interactive Props & Effects",
     desc: "เพิ่มสีสันให้กับการถ่ายภาพด้วยพร็อพสนุกๆ และเอฟเฟกต์สุดล้ำที่จะทำให้ทุกรูปถ่ายเต็มไปด้วยรอยยิ้มและประสบการณ์ที่น่าประทับใจ",
+  },
+]
+
+export const news: NewsItem[] = [
+  {
+    src: "/news1.png",
+    alt: "News 1",
+    title:
+      "JorJoy เปิดตัวเกมใหม่สุดมันส์ 'Racing Run' พร้อมให้ผู้เล่นได้สัมผัสความสนุกแล้ววันนี้!",
+    description:
+      "JorJoy ภูมิใจนำเสนอเกมใหม่ล่าสุด 'Racing Run' เกมวิ่งแข่งสุดมันส์ที่รองรับผู้เล่นสูงสุดถึง 4 คน พร้อมให้คุณได้สัมผัสประสบการณ์การเล่นที่ไม่เหมือนใคร",
+  },
+  {
+    src: "/news2.png",
+    alt: "News 2",
+    title:
+      "อัปเดตฟีเจอร์ใหม่ใน JorJoy Event Management System เพิ่มความสะดวกในการจัดงานอีเวนท์",
+    description:
+      "JorJoy ได้ทำการอัปเดตฟีเจอร์ใหม่ในระบบ Event Management System เพื่อให้ผู้ใช้งานสามารถจัดการงานอีเวนท์ได้ง่ายขึ้นและมีประสิทธิภาพมากยิ่งขึ้น พร้อมรองรับการจัดงานในรูปแบบต่างๆ",
   },
 ]

@@ -2,7 +2,7 @@
 import { useState } from "react"
 import Image from "next/image"
 
-type NewsItem = {
+type AllItem = {
   category: string
   title: string
   detail: string
@@ -11,18 +11,24 @@ type NewsItem = {
 }
 
 type NewsSectionProps = {
-  news: NewsItem[]
+  dataItem: AllItem[]
 }
 
-export default function NewsSection({ news }: NewsSectionProps) {
+export default function NewsSection({ dataItem }: NewsSectionProps) {
   const [selectedCategory, setSelectedCategory] = useState<string>("All")
 
-  const categories = ["All", "Game Event", "Photo Booth", "Event Management"]
+  const categories = [
+    "All",
+    "Game Event",
+    "Photo Booth",
+    "Event Management",
+    "News",
+  ]
 
   const filteredNews =
     selectedCategory === "All"
-      ? news
-      : news.filter((item) => item.category === selectedCategory)
+      ? dataItem
+      : dataItem.filter((item) => item.category === selectedCategory)
 
   return (
     <section

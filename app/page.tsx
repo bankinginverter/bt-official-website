@@ -4,7 +4,7 @@ import Link from "next/link"
 import NewsSection from "./components/NewsSection"
 import ContactForm from "./components/ContactForm"
 import Navbar from "./components/Navbar"
-import { news } from "@/app/data-collection/gameData"
+import { all } from "@/app/data-collection/gameData"
 import HighlightMarquee from "./components/HighlightMarquee"
 
 export const metadata: Metadata = {
@@ -359,7 +359,7 @@ export default function GamingHub() {
         id="news"
         className="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-3 gap-16"
       >
-        <NewsSection news={news} />
+        <NewsSection dataItem={all} />
 
         {/* --- Newsletter & Sidebar --- */}
         <aside className="space-y-12">
