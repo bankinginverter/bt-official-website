@@ -128,56 +128,55 @@ export default function GamePage() {
         id="about-us"
         className="scroll-mt-28 py-20 px-6 max-w-7xl mx-auto relative z-10"
       >
-        <div className="text-center max-w-3xl mx-auto space-y-6">
-          <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight">
-            ทำไม ต้องเลือก <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#48C6EF] via-[#2272FF] to-[#9B51E0]">
-              JORJOY
+        <div className="text-center max-w-4xl mx-auto space-y-8">
+          <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight leading-normal md:leading-[1.4]">
+            ทำไมต้องเช่าตู้เกมและจัด <br className="hidden md:block" />
+            <span className="inline-block py-2 text-transparent bg-clip-text bg-gradient-to-r from-[#48C6EF] via-[#2272FF] to-[#9B51E0]">
+              Game Event กับ JORJOY?
             </span>
           </h2>
-          <p className="text-lg md:text-xl text-slate-600 dark:text-white/90 leading-relaxed font-medium transition-colors">
-            เราคือบริษัทที่ผสานรวมเทคโนโลยีเข้ากับจินตนาการ
-            เพื่อสรรค์สร้างความสนุกในรูปแบบใหม่
-            พร้อมเปลี่ยนทุกประสบการณ์ให้ล้ำสมัยและทำให้งานของคุณให้มีระดับน่าจดจำมากยิ่งขึ้น
-          </p>
+          <div className="space-y-4">
+            <p className="text-lg md:text-xl text-slate-600 dark:text-white/90 leading-relaxed font-medium transition-colors">
+              การเลือก <span className="font-bold">เช่าตู้เกมงานแต่ง</span> ไม่เพียงแต่ช่วยละลายพฤติกรรม (Ice Breaking) ให้แขกในงานได้มีกิจกรรมทำร่วมกัน แต่ยังช่วยสร้างภาพจำที่แตกต่างและยกระดับภาพลักษณ์การจัดงานอีเวนท์ของคุณด้วย
+            </p>
+            <p className="text-base md:text-lg text-slate-500 dark:text-white/80 leading-relaxed transition-colors">
+              ที่ JORJOY เราคือผู้เชี่ยวชาญด้าน Game Event & Photo Booth ตัวจริงที่พร้อมเนรมิตความสนุกให้งานอีเวนท์ทุกรูปแบบ:
+            </p>
+          </div>
         </div>
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
           <article className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-2xl p-8 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
             <div className="w-12 h-12 bg-gradient-to-br from-[#48C6EF] to-[#2272FF] rounded-lg mb-6 flex items-center justify-center text-2xl shadow-lg shadow-[#2272FF]/20">
-              🚀
-            </div>
-            <h3 className="text-lg font-bold mb-3 uppercase tracking-tight">
-              Technology-Driven Fun
-            </h3>
-            <p className="text-xs md:text-sm text-slate-500 dark:text-white/60 leading-relaxed transition-colors">
-              เราใช้เทคโนโลยีที่เพื่อสร้างสรรค์ความสนุกที่ไม่เหมือนใคร
-              และสร้างประสบการณ์ที่เหนือกว่าให้แก่งาน Event ของคุณ
-            </p>
-          </article>
-          <article className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-2xl p-8 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
-            <div className="w-12 h-12 bg-gradient-to-br from-[#2272FF] to-[#9B51E0] rounded-lg mb-6 flex items-center justify-center text-2xl shadow-lg shadow-[#9B51E0]/20">
-              🎮
+              🎨
             </div>
             <h3 className="text-lg font-bold mb-3 uppercase tracking-tight">
               Customization
             </h3>
             <p className="text-xs md:text-sm text-slate-500 dark:text-white/60 leading-relaxed transition-colors">
-              ผลิตภัณฑ์ของเราออกแบบมาเพื่อสร้างให้ตรงกับความต้องการของลูกค้า
-              และลูกค้าสามารถปรับแต่งได้เพื่อให้เหมาะสมกับความสนุกที่ต้องการได้อย่างไม่มีขีดจำกัด
+              ปรับแต่งกราฟิก โลโก้ และโทนสีบนหน้าจอตู้เกมให้เข้ากับธีมงานอีเวนท์ของคุณได้ 100%
             </p>
           </article>
           <article className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-2xl p-8 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
-            <div className="w-12 h-12 bg-gradient-to-br from-[#9B51E0] to-[#48C6EF] rounded-lg mb-6 flex items-center justify-center text-2xl shadow-lg shadow-[#48C6EF]/20">
+            <div className="w-12 h-12 bg-gradient-to-br from-[#2272FF] to-[#9B51E0] rounded-lg mb-6 flex items-center justify-center text-2xl shadow-lg shadow-[#9B51E0]/20">
               ✨
             </div>
             <h3 className="text-lg font-bold mb-3 uppercase tracking-tight">
               Premium Experience
             </h3>
             <p className="text-xs md:text-sm text-slate-500 dark:text-white/60 leading-relaxed transition-colors">
-              เราไม่ได้เพียงแค่สร้างผลิตภัณฑ์
-              แต่เราช่วยยกระดับภาพลักษณ์ให้งานของคุณดูพรีเมียม ทรงคุณค่า
-              และโดดเด่นกว่าที่เคย
+              ตู้เกมดีไซน์โมเดิร์น มินิมอล วางมุมไหนของงานอีเวนท์ก็ดูสวยงาม เป็นระเบียบ ไม่รกตา
+            </p>
+          </article>
+          <article className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-2xl p-8 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
+            <div className="w-12 h-12 bg-gradient-to-br from-[#9B51E0] to-[#48C6EF] rounded-lg mb-6 flex items-center justify-center text-2xl shadow-lg shadow-[#48C6EF]/20">
+              👨‍💻
+            </div>
+            <h3 className="text-lg font-bold mb-3 uppercase tracking-tight">
+              Professional Staff
+            </h3>
+            <p className="text-xs md:text-sm text-slate-500 dark:text-white/60 leading-relaxed transition-colors">
+              มีทีมงานมืออาชีพสแตนบายดูแลระบบและอำนวยความสะดวกให้แขกในงานอีเวนท์ตลอดทั้งงาน
             </p>
           </article>
         </div>
