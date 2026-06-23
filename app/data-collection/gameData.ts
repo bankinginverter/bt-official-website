@@ -11,19 +11,13 @@ interface AllItem {
   detail: string
   date: string
   img: string
+  link?: string
 }
 
 interface PhotoBoothDataItem {
   src: string
   title: string
   desc: string
-}
-
-interface NewsItem {
-  src: string
-  alt: string
-  title: string
-  description: string
 }
 
 export const games: GameItem[] = [
@@ -78,6 +72,7 @@ export const all: AllItem[] = [
     detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     date: "KOTAKU • 2 HOURS AGO",
     img: "/Racingrun.png",
+    link: "/games",
   },
   {
     category: "Event Management",
@@ -86,6 +81,31 @@ export const all: AllItem[] = [
     detail: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     date: "KOTAKU • 2 HOURS AGO",
     img: "/event1.png",
+    link: "/eventmanagement",
+  },
+  {
+    category: "News",
+    title: "7 วิธีดึงคนเข้าบูธด้วย Game Event เปลี่ยนงานออกบูธให้คนล้น!",
+    detail: "ผู้ประกอบการหรือนักการตลาดหลายคนน่าจะเคยเจอฝันร้ายเวลาไป งานออกบูธ ตามงานแฟร์ หรือ Exhibition ใหญ่ๆ ใช่ไหมครับ? ทั้งที่อุตส่าห์เสียเงินค่าเช่าที่แพงแสนแพง ดีไซน์บูธซะสวยงาม แต่ผลลัพธ์คือคนเดินผ่านไปผ่านมา แวะมอง แป๊บๆ แล้วก็เดินจากไป",
+    date: "NEWS • 1 DAY AGO",
+    img: "/news1.png",
+    link: "/news?category=game&article=7-ways",
+  },
+  {
+    category: "News",
+    title: "5 ไอเดียเลือกตู้เกม ให้เข้ากับธีมงานแต่งงาน",
+    detail: "หมดยุคงานแต่งงานที่แขกมาถึงแล้วต้องนั่งรออุดอู้เคี้ยวถั่วคั่วจนกว่าพิธีการจะเริ่มแล้วครับ! เทรนด์การจัดงานอีเวนท์แต่งงานยุคนี้ ให้ความสำคัญกับ Experience กิจกรรมสุดชิคในงานอีเวนท์ที่แขกประทับใจ",
+    date: "NEWS • 3 DAYS AGO",
+    img: "/news2.png",
+    link: "/news?category=game&article=5-ideas",
+  },
+  {
+    category: "Photo Booth",
+    title: "ไอเดียจัดตู้ถ่ายรูป Photo Booth สุดชิคในงานแต่งงาน",
+    detail: "รวมไอเดียตู้ถ่ายรูป Photo Booth ที่สามารถปรับแต่งกรอบรูป พร็อพ และพื้นหลังให้เข้ากับธีมงานได้อย่างอิสระ สร้างความประทับใจให้แขกในงาน",
+    date: "TIPS • 1 WEEK AGO",
+    img: "/photobooth1.jpeg",
+    link: "/photobooth",
   },
 ]
 
@@ -104,24 +124,5 @@ export const PhotoBoothData: PhotoBoothDataItem[] = [
     src: "/photobooth3.jpeg",
     title: "Interactive Props & Effects",
     desc: "เพิ่มสีสันให้กับการถ่ายภาพด้วยพร็อพสนุกๆ และเอฟเฟกต์สุดล้ำที่จะทำให้ทุกรูปถ่ายเต็มไปด้วยรอยยิ้มและประสบการณ์ที่น่าประทับใจ",
-  },
-]
-
-export const news: NewsItem[] = [
-  {
-    src: "/news1.png",
-    alt: "News 1",
-    title:
-      "JorJoy เปิดตัวเกมใหม่สุดมันส์ 'Racing Run' พร้อมให้ผู้เล่นได้สัมผัสความสนุกแล้ววันนี้!",
-    description:
-      "JorJoy ภูมิใจนำเสนอเกมใหม่ล่าสุด 'Racing Run' เกมวิ่งแข่งสุดมันส์ที่รองรับผู้เล่นสูงสุดถึง 4 คน พร้อมให้คุณได้สัมผัสประสบการณ์การเล่นที่ไม่เหมือนใคร",
-  },
-  {
-    src: "/news2.png",
-    alt: "News 2",
-    title:
-      "อัปเดตฟีเจอร์ใหม่ใน JorJoy Event Management System เพิ่มความสะดวกในการจัดงานอีเวนท์",
-    description:
-      "JorJoy ได้ทำการอัปเดตฟีเจอร์ใหม่ในระบบ Event Management System เพื่อให้ผู้ใช้งานสามารถจัดการงานอีเวนท์ได้ง่ายขึ้นและมีประสิทธิภาพมากยิ่งขึ้น พร้อมรองรับการจัดงานในรูปแบบต่างๆ",
   },
 ]

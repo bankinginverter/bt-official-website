@@ -74,7 +74,7 @@ export default function GamingHub() {
       >
         <div className="text-center max-w-3xl mx-auto space-y-6">
           <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight">
-            Why Choose <br />
+            ทำไม ต้องเลือก <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#48C6EF] via-[#2272FF] to-[#9B51E0]">
               JORJOY
             </span>
@@ -87,19 +87,19 @@ export default function GamingHub() {
         </div>
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-2xl p-8 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
+          <article className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-2xl p-8 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
             <div className="w-12 h-12 bg-gradient-to-br from-[#48C6EF] to-[#2272FF] rounded-lg mb-6 flex items-center justify-center text-2xl shadow-lg shadow-[#2272FF]/20">
               🚀
             </div>
             <h3 className="text-lg font-bold mb-3 uppercase tracking-tight">
-              Cutting-Edge Tech
+              Technology-Driven Fun
             </h3>
             <p className="text-xs md:text-sm text-slate-500 dark:text-white/60 leading-relaxed transition-colors">
-              ใช้เทคโนโลยีที่เกี่ยวกับ Interactive
-              เพื่อสร้างประสบการณ์ที่เหนือกว่าให้แก่ผลิตภัณฑ์และงาน Event ของคุณ
+              เราใช้เทคโนโลยีที่เพื่อสร้างสรรค์ความสนุกที่ไม่เหมือนใคร
+              และสร้างประสบการณ์ที่เหนือกว่าให้แก่งาน Event ของคุณ
             </p>
-          </div>
-          <div className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-2xl p-8 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
+          </article>
+          <article className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-2xl p-8 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
             <div className="w-12 h-12 bg-gradient-to-br from-[#2272FF] to-[#9B51E0] rounded-lg mb-6 flex items-center justify-center text-2xl shadow-lg shadow-[#9B51E0]/20">
               🎮
             </div>
@@ -110,8 +110,8 @@ export default function GamingHub() {
               ผลิตภัณฑ์ของเราออกแบบมาเพื่อสร้างให้ตรงกับความต้องการของลูกค้า
               และลูกค้าสามารถปรับแต่งได้เพื่อให้เหมาะสมกับความสนุกที่ต้องการได้อย่างไม่มีขีดจำกัด
             </p>
-          </div>
-          <div className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-2xl p-8 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
+          </article>
+          <article className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-2xl p-8 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
             <div className="w-12 h-12 bg-gradient-to-br from-[#9B51E0] to-[#48C6EF] rounded-lg mb-6 flex items-center justify-center text-2xl shadow-lg shadow-[#48C6EF]/20">
               ✨
             </div>
@@ -120,10 +120,10 @@ export default function GamingHub() {
             </h3>
             <p className="text-xs md:text-sm text-slate-500 dark:text-white/60 leading-relaxed transition-colors">
               เราไม่ได้เพียงแค่สร้างผลิตภัณฑ์
-              แต่เราช่วยยกระดับภาพลักษณ์ให้งานของคุณดูพรีเมียม เป็นมืออาชีพ
+              แต่เราช่วยยกระดับภาพลักษณ์ให้งานของคุณดูพรีเมียม ทรงคุณค่า
               และโดดเด่นกว่าที่เคย
             </p>
-          </div>
+          </article>
         </div>
       </section>
       {/* --- Products & Services Section --- */}
@@ -317,12 +317,12 @@ export default function GamingHub() {
 
         <HighlightMarquee />
       </section>
-      
+
       {/* --- Post-Highlight CTA Section --- */}
       <section className="py-20 relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-gray-50 dark:from-[#0a1930] dark:via-[#050505] dark:to-black border-t border-slate-200 dark:border-white/10 transition-colors duration-500">
         <div className="absolute inset-0 bg-[url('/noise.png')] opacity-5 dark:opacity-10 mix-blend-overlay" />
         <div className="absolute top-0 right-0 w-96 h-96 bg-[#2272FF] rounded-full blur-[150px] opacity-10 dark:opacity-20 pointer-events-none" />
-        
+
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center space-y-8">
           <div className="inline-block px-4 py-2 bg-[#2272FF]/10 dark:bg-[#2272FF]/20 text-[#2272FF] dark:text-[#48C6EF] border border-[#2272FF]/20 dark:border-[#2272FF]/30 rounded-full text-xs font-bold tracking-widest uppercase shadow-sm dark:shadow-none">
             Summary
@@ -333,21 +333,38 @@ export default function GamingHub() {
               และปังกว่าเดิมด้วย JORJOY
             </span>
           </h2>
-          
+
           <div className="text-sm md:text-lg text-slate-600 dark:text-white/70 leading-relaxed max-w-4xl mx-auto space-y-4">
             <p>
-              การไป งานออกบูธ ยุคนี้จะหวังพึ่งแค่พริตตี้หรือการแจกใบปลิวอย่างเดียวไม่ได้แล้วครับ แบรนด์ต้องสร้าง <strong>&quot;Interactive Experience&quot;</strong> ที่สนุกสนาน เพื่อให้เข้าไปนั่งในใจของผู้บริโภค
+              การไป งานออกบูธ
+              ยุคนี้จะหวังพึ่งแค่พริตตี้หรือการแจกใบปลิวอย่างเดียวไม่ได้แล้วครับ
+              แบรนด์ต้องสร้าง{" "}
+              <strong>&quot;Interactive Experience&quot;</strong> ที่สนุกสนาน
+              เพื่อให้เข้าไปนั่งในใจของผู้บริโภค
             </p>
             <p>
-              หากคุณกำลังวางแผนจัด งานอีเวนท์ (Event) หรือเตรียมตัวไปออกบูธแสดงสินค้า และต้องการตู้เกมเจ๋งๆ ที่เปลี่ยนบูธเงียบเหงาให้กลายเป็นจุดแลนด์มาร์คของงาน ทักมาปรึกษาทีมงาน <strong>JORJOY</strong> ได้เลย! เรามีบริการเช่าตู้เกม Game Event และ Photo Booth ครบวงจร ดีไซน์พรีเมียม ปรับแต่งหน้าจอได้ตามใจสั่ง พร้อมทีมงานสแตนบายดูแลตลอดทั้งงานอีเวนท์ <span className="font-bold text-[#2272FF] dark:text-[#48C6EF]">ราคาเริ่มต้นคุ้มค่าเพียง 9,000 บาทเท่านั้น</span>
+              หากคุณกำลังวางแผนจัด งานอีเวนท์ (Event)
+              หรือเตรียมตัวไปออกบูธแสดงสินค้า และต้องการตู้เกมเจ๋งๆ
+              ที่เปลี่ยนบูธเงียบเหงาให้กลายเป็นจุดแลนด์มาร์คของงาน
+              ทักมาปรึกษาทีมงาน <strong>JORJOY</strong> ได้เลย!
+              เรามีบริการเช่าตู้เกม Game Event และ Photo Booth ครบวงจร
+              ดีไซน์พรีเมียม ปรับแต่งหน้าจอได้ตามใจสั่ง
+              พร้อมทีมงานสแตนบายดูแลตลอดทั้งงานอีเวนท์{" "}
+              <span className="font-bold text-[#2272FF] dark:text-[#48C6EF]">
+                ราคาเริ่มต้นคุ้มค่าเพียง 9,000 บาทเท่านั้น
+              </span>
             </p>
             <p className="font-bold text-slate-900 dark:text-white text-base md:text-xl pt-4">
-              อยากให้บูธถัดไปของคุณคนแน่นจนล้น? ติดต่อปรึกษาและเช็คคิวงานกับ JORJOY ได้ฟรี! ผ่านช่องทางด้านล่างนี้ได้เลยครับ!
+              อยากให้บูธถัดไปของคุณคนแน่นจนล้น? ติดต่อปรึกษาและเช็คคิวงานกับ
+              JORJOY ได้ฟรี! ผ่านช่องทางด้านล่างนี้ได้เลยครับ!
             </p>
           </div>
 
           <div className="pt-6">
-            <a href="#contact-us" className="inline-block px-10 py-4 bg-[#2272FF] hover:bg-blue-600 dark:hover:bg-[#48C6EF] rounded-lg font-bold text-sm uppercase tracking-widest transition-all text-white shadow-xl shadow-[#2272FF]/20 hover:-translate-y-1">
+            <a
+              href="#contact-us"
+              className="inline-block px-10 py-4 bg-[#2272FF] hover:bg-blue-600 dark:hover:bg-[#48C6EF] rounded-lg font-bold text-sm uppercase tracking-widest transition-all text-white shadow-xl shadow-[#2272FF]/20 hover:-translate-y-1"
+            >
               ปรึกษาฟรี คลิกเลย
             </a>
           </div>
