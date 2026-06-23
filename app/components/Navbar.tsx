@@ -41,6 +41,9 @@ export default function Navbar({ aboutUsRef }: NavbarProps) {
             <Link href="/" className="hover:text-[#48C6EF] transition py-2">
               Home
             </Link>
+            <Link href="/news" className="hover:text-[#48C6EF] transition py-2">
+              News
+            </Link>
             <div className="relative group">
               <div
                 tabIndex={0}
@@ -161,6 +164,14 @@ export default function Navbar({ aboutUsRef }: NavbarProps) {
             className="hover:text-[#48C6EF] transition"
           >
             Home
+          </Link>
+
+          <Link
+            href="/news"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="hover:text-[#48C6EF] transition"
+          >
+            News
           </Link>
 
           <div className="flex flex-col gap-4">
