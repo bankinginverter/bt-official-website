@@ -50,15 +50,16 @@ export default function GamePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-12 md:py-24">
             {/* Left Column: Text */}
             <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 z-10">
-              <h1 className="text-4xl md:text-6xl lg:text-[4.5rem] font-black leading-tight tracking-tight text-white py-2">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.4] md:leading-[1.5] tracking-tight text-white py-2">
                 <span className="block mb-2">เปลี่ยนทุกงานอีเวนท์</span>
                 <span className="block mb-2">
                   ให้สนุก <span className="text-[#48C6EF]">ด้วยตู้เกม</span>
                 </span>
-                <span className="block mb-2 inline-block py-2 text-transparent bg-clip-text bg-gradient-to-r from-[#48C6EF] via-[#2272FF] to-[#9B51E0]">
+                <span className="inline-block mb-2 py-1 text-transparent bg-clip-text bg-gradient-to-r from-[#48C6EF] via-[#2272FF] to-[#9B51E0]">
                   Interactive
                 </span>
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#48C6EF] via-[#2272FF] to-[#9B51E0]">
+                <br />
+                <span className="inline-block py-1 text-transparent bg-clip-text bg-gradient-to-r from-[#48C6EF] via-[#2272FF] to-[#9B51E0] leading-normal">
                   สุดล้ำ
                 </span>
               </h1>
@@ -137,10 +138,14 @@ export default function GamePage() {
           </h2>
           <div className="space-y-4">
             <p className="text-lg md:text-xl text-slate-600 dark:text-white/90 leading-relaxed font-medium transition-colors">
-              การเลือก <span className="font-bold">เช่าตู้เกมงานแต่ง</span> ไม่เพียงแต่ช่วยละลายพฤติกรรม (Ice Breaking) ให้แขกในงานได้มีกิจกรรมทำร่วมกัน แต่ยังช่วยสร้างภาพจำที่แตกต่างและยกระดับภาพลักษณ์การจัดงานอีเวนท์ของคุณด้วย
+              การเลือก <span className="font-bold">เช่าตู้เกมงานแต่ง</span>{" "}
+              ไม่เพียงแต่ช่วยละลายพฤติกรรม (Ice Breaking)
+              ให้แขกในงานได้มีกิจกรรมทำร่วมกัน
+              แต่ยังช่วยสร้างภาพจำที่แตกต่างและยกระดับภาพลักษณ์การจัดงานอีเวนท์ของคุณด้วย
             </p>
             <p className="text-base md:text-lg text-slate-500 dark:text-white/80 leading-relaxed transition-colors">
-              ที่ JORJOY เราคือผู้เชี่ยวชาญด้าน Game Event & Photo Booth ตัวจริงที่พร้อมเนรมิตความสนุกให้งานอีเวนท์ทุกรูปแบบ:
+              ที่ JORJOY เราคือผู้เชี่ยวชาญด้าน Game Event & Photo Booth
+              ตัวจริงที่พร้อมเนรมิตความสนุกให้งานอีเวนท์ทุกรูปแบบ:
             </p>
           </div>
         </div>
@@ -154,7 +159,8 @@ export default function GamePage() {
               Customization
             </h3>
             <p className="text-xs md:text-sm text-slate-500 dark:text-white/60 leading-relaxed transition-colors">
-              ปรับแต่งกราฟิก โลโก้ และโทนสีบนหน้าจอตู้เกมให้เข้ากับธีมงานอีเวนท์ของคุณได้ 100%
+              ปรับแต่งกราฟิก โลโก้
+              และโทนสีบนหน้าจอตู้เกมให้เข้ากับธีมงานอีเวนท์ของคุณได้ 100%
             </p>
           </article>
           <article className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-2xl p-8 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
@@ -165,7 +171,8 @@ export default function GamePage() {
               Premium Experience
             </h3>
             <p className="text-xs md:text-sm text-slate-500 dark:text-white/60 leading-relaxed transition-colors">
-              ตู้เกมดีไซน์โมเดิร์น มินิมอล วางมุมไหนของงานอีเวนท์ก็ดูสวยงาม เป็นระเบียบ ไม่รกตา
+              ตู้เกมดีไซน์โมเดิร์น มินิมอล วางมุมไหนของงานอีเวนท์ก็ดูสวยงาม
+              เป็นระเบียบ ไม่รกตา
             </p>
           </article>
           <article className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-2xl p-8 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">

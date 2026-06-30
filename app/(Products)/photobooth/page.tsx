@@ -40,18 +40,21 @@ export default function Photobooth() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-12 md:py-24">
             {/* Left Column: Text */}
             <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-8 z-10">
-              <h1 className="text-5xl md:text-7xl font-black leading-tight tracking-tight">
-                <span>Create Innovation</span>
-                <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#48C6EF] via-[#2272FF] to-[#9B51E0]">
-                  Elevate Your Experience
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.4] md:leading-[1.5] tracking-tight text-white py-2">
+                <span className="block mb-2">ทุกภาพถ่าย</span>
+                <span className="block mb-2">คือความทรงจำ</span>
+                <span className="inline-block pt-2 pb-1 text-transparent bg-clip-text bg-gradient-to-r from-[#48C6EF] via-[#2272FF] to-[#9B51E0]">
+                  ให้ Photo Booth เก็บทุกโมเมนต์ของคุณ
                 </span>
                 <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#48C6EF] via-[#2272FF] to-[#9B51E0]"></span>
+                <span className="inline-block pt-1 pb-4 text-transparent bg-clip-text bg-gradient-to-r from-[#48C6EF] via-[#2272FF] to-[#9B51E0]">
+                  ในทุกงานอีเวนท์
+                </span>
               </h1>
-              <span className="text-[#48C6EF] text-xs font-bold uppercase tracking-[0.3em]">
-                Play Innovate Elevate
-              </span>
+              <p className="text-[#48C6EF] text-sm md:text-base max-w-md leading-relaxed font-bold">
+                มาร่วมสร้างประสบการณ์ที่เหนือกว่า ด้วย PHOTO BOOTH
+                ยกระดับความสนุก สำหรับงานอีเวนท์ของคุณ รองรับทั้งคุณผู้ร่วมงาน
+              </p>
               <Link
                 href="#contact-us"
                 className="px-10 py-4 bg-[#2272FF] hover:bg-[#48C6EF] rounded-lg font-bold text-xs uppercase tracking-widest flex items-center gap-3 transition-all group text-white"
@@ -65,6 +68,11 @@ export default function Photobooth() {
 
             {/* Right Column: Overlapping Images */}
             <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] flex items-center justify-center mt-12 lg:mt-0">
+              {/* Glowing Pedestal */}
+              <div className="absolute top-[85%] left-1/2 -translate-x-1/2 w-[80%] md:w-[70%] h-[40px] rounded-[100%] bg-[#2272FF] blur-[50px] opacity-70 z-0"></div>
+              <div className="absolute top-[85%] left-1/2 -translate-x-1/2 w-[60%] md:w-[50%] h-[15px] rounded-[100%] bg-[#48C6EF] blur-[15px] opacity-90 z-0"></div>
+              <div className="absolute top-[85%] left-1/2 -translate-x-1/2 w-[45%] md:w-[35%] h-[2px] rounded-[100%] bg-white blur-[1px] opacity-80 z-0"></div>
+
               {/* Left Image (Matching) */}
               <div className="absolute left-[5%] md:left-[10%] top-1/2 -translate-y-1/2 -rotate-12 w-[40%] sm:w-[35%] max-w-[220px] aspect-[9/16] rounded-2xl md:rounded-3xl overflow-hidden border border-slate-200 dark:border-white/10 shadow-2xl transition-all duration-500 hover:rotate-0 hover:z-30 hover:scale-105 bg-white dark:bg-black/50">
                 <Image
@@ -108,15 +116,19 @@ export default function Photobooth() {
       >
         <div className="text-center max-w-3xl mx-auto space-y-6">
           <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight">
-            Why Choose <br />
+            ทำไมต้องเช่า PhotoBooth และจัด <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#48C6EF] via-[#2272FF] to-[#9B51E0]">
-              JORJOY
+              Event กับ JORJOY
             </span>
           </h2>
           <p className="text-lg md:text-xl text-slate-600 dark:text-white/90 leading-relaxed font-medium transition-colors">
-            เราคือบริษัทที่ผสานรวมเทคโนโลยีเข้ากับจินตนาการ
-            เพื่อสรรค์สร้างความสนุกในรูปแบบใหม่
-            พร้อมเปลี่ยนทุกประสบการณ์ให้ล้ำสมัยและทำให้งานของคุณให้มีระดับน่าจดจำมากยิ่งขึ้น
+            การเลือกเช่า PhotoBooth
+            ไม่เพียงแต่ช่วยเพิ่มสีสันให้กับงานเท่านั้นแต่ยังช่วยเก็บความทรงจำ
+            ดีๆ และสร้างความประทับใจให้กับผู้ร่วมงานได้อย่างดีเยี่ยมอีกด้วย
+          </p>
+          <p className="text-base md:text-lg text-slate-500 dark:text-white/80 leading-relaxed transition-colors">
+            ที่ JORJOY เราคือผู้เชี่ยวชาญด้าน Game Event & Photo Booth
+            ตัวจริงที่พร้อมเนรมิตความสนุกให้งานอีเวนท์ทุกรูปแบบ:
           </p>
         </div>
 
@@ -126,11 +138,11 @@ export default function Photobooth() {
               🚀
             </div>
             <h3 className="text-lg font-bold mb-3 uppercase tracking-tight">
-              Cutting-Edge Tech
+              AI Image Processing
             </h3>
             <p className="text-xs md:text-sm text-slate-500 dark:text-white/60 leading-relaxed transition-colors">
-              ใช้เทคโนโลยีที่เกี่ยวกับ Interactive
-              เพื่อสร้างประสบการณ์ที่เหนือกว่าให้แก่ผลิตภัณฑ์และงาน Event ของคุณ
+              มีเทคโนโลยี AI Image Processing ที่ช่วยให้ภาพถ่ายออกมาคมชัด
+              และสวยงามมากยิ่งขึ้น พร้อมฟีเจอร์การตกแต่งภาพที่หลากหลายและทันสมัย
             </p>
           </article>
           <article className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-2xl p-8 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
@@ -138,11 +150,11 @@ export default function Photobooth() {
               🎮
             </div>
             <h3 className="text-lg font-bold mb-3 uppercase tracking-tight">
-              Customization
+              Default & Customization
             </h3>
             <p className="text-xs md:text-sm text-slate-500 dark:text-white/60 leading-relaxed transition-colors">
-              ผลิตภัณฑ์ของเราออกแบบมาเพื่อสร้างให้ตรงกับความต้องการของลูกค้า
-              และลูกค้าสามารถปรับแต่งได้เพื่อให้เหมาะสมกับความสนุกที่ต้องการได้อย่างไม่มีขีดจำกัด
+              ผลิตภัณฑ์ของเรา มีธีมและกรอบรูปที่ออกแบบมาให้เลือกมากมาย
+              และลูกค้าสามารถปรับแต่งได้เพื่อให้เหมาะสมกับธีมงานที่ต้องการ
             </p>
           </article>
           <article className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-2xl p-8 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
@@ -150,12 +162,10 @@ export default function Photobooth() {
               ✨
             </div>
             <h3 className="text-lg font-bold mb-3 uppercase tracking-tight">
-              Premium Experience
+              Professional Staff
             </h3>
             <p className="text-xs md:text-sm text-slate-500 dark:text-white/60 leading-relaxed transition-colors">
-              เราไม่ได้เพียงแค่สร้างผลิตภัณฑ์
-              แต่เราช่วยยกระดับภาพลักษณ์ให้งานของคุณดูพรีเมียม เป็นมืออาชีพ
-              และโดดเด่นกว่าที่เคย
+              มีทีมงานมืออาชีพสแตนบายดูแลระบบและอำนวยความสะดวกให้แขกในงานอีเวนท์ตลอดทั้งงาน
             </p>
           </article>
         </div>
@@ -259,7 +269,7 @@ export default function Photobooth() {
                 </div>
                 <div className="relative aspect-[3/4] w-full rounded-xl md:rounded-2xl overflow-hidden shadow-xl border border-white/40 dark:border-white/10 bg-white dark:bg-white/5">
                   <Image
-                    src="/photoframe/ghost3.png"
+                    src="/photoframe/water3.png"
                     alt="Frame 3"
                     fill
                     className="object-cover"

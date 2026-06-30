@@ -142,61 +142,10 @@ export default function GamingHub() {
         </div>
 
         <div className="grid grid-cols-1 gap-8">
-          {/* Card 1: Game Event */}
-          <div
-            id="game-event"
-            className="scroll-mt-28 bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-3xl p-8 md:p-12 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 flex flex-col lg:flex-row items-center gap-8 md:gap-12 w-full"
-          >
-            <div className="flex-1 text-center lg:text-left">
-              <div className="w-16 h-16 md:w-20 md:h-20 mx-auto lg:mx-0 bg-gradient-to-br from-[#48C6EF] to-[#2272FF] rounded-2xl flex items-center justify-center text-3xl md:text-4xl shadow-lg shadow-[#2272FF]/20 mb-6">
-                🕹️
-              </div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 uppercase tracking-tight text-slate-900 dark:text-white transition-colors">
-                Game Event
-              </h3>
-              <p className="text-sm md:text-base text-slate-500 dark:text-white/60 leading-relaxed transition-colors">
-                เปลี่ยนพื้นที่ในงานของคุณให้เป็นโซนแห่งความสนุกด้วยเกมตู้ KIOSK
-                ที่หลากหลาย เล่นง่าย
-                ดึงดูดผู้เข้าร่วมงานและสร้างสีสันได้อย่างยอดเยี่ยม
-              </p>
-              <div className="inline-block mt-4">
-                <div className="px-6 py-2.5 bg-gradient-to-r from-[#48C6EF] via-[#2272FF] to-[#9B51E0] rounded-full shadow-lg shadow-[#2272FF]/30 hover:shadow-xl hover:shadow-[#2272FF]/40 hover:-translate-y-1 transition-all duration-300 cursor-default group relative overflow-hidden">
-                  <span className="text-lg md:text-xl font-black text-white inline-block group-hover:scale-105 transition-transform duration-300 drop-shadow-md">
-                    เริ่มต้นที่ 20,000 บาท
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* 6 Images Grid */}
-            <div className="w-full lg:w-1/2 grid grid-cols-3 gap-3 md:gap-4 shrink-0">
-              {[
-                "/catchfruit.png",
-                "/bubbleshooter.png",
-                "/matching.png",
-                "/luckyspin.png",
-                "/question.png",
-                "/bubblebaby.png",
-              ].map((src, index) => (
-                <div
-                  key={index}
-                  className="relative aspect-square rounded-xl md:rounded-2xl overflow-hidden border border-slate-200 dark:border-white/10 group shadow-lg bg-white dark:bg-transparent"
-                >
-                  <Image
-                    src={src}
-                    alt={`Game product ${index + 1}`}
-                    fill
-                    sizes="(max-width: 768px) 33vw, 250px"
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-          {/* Card 2: Photo Booth */}
+          {/* Card 1: Photo Booth */}
           <div
             id="photo-booth"
-            className="scroll-mt-28 bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-3xl p-8 md:p-12 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 flex flex-col lg:flex-row-reverse items-center gap-8 md:gap-12 w-full"
+            className="scroll-mt-28 bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-3xl p-8 md:p-12 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 flex flex-col lg:flex-row items-center gap-8 md:gap-12 w-full"
           >
             <div className="flex-1 text-center lg:text-left">
               <div className="w-16 h-16 md:w-20 md:h-20 mx-auto lg:mx-0 bg-gradient-to-br from-[#2272FF] to-[#9B51E0] rounded-2xl flex items-center justify-center text-3xl md:text-4xl shadow-lg shadow-[#9B51E0]/20 mb-6">
@@ -211,11 +160,14 @@ export default function GamingHub() {
                 Media ได้ทันที
               </p>
               <div className="inline-block mt-4">
-                <div className="px-6 py-2.5 bg-gradient-to-r from-[#48C6EF] via-[#2272FF] to-[#9B51E0] rounded-full shadow-lg shadow-[#2272FF]/30 hover:shadow-xl hover:shadow-[#2272FF]/40 hover:-translate-y-1 transition-all duration-300 cursor-default group relative overflow-hidden">
+                <Link
+                  href="/photobooth"
+                  className="inline-block px-6 py-2.5 bg-gradient-to-r from-[#48C6EF] via-[#2272FF] to-[#9B51E0] rounded-full shadow-lg shadow-[#2272FF]/30 hover:shadow-xl hover:shadow-[#2272FF]/40 hover:-translate-y-1 transition-all duration-300 cursor-pointer group relative overflow-hidden"
+                >
                   <span className="text-lg md:text-xl font-black text-white inline-block group-hover:scale-105 transition-transform duration-300 drop-shadow-md">
                     เริ่มต้นที่ 9,000 บาท
                   </span>
-                </div>
+                </Link>
               </div>
             </div>
 
@@ -253,6 +205,61 @@ export default function GamingHub() {
               </div>
             </div>
           </div>
+          {/* Card 2: Game Event */}
+          <div
+            id="game-event"
+            className="scroll-mt-28 bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-3xl p-8 md:p-12 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 flex flex-col lg:flex-row-reverse items-center gap-8 md:gap-12 w-full"
+          >
+            <div className="flex-1 text-center lg:text-left">
+              <div className="w-16 h-16 md:w-20 md:h-20 mx-auto lg:mx-0 bg-gradient-to-br from-[#48C6EF] to-[#2272FF] rounded-2xl flex items-center justify-center text-3xl md:text-4xl shadow-lg shadow-[#2272FF]/20 mb-6">
+                🕹️
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold mb-4 uppercase tracking-tight text-slate-900 dark:text-white transition-colors">
+                Game Event
+              </h3>
+              <p className="text-sm md:text-base text-slate-500 dark:text-white/60 leading-relaxed transition-colors">
+                เปลี่ยนพื้นที่ในงานของคุณให้เป็นโซนแห่งความสนุกด้วยเกมตู้ KIOSK
+                ที่หลากหลาย เล่นง่าย
+                ดึงดูดผู้เข้าร่วมงานและสร้างสีสันได้อย่างยอดเยี่ยม
+              </p>
+              <div className="inline-block mt-4">
+                <Link
+                  href="/games"
+                  className="inline-block px-6 py-2.5 bg-gradient-to-r from-[#48C6EF] via-[#2272FF] to-[#9B51E0] rounded-full shadow-lg shadow-[#2272FF]/30 hover:shadow-xl hover:shadow-[#2272FF]/40 hover:-translate-y-1 transition-all duration-300 cursor-pointer group relative overflow-hidden"
+                >
+                  <span className="text-lg md:text-xl font-black text-white inline-block group-hover:scale-105 transition-transform duration-300 drop-shadow-md">
+                    เริ่มต้นที่ 20,000 บาท
+                  </span>
+                </Link>
+              </div>
+            </div>
+
+            {/* 6 Images Grid */}
+            <div className="w-full lg:w-1/2 grid grid-cols-3 gap-3 md:gap-4 shrink-0">
+              {[
+                "/catchfruit.png",
+                "/bubbleshooter.png",
+                "/matching.png",
+                "/luckyspin.png",
+                "/question.png",
+                "/bubblebaby.png",
+              ].map((src, index) => (
+                <div
+                  key={index}
+                  className="relative aspect-square rounded-xl md:rounded-2xl overflow-hidden border border-slate-200 dark:border-white/10 group shadow-lg bg-white dark:bg-transparent"
+                >
+                  <Image
+                    src={src}
+                    alt={`Game product ${index + 1}`}
+                    fill
+                    priority
+                    sizes="(max-width: 768px) 33vw, 250px"
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
           {/* Card 3: Event Management System */}
           <div
             id="event-management"
@@ -275,6 +282,16 @@ export default function GamingHub() {
                 ระบบจองคิว และการดูแล User
                 เพื่อให้การดำเนินงานลื่นไหลและเป็นมืออาชีพ
               </p>
+              <div className="inline-block mt-4">
+                <Link
+                  href="/eventmanagement"
+                  className="inline-block px-6 py-2.5 bg-gradient-to-r from-[#9B51E0] to-[#48C6EF] rounded-full shadow-lg shadow-[#48C6EF]/30 hover:shadow-xl hover:shadow-[#48C6EF]/40 hover:-translate-y-1 transition-all duration-300 cursor-pointer group relative overflow-hidden"
+                >
+                  <span className="text-lg md:text-xl font-black text-white inline-block group-hover:scale-105 transition-transform duration-300 drop-shadow-md">
+                    รายละเอียดเพิ่มเติม
+                  </span>
+                </Link>
+              </div>
             </div>
 
             {/* 5 Images Grid */}
@@ -324,9 +341,6 @@ export default function GamingHub() {
         <div className="absolute top-0 right-0 w-96 h-96 bg-[#2272FF] rounded-full blur-[150px] opacity-10 dark:opacity-20 pointer-events-none" />
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center space-y-8">
-          <div className="inline-block px-4 py-2 bg-[#2272FF]/10 dark:bg-[#2272FF]/20 text-[#2272FF] dark:text-[#48C6EF] border border-[#2272FF]/20 dark:border-[#2272FF]/30 rounded-full text-xs font-bold tracking-widest uppercase shadow-sm dark:shadow-none">
-            Summary
-          </div>
           <h2 className="text-3xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white leading-[1.3]">
             เปลี่ยนงานออกบูธให้เป็นเรื่องง่าย <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2272FF] to-[#48C6EF] dark:from-[#48C6EF] dark:to-[#2272FF]">
@@ -340,12 +354,12 @@ export default function GamingHub() {
               ยุคนี้จะหวังพึ่งแค่พริตตี้หรือการแจกใบปลิวอย่างเดียวไม่ได้แล้วครับ
               แบรนด์ต้องสร้าง{" "}
               <strong>&quot;Interactive Experience&quot;</strong> ที่สนุกสนาน
-              เพื่อให้เข้าไปนั่งในใจของผู้บริโภค
+              เพื่อให้เข้าไปนั่งในใจของผู้ใช้งาน
             </p>
             <p>
               หากคุณกำลังวางแผนจัด งานอีเวนท์ (Event)
-              หรือเตรียมตัวไปออกบูธแสดงสินค้า และต้องการตู้เกมเจ๋งๆ
-              ที่เปลี่ยนบูธเงียบเหงาให้กลายเป็นจุดแลนด์มาร์คของงาน
+              หรือเตรียมตัวไปออกบูธแสดงสินค้า และต้องการตู้เกมเจ๋งๆ หรือ Photo
+              Booth สุดแจ่ม ที่เปลี่ยนบูธเงียบเหงาให้กลายเป็นจุดแลนด์มาร์คของงาน
               ทักมาปรึกษาทีมงาน <strong>JORJOY</strong> ได้เลย!
               เรามีบริการเช่าตู้เกม Game Event และ Photo Booth ครบวงจร
               ดีไซน์พรีเมียม ปรับแต่งหน้าจอได้ตามใจสั่ง

@@ -68,16 +68,16 @@ export default function Navbar({ aboutUsRef }: NavbarProps) {
               <div className="absolute top-full left-0 w-48 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-300 z-50">
                 <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 rounded-lg shadow-xl flex flex-col py-2">
                   <Link
-                    href="/games"
-                    className="px-4 py-2 hover:bg-slate-50 dark:hover:bg-white/5 hover:text-[#48C6EF] transition-colors"
-                  >
-                    Games
-                  </Link>
-                  <Link
                     href="/photobooth"
                     className="px-4 py-2 hover:bg-slate-50 dark:hover:bg-white/5 hover:text-[#48C6EF] transition-colors"
                   >
                     PhotoBooth
+                  </Link>
+                  <Link
+                    href="/games"
+                    className="px-4 py-2 hover:bg-slate-50 dark:hover:bg-white/5 hover:text-[#48C6EF] transition-colors"
+                  >
+                    Games
                   </Link>
                   <Link
                     href="/eventmanagement"
@@ -206,21 +206,21 @@ export default function Navbar({ aboutUsRef }: NavbarProps) {
               }`}
             >
               <Link
-                href="/Products/Games"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="hover:text-[#48C6EF] transition text-xs"
-              >
-                Games
-              </Link>
-              <Link
-                href="/Products/PhotoBooth"
+                href="/photobooth"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="hover:text-[#48C6EF] transition text-xs"
               >
                 PhotoBooth
               </Link>
               <Link
-                href="/Products/EventManagement"
+                href="/games"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="hover:text-[#48C6EF] transition text-xs"
+              >
+                Games
+              </Link>
+              <Link
+                href="/eventmanagement"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="hover:text-[#48C6EF] transition text-xs"
               >

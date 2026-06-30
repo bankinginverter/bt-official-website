@@ -32,18 +32,16 @@ export default function EventManagement() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-12 md:py-24">
             {/* Left Column: Text */}
             <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-8 z-10">
-              <h1 className="text-5xl md:text-7xl font-black leading-tight tracking-tight">
-                <span>Create Innovation</span>
-                <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#48C6EF] via-[#2272FF] to-[#9B51E0]">
-                  Elevate Your Experience
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.4] md:leading-[1.5] tracking-tight text-white py-2">
+                <span className="block mb-2">เปลี่ยนทุกงานอีเวนท์</span>
+                <span className="block mb-2">ให้บริหารง่าย</span>
+                <span className="inline-block pt-2 pb-4 text-transparent bg-clip-text bg-gradient-to-r from-[#48C6EF] via-[#2272FF] to-[#9B51E0]">
+                  ด้วย Event Management Software
                 </span>
-                <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#48C6EF] via-[#2272FF] to-[#9B51E0]"></span>
               </h1>
-              <span className="text-[#48C6EF] text-xs font-bold uppercase tracking-[0.3em]">
-                Play Innovate Elevate
-              </span>
+              <p className="text-[#48C6EF] text-sm md:text-base max-w-md leading-relaxed font-bold">
+                จัดการผู้เข้าร่วม เกม กิจกรรม และข้อมูล ได้ในระบบเดียว
+              </p>
               <button
                 onClick={() =>
                   contactus.current?.scrollIntoView({ behavior: "smooth" })
@@ -59,6 +57,11 @@ export default function EventManagement() {
 
             {/* Right Column: Overlapping Images */}
             <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] flex items-center justify-center mt-12 lg:mt-0">
+              {/* Glowing Pedestal */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] max-w-[400px] aspect-square bg-[#2272FF] rounded-full blur-[100px] opacity-20 dark:opacity-30 pointer-events-none" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] max-w-[300px] aspect-square bg-[#48C6EF] rounded-full blur-[80px] opacity-30 dark:opacity-40 pointer-events-none mix-blend-screen" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40%] max-w-[200px] aspect-square bg-white rounded-full blur-[60px] opacity-10 dark:opacity-20 pointer-events-none" />
+
               {/* Left Image (Matching) */}
               <div className="absolute left-[5%] md:left-[10%] top-1/2 -translate-y-1/2 -rotate-12 w-[40%] sm:w-[35%] max-w-[220px] aspect-[9/16] rounded-2xl md:rounded-3xl overflow-hidden border border-slate-200 dark:border-white/10 shadow-2xl transition-all duration-500 hover:rotate-0 hover:z-30 hover:scale-105 bg-white dark:bg-black/50">
                 <Image
@@ -102,15 +105,16 @@ export default function EventManagement() {
       >
         <div className="text-center max-w-3xl mx-auto space-y-6">
           <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight">
-            Why Choose <br />
+            ทำไมต้องใช้ <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#48C6EF] via-[#2272FF] to-[#9B51E0]">
-              JORJOY
+              ของ JORJOY
             </span>
           </h2>
           <p className="text-lg md:text-xl text-slate-600 dark:text-white/90 leading-relaxed font-medium transition-colors">
-            เราคือบริษัทที่ผสานรวมเทคโนโลยีเข้ากับจินตนาการ
-            เพื่อสรรค์สร้างความสนุกในรูปแบบใหม่
-            พร้อมเปลี่ยนทุกประสบการณ์ให้ล้ำสมัยและทำให้งานของคุณให้มีระดับน่าจดจำมากยิ่งขึ้น
+            เราไม่ได้เป็นเพียงผู้พัฒนาซอฟต์แวร์สำหรับงานอีเวนท์
+            แต่เราสร้างแพลตฟอร์มที่ช่วยให้การจัดงานเป็นเรื่องง่ายและมีประสิทธิภาพยิ่งขึ้น
+            ตั้งแต่การบริหารจัดการ
+            ไปจนถึงการสร้างประสบการณ์ที่ดีให้กับผู้เข้าร่วม
           </p>
         </div>
 
@@ -120,11 +124,13 @@ export default function EventManagement() {
               🚀
             </div>
             <h3 className="text-lg font-bold mb-3 uppercase tracking-tight">
-              Cutting-Edge Tech
+              ALL-IN-ONE PLATFORM
             </h3>
             <p className="text-xs md:text-sm text-slate-500 dark:text-white/60 leading-relaxed transition-colors">
-              ใช้เทคโนโลยีที่เกี่ยวกับ Interactive
-              เพื่อสร้างประสบการณ์ที่เหนือกว่าให้แก่ผลิตภัณฑ์และงาน Event ของคุณ
+              จัดการทุกขั้นตอนของงานอีเวนท์ได้จากระบบเดียว
+              ไม่ว่าจะเป็นการลงทะเบียน Check-in ดูจำนวนผู้เข้าร่วม หรือ
+              ระบบจองคิว และยังมี Dashboard เพื่อดูข้อมูล
+              ลดการใช้หลายโปรแกรมและทำให้งานของทีมเป็นระบบมากขึ้น
             </p>
           </div>
           <div className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-2xl p-8 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
@@ -135,8 +141,9 @@ export default function EventManagement() {
               Customization
             </h3>
             <p className="text-xs md:text-sm text-slate-500 dark:text-white/60 leading-relaxed transition-colors">
-              ผลิตภัณฑ์ของเราออกแบบมาเพื่อสร้างให้ตรงกับความต้องการของลูกค้า
-              และลูกค้าสามารถปรับแต่งได้เพื่อให้เหมาะสมกับความสนุกที่ต้องการได้อย่างไม่มีขีดจำกัด
+              ปรับแต่งทุกองค์ประกอบให้สอดคล้องกับแบรนด์ของคุณ ทั้งโลโก้ สี ธีม
+              หน้าจอ และกิจกรรม
+              เพื่อสร้างประสบการณ์ที่เป็นเอกลักษณ์และเหมาะกับทุกประเภทของงาน
             </p>
           </div>
           <div className="bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 shadow-xl dark:shadow-none shadow-slate-200/50 rounded-2xl p-8 hover:shadow-2xl dark:hover:shadow-none hover:shadow-slate-200 dark:hover:bg-white/10 transition-all duration-300 hover:-translate-y-2">
@@ -144,12 +151,10 @@ export default function EventManagement() {
               ✨
             </div>
             <h3 className="text-lg font-bold mb-3 uppercase tracking-tight">
-              Premium Experience
+              Professional Staff
             </h3>
             <p className="text-xs md:text-sm text-slate-500 dark:text-white/60 leading-relaxed transition-colors">
-              เราไม่ได้เพียงแค่สร้างผลิตภัณฑ์
-              แต่เราช่วยยกระดับภาพลักษณ์ให้งานของคุณดูพรีเมียม เป็นมืออาชีพ
-              และโดดเด่นกว่าที่เคย
+              มีทีมงานมืออาชีพสแตนบายดูแลระบบและอำนวยความสะดวกให้แขกในงานอีเวนท์ตลอดทั้งงาน
             </p>
           </div>
         </div>

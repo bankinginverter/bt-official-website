@@ -448,6 +448,7 @@ export default async function NewsArticlePage({ searchParams }: Props) {
                               src={idea.img}
                               alt={idea.title}
                               fill
+                              sizes="(max-width: 768px) 100vw, 50vw"
                               className="object-cover"
                             />
                           </div>
@@ -572,6 +573,7 @@ export default async function NewsArticlePage({ searchParams }: Props) {
                             src={game.img}
                             alt={game.name}
                             fill
+                            sizes="(max-width: 768px) 50vw, 20vw"
                             className="object-cover group-hover:scale-110 transition duration-500"
                           />
                         </div>
@@ -744,6 +746,7 @@ export default async function NewsArticlePage({ searchParams }: Props) {
                         src="/matching.png"
                         alt="thumbnail"
                         fill
+                        sizes="80px"
                         className="object-cover group-hover:scale-110 transition duration-500"
                       />
                     </div>
@@ -767,6 +770,7 @@ export default async function NewsArticlePage({ searchParams }: Props) {
                         src="/bubblebaby.png"
                         alt="thumbnail"
                         fill
+                        sizes="80px"
                         className="object-cover group-hover:scale-110 transition duration-500"
                       />
                     </div>
