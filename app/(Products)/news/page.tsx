@@ -18,18 +18,20 @@ export async function generateMetadata({
 
   if (category === "photo") {
     return {
-      title: "ไอเดีย Photo Booth สุดชิค | JORJOY",
+      title: "ทำไมจัดงานยุคนี้ถึงต้องมี Photo Booth? พื้นที่สร้างความทรงจำ | JORJOY",
       description:
-        "รวมไอเดียตู้ถ่ายรูป Photo Booth สำหรับงานอีเวนท์ สร้างความทรงจำดีๆ ให้กับแขกที่มาร่วมงาน",
+        "เปลี่ยนมุมธรรมดาให้เป็นพื้นที่สร้างความทรงจำ Photo Booth คือคำตอบสุดท้ายที่จะทำให้แขกประทับใจไม่รู้ลืม ตัวช่วยละลายพฤติกรรมและของชำร่วยที่มีคุณค่า",
+      keywords: ["Photo Booth", "ตู้ถ่ายรูป", "ตู้ถ่ายรูปงานแต่ง", "บูธถ่ายรูป", "จัดงานอีเวนท์", "ของชำร่วยงานแต่ง", "กิจกรรมในงาน", "JORJOY"],
       alternates: { canonical: "/news?category=photo" },
     }
   }
 
   if (category === "software") {
     return {
-      title: "ระบบจัดการงานอีเวนท์ (Event Management) | JORJOY",
+      title: "ทำไมต้องมี Event Management Software? เบื้องหลังความสำเร็จ | JORJOY",
       description:
-        "ทำความรู้จักระบบลงทะเบียนและจัดการงานอีเวนท์ที่จะช่วยให้งานของคุณราบรื่น ไร้รอยต่อ",
+        "ระบบจัดการอีเวนท์คือกุญแจสำคัญ เปลี่ยนความโกลาหลให้เป็นความประทับใจ ลดภาระการทำงาน ควบคุมได้แบบ Real-time พร้อมเปลี่ยนรายชื่อแขกเป็นขุมทรัพย์ทางการตลาด",
+      keywords: ["Event Management Software", "ระบบจัดการงานอีเวนท์", "ระบบลงทะเบียนหน้างาน", "เช็กอิน QR Code", "จัดงานสัมมนา", "เทคโนโลยีจัดงาน", "JORJOY"],
       alternates: { canonical: "/news?category=software" },
     }
   }
@@ -39,6 +41,7 @@ export async function generateMetadata({
       title: "5 ไอเดียเลือกตู้เกมให้เข้ากับธีมงานแต่งงาน | JORJOY",
       description:
         "เทรนด์การจัดงานอีเวนท์แต่งงานยุคนี้ ให้ความสำคัญกับ Experience กิจกรรมสุดชิคในงานอีเวนท์ที่แขกประทับใจ",
+      keywords: ["ตู้เกมงานแต่ง", "เกมงานแต่ง", "กิจกรรมงานแต่ง", "After Party", "ไอเดียงานแต่ง", "จัดงานแต่งงาน", "JORJOY"],
       alternates: { canonical: "/news?category=game&article=5-ideas" },
     }
   }
@@ -47,6 +50,7 @@ export async function generateMetadata({
     title: "7 วิธีดึงคนเข้าบูธด้วย Game Event | JORJOY",
     description:
       "เปลี่ยนงานออกบูธน่าเบื่อให้คนต่อคิวยาวจนล้น! ดึงเทคโนโลยีอย่างตู้เกม Interactive เข้ามาช่วย",
+    keywords: ["Game Event", "ตู้เกมอีเวนท์", "ดึงคนเข้าบูธ", "กิจกรรมหน้าบูธ", "เกม Interactive", "ออกบูธ", "ทำการตลาด", "JORJOY"],
     alternates: { canonical: "/news?category=game&article=7-ways" },
   }
 }
@@ -60,7 +64,7 @@ const exhibitionWays = [
     desc: "ในฮอลล์จัด งานอีเวนท์ ที่มีบูธตั้งเรียงรายเป็นร้อยๆ บูธ สิ่งแรกที่จะทำให้คนหยุดเดินคือ 'ความแปลกใหม่' ตู้เกม Interactive ของ JORJOY ดีไซน์ออกมาให้มีความมินิมอล โมเดิร์น และล้ำสมัย แตกต่างจากตู้เกมตู้สล็อตเก่าๆ การมีหน้าจอขนาดใหญ่ที่แสงสีสวยงามตั้งอยู่หน้าบูธ จะทำหน้าที่เป็นแม่เหล็กดึงดูดความสนใจ (Visual Attractor) ให้คนเดินปรี่เข้ามาหาบูธของคุณก่อนเป็นอันดับแรก",
     tags: ["Modern Design", "Visual Attractor"],
     tip: "ข้อดี/ทริค: การวางตู้เกมไว้ด้านหน้าสุดของบูธหรือมุมที่เห็นได้ชัดเจน จะช่วยเพิ่มโอกาสให้คนหยุดดูมากยิ่งขึ้น",
-    img: "/matching.png",
+    img: "/news1-1.png",
   },
   {
     num: "02",
@@ -69,7 +73,7 @@ const exhibitionWays = [
     desc: "แทนที่จะแจกของที่ระลึก ของชำร่วย หรือโบรชัวร์ให้คนเดินผ่านไปมาแบบธรรมดา (ซึ่งส่วนใหญ่คนมักจะรับไปแล้วทิ้ง) ให้เปลี่ยนมาเป็นกิมมิค Game Event โดยให้ผู้ร่วมงานได้หมุน 'ตู้เกม Lucky Spin' เพื่อลุ้นรางวัลด้วยตัวเอง",
     tags: ["Lucky Spin", "Giveaway"],
     tip: "ข้อดี/ทริค: ความรู้สึกที่ได้ 'ลุ้น' และเสียงเอฟเฟกต์ตอนวงล้อหมุน จะช่วยสร้างบรรยากาศชวนตื่นเต้น และดึงดูดให้คนที่อยู่รอบๆ อยากเข้ามาลองเสี่ยงโชคบ้าง",
-    img: "/luckyspin.png",
+    img: "/news1-2.png",
   },
   {
     num: "03",
@@ -78,7 +82,7 @@ const exhibitionWays = [
     desc: "ธรรมชาติของคนเรามักจะชอบความท้าทายและการแข่งขัน ลองเลือกใช้เกมตู้ประเภทที่โชว์คะแนนสูงสุด เช่น เกม Racing Run (วิ่งแข่ง) หรือ เกม Catch Fruit (รับผลไม้) แล้วตั้งกระดาน Leaderboard เอาไว้หน้าบูธ ใครทำคะแนนได้สูงสุด 3 อันดับแรกของวัน รับรางวัลใหญ่ไปเลย!",
     tags: ["Racing Run", "Catch Fruit", "Leaderboard"],
     tip: "ข้อดี/ทริค: เทคนิคนี้จะทำให้คนใน งานอีเวนท์ พยายามกลับมาเล่นซ้ำเพื่อล้มแชมป์เก่า ช่วยเพิ่มยอด Traffic ให้พุ่งกระฉูด",
-    img: "/catchfruit.png",
+    img: "/news1-3.png",
   },
   {
     num: "04",
@@ -87,7 +91,7 @@ const exhibitionWays = [
     desc: "การจัด กิจกรรมอีเวนท์ ด้วยตู้เกมที่ดี ต้องระวังไม่ให้เนื้อหาเกมซับซ้อนเกินไป เกมที่ดีสำหรับการ งานออกบูธ ควรใช้เวลาเล่นต่อรอบไม่เกิน 1-2 นาที เช่น เกม Matching (จับคู่ภาพ) หรือ เกม Bubble Shooter เพื่อให้แถวคิวรันได้อย่างรวดเร็ว (High Throughput)",
     tags: ["Matching", "Bubble Shooter"],
     tip: "ข้อดี/ทริค: คนที่ต่อคิวจะไม่รอนานจนถอดใจ และแบรนด์ของคุณก็จะได้ยอด Data หรือจำนวนคนที่มาร่วมสนุกต่อวันมากที่สุดด้วยครับ",
-    img: "/bubbleshooter.png",
+    img: "/news1-4.png",
   },
   {
     num: "05",
@@ -96,7 +100,7 @@ const exhibitionWays = [
     desc: "อย่าปล่อยให้คนเล่นเกมจบแล้วเดินจากไปโดยจำไม่ได้ว่าเราขายอะไร! ข้อดีของการเช่าตู้เกมแบบ Game Event กับ JORJOY คือคุณสามารถ Custom UI หรือปรับแต่งกราฟิกในเกมได้ 100% ตัวอย่าง: หากคุณเป็นแบรนด์อาหารเสริม คุณสามารถเปลี่ยนลูกบอลในเกมยิงโป่งให้กลายเป็นรูปส่วนผสมเด็ดของผลิตภัณฑ์ หรือในเกมจับคู่ภาพ ก็ใส่เป็นรูปสินค้าและโลโก้แบรนด์",
     tags: ["Custom UI", "Branding"],
     tip: "ข้อดี/ทริค: วิธีนี้จะช่วยให้ลูกค้าซึมซับและจดจำแบรนด์ของคุณได้โดยไม่รู้สึกว่าโดนยัดเยียดโฆษณา",
-    img: "/bubblebaby.png",
+    img: "/news1-5.png",
   },
   {
     num: "06",
@@ -168,11 +172,38 @@ const weddingIdeas = [
 ]
 
 const popularGames = [
-  { name: "Lucky Spin", desc: "ลุ้นรางวัลสุดพิเศษ", img: "/matching.png" },
+  { name: "Lucky Spin", desc: "ลุ้นรางวัลสุดพิเศษ", img: "/luckyspin.png" },
   { name: "Bubble Baby", desc: "เกมพัซเซิลสุดน่ารัก", img: "/bubblebaby.png" },
   { name: "Catch Fruit", desc: "เก็บผลไม้ได้คะแนน", img: "/catchfruit.png" },
-  { name: "Racing Run", desc: "แข่งขันสุดมันส์", img: "/matching.png" },
+  { name: "Racing Run", desc: "แข่งขันสุดมันส์", img: "/Racingrun.png" },
   { name: "Matching", desc: "เกมจับคู่ภาพ", img: "/matching.png" },
+]
+
+const ALL_ARTICLES = [
+  {
+    category: "game",
+    article: "7-ways",
+    image: "/matching.png",
+    title: "7 วิธีดึงคนเข้าบูธด้วย Game Event เปลี่ยนงานออกบูธให้คนล้น!",
+  },
+  {
+    category: "game",
+    article: "5-ideas",
+    image: "/bubblebaby.png",
+    title: "5 ไอเดียเลือกตู้เกมให้เข้ากับธีมงานแต่งงาน (Wedding)",
+  },
+  {
+    category: "photo",
+    article: null,
+    image: "/photobooth1.jpeg",
+    title: "รวมไอเดียจัดตู้ Photo Booth",
+  },
+  {
+    category: "software",
+    article: null,
+    image: "/photobooth2.jpeg",
+    title: "Software Event Management",
+  },
 ]
 
 export default async function NewsArticlePage({ searchParams }: Props) {
@@ -185,6 +216,24 @@ export default async function NewsArticlePage({ searchParams }: Props) {
   const isWedding = article === "5-ideas"
   const activeData = isWedding ? weddingIdeas : exhibitionWays
 
+  const currentIndex = ALL_ARTICLES.findIndex(
+    (a) =>
+      a.category === category && (a.article === null || a.article === article),
+  )
+
+  const prevArticle = currentIndex > 0 ? ALL_ARTICLES[currentIndex - 1] : null
+  const nextArticle =
+    currentIndex >= 0 && currentIndex < ALL_ARTICLES.length - 1
+      ? ALL_ARTICLES[currentIndex + 1]
+      : null
+
+  const getHref = (item: (typeof ALL_ARTICLES)[0] | null) =>
+    item
+      ? item.article
+        ? `?category=${item.category}&article=${item.article}`
+        : `?category=${item.category}`
+      : "#"
+
   return (
     <main className="bg-gray-50 dark:bg-[#050505] text-gray-900 dark:text-white min-h-screen font-sans selection:bg-[#2272FF] selection:text-white transition-colors duration-500">
       <Navbar />
@@ -196,28 +245,6 @@ export default async function NewsArticlePage({ searchParams }: Props) {
         <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#48C6EF]/10 via-transparent to-transparent opacity-100 dark:opacity-60" />
 
         <div className="relative z-10 max-w-7xl mx-auto flex flex-col gap-6">
-          {/* Menu / Tabs */}
-          <nav className="flex flex-wrap items-center gap-8 border-b border-gray-200 dark:border-white/10 pb-4 mb-4">
-            <Link
-              href="?category=game"
-              className={`text-[10px] md:text-xs font-bold uppercase tracking-widest transition-all ${category === "game" ? "text-[#2272FF] dark:text-[#48C6EF] border-b-2 border-[#2272FF] dark:border-[#48C6EF] pb-1" : "text-gray-500 dark:text-white/50 hover:text-gray-800 dark:hover:text-white/80 pb-1"}`}
-            >
-              Game Event
-            </Link>
-            <Link
-              href="?category=photo"
-              className={`text-[10px] md:text-xs font-bold uppercase tracking-widest transition-all ${category === "photo" ? "text-[#2272FF] dark:text-[#48C6EF] border-b-2 border-[#2272FF] dark:border-[#48C6EF] pb-1" : "text-gray-500 dark:text-white/50 hover:text-gray-800 dark:hover:text-white/80 pb-1"}`}
-            >
-              Photo Booth
-            </Link>
-            <Link
-              href="?category=software"
-              className={`text-[10px] md:text-xs font-bold uppercase tracking-widest transition-all ${category === "software" ? "text-[#2272FF] dark:text-[#48C6EF] border-b-2 border-[#2272FF] dark:border-[#48C6EF] pb-1" : "text-gray-500 dark:text-white/50 hover:text-gray-800 dark:hover:text-white/80 pb-1"}`}
-            >
-              Software Event Management
-            </Link>
-          </nav>
-
           {/* Conditional Hero Title based on Category */}
           {category === "game" && (
             <>
@@ -358,45 +385,14 @@ export default async function NewsArticlePage({ searchParams }: Props) {
           <div className="lg:col-span-8 space-y-12">
             {category === "game" && (
               <>
-                {/* --- Article Selection Tabs --- */}
-                <div className="flex flex-col sm:flex-row gap-2 p-1.5 bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-2xl md:rounded-full w-fit">
-                  <Link
-                    href="?category=game&article=7-ways"
-                    className={`px-6 py-3 rounded-xl md:rounded-full text-sm font-bold transition-all text-center ${!isWedding ? "bg-white dark:bg-[#2272FF] text-[#2272FF] dark:text-white shadow-sm border border-gray-200 dark:border-transparent" : "text-gray-500 hover:text-gray-900 dark:text-white/60 dark:hover:text-white"}`}
-                  >
-                    ไอเดียสำหรับ งานออกบูธ
-                  </Link>
-                  <Link
-                    href="?category=game&article=5-ideas"
-                    className={`px-6 py-3 rounded-xl md:rounded-full text-sm font-bold transition-all text-center ${isWedding ? "bg-white dark:bg-[#2272FF] text-[#2272FF] dark:text-white shadow-sm border border-gray-200 dark:border-transparent" : "text-gray-500 hover:text-gray-900 dark:text-white/60 dark:hover:text-white"}`}
-                  >
-                    ไอเดียสำหรับ งานแต่งงาน
-                  </Link>
-                </div>
-
-                {/* Table of Contents Pills */}
-                <div className="flex flex-wrap gap-3 pb-4 border-b border-gray-200 dark:border-white/10">
-                  {activeData.map((idea) => (
-                    <button
-                      key={idea.num}
-                      className="px-4 py-2 rounded-full border border-gray-200 dark:border-white/20 text-xs font-bold bg-white dark:bg-white/5 hover:bg-gray-50 dark:hover:bg-white/10 transition text-gray-700 dark:text-white/80 shadow-sm dark:shadow-none whitespace-nowrap"
-                    >
-                      <span className="text-[#2272FF] dark:text-[#48C6EF] mr-2">
-                        {idea.num}
-                      </span>
-                      {idea.title.split(" / ")[0]}
-                    </button>
-                  ))}
-                </div>
-
                 {/* Main Article Paragraph */}
                 <div className="prose dark:prose-invert prose-p:text-gray-600 dark:prose-p:text-white/70 prose-p:leading-relaxed max-w-none">
                   {isWedding ? (
                     <>
                       <p>
                         เทรนด์การจัดงานอีเวนท์แต่งงานยุคนี้
-                        บ่าวสาวและออร์แกไนเซอร์ส่วนใหญ่ให้ความสำคัญกับ{" "}
-                        <strong>&quot;Experience&quot;</strong>{" "}
+                        บ่าวสาวและออร์แกไนเซอร์ส่วนใหญ่ให้ความสำคัญกับ
+                        <strong>&quot;Experience&quot;</strong>
                         หรือประสบการณ์ที่แขกจะได้รับในงานเป็นอันดับต้นๆ
                         เมื่อพูดถึงประสบการณ์ที่มีความสนุกและน่าจดจำ
                         แน่นอนว่าการเพิ่มกิจกรรมสุดฮิตอย่างตู้เกม Interactive
@@ -413,11 +409,11 @@ export default async function NewsArticlePage({ searchParams }: Props) {
                   ) : (
                     <>
                       <p>
-                        ถ้าคุณไม่อยากให้ <strong>งานอีเวนท์ (Event)</strong>{" "}
-                        ครั้งต่อไปต้องเงียบเหงา การดึงเทคโนโลยีอย่าง{" "}
+                        ถ้าคุณไม่อยากให้ <strong>งานอีเวนท์ (Event)</strong>
+                        ครั้งต่อไปต้องเงียบเหงา การดึงเทคโนโลยีอย่าง
                         <strong>
                           &quot;Game Event (ตู้เกม Interactive)&quot;
-                        </strong>{" "}
+                        </strong>
                         เข้ามาช่วย
                         ถือเป็นอาวุธเด็ดที่จะเปลี่ยนบรรยากาศหน้าบูธของคุณให้คึกคักขึ้นทันตาเห็น!
                       </p>
@@ -437,7 +433,7 @@ export default async function NewsArticlePage({ searchParams }: Props) {
                     return (
                       <div
                         key={idea.num}
-                        className={`flex flex-col ${isEven ? "md:flex-row-reverse" : "md:flex-row"} gap-8 bg-white dark:bg-[#0a0a0a] border border-gray-100 dark:border-white/10 rounded-2xl p-6 md:p-8 hover:border-[#2272FF]/50 transition-colors duration-500 shadow-xl shadow-gray-200/50 dark:shadow-none`}
+                        className={`flex flex-col ${isEven ? "md:flex-row-reverse" : "md:flex-row"} gap-8 bg-transparent rounded-2xl p-6 md:p-8 transition-colors duration-500`}
                       >
                         {/* Image Area */}
                         <div className="w-full md:w-5/12 relative aspect-[4/5] md:aspect-auto rounded-xl overflow-hidden bg-gray-100 dark:bg-black flex items-center justify-center">
@@ -513,9 +509,6 @@ export default async function NewsArticlePage({ searchParams }: Props) {
                 <div className="relative rounded-2xl bg-gradient-to-r from-blue-50 to-white dark:from-[#0a1930] dark:to-[#120b29] border border-blue-100 dark:border-white/10 p-8 flex items-center justify-between overflow-hidden text-gray-900 dark:text-white mt-12 shadow-sm dark:shadow-none">
                   <div className="absolute top-0 right-0 w-64 h-64 bg-[#2272FF] rounded-full blur-[100px] opacity-10 dark:opacity-20" />
                   <div className="relative z-10 flex items-center gap-6">
-                    <div className="w-12 h-12 rounded-full bg-[#48C6EF]/20 flex items-center justify-center shrink-0">
-                      <span className="text-2xl">⭐</span>
-                    </div>
                     <div>
                       <div className="text-xs font-bold text-[#2272FF] dark:text-[#48C6EF] uppercase tracking-widest mb-2">
                         Event Insight
@@ -540,23 +533,7 @@ export default async function NewsArticlePage({ searchParams }: Props) {
                       </h3>
                     </div>
                   </div>
-                  <div className="hidden md:flex relative z-10 opacity-40 dark:opacity-80">
-                    <svg
-                      className="w-24 h-24 text-[#2272FF]"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1}
-                        d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-                      />
-                    </svg>
-                  </div>
                 </div>
-
                 {/* Popular Games Section */}
                 <div className="space-y-6 pt-8">
                   <h3 className="text-center text-xl font-bold text-gray-900 dark:text-white">
@@ -599,26 +576,377 @@ export default async function NewsArticlePage({ searchParams }: Props) {
             )}
 
             {category === "photo" && (
-              <div className="py-20 text-center border border-gray-200 dark:border-white/10 rounded-2xl bg-white dark:bg-white/5 shadow-sm dark:shadow-none">
-                <h3 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">
-                  บทความ Photo Booth กำลังมาเร็วๆ นี้
-                </h3>
-                <p className="text-gray-500 dark:text-white/50">
-                  เตรียมพบกับไอเดียการจัดตู้ถ่ายรูปให้ปังที่สุดในงานอีเวนท์
-                </p>
+              <div className="space-y-12">
+                <div className="prose prose-lg dark:prose-invert max-w-none">
+                  <p className="text-gray-700 dark:text-white/80 leading-relaxed text-lg font-bold">
+                    ทำไมจัดงานยุคนี้... ถึงต้องมี Photo Booth?
+                    เปลี่ยนมุมธรรมดาให้เป็นพื้นที่สร้างความทรงจำ
+                  </p>
+                  <p className="text-gray-700 dark:text-white/80 leading-relaxed mt-4">
+                    ลองจินตนาการถึงงานอีเวนท์ งานแต่งงาน
+                    หรือปาร์ตี้ที่คุณตั้งใจจัดขึ้นมาอย่างประณีต
+                    สิ่งที่คุณอยากเห็นที่สุดในงานคืออะไร? แน่นอนว่าคือ{" "}
+                    <span className="font-bold text-[#2272FF] dark:text-[#48C6EF]">
+                      รอยยิ้ม เสียงหัวเราะ และความสุขของแขกทุกคน
+                    </span>
+                  </p>
+                  <p className="text-gray-700 dark:text-white/80 leading-relaxed mt-4">
+                    และนี่คือเหตุผลสำคัญว่าทำไม Photo Booth
+                    ถึงไม่ใช่แค่ตู้ถ่ายรูปธรรมดา
+                    แต่เป็นสิ่งเติมเต็มที่ทุกงานอีเวนท์ขาดไม่ได้!
+                  </p>
+                </div>
+
+                <div className="space-y-8">
+                  {/* Image Grid */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pb-6">
+                    <div className="aspect-[9/16] relative rounded-2xl overflow-hidden bg-gray-100 dark:bg-white/5 group">
+                      <Image
+                        src="/photobooth1.jpeg"
+                        alt="Photo Booth Image 1"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        className="object-cover group-hover:scale-110 transition duration-500"
+                      />
+                    </div>
+                    <div className="aspect-[9/16] relative rounded-2xl overflow-hidden bg-gray-100 dark:bg-white/5 group">
+                      <Image
+                        src="/photobooth2.jpeg"
+                        alt="Photo Booth Image 2"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        className="object-cover group-hover:scale-110 transition duration-500"
+                      />
+                    </div>
+                    <div className="aspect-[9/16] relative rounded-2xl overflow-hidden bg-gray-100 dark:bg-white/5 group">
+                      <Image
+                        src="/photobooth3.jpeg"
+                        alt="Photo Booth Image 3"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        className="object-cover group-hover:scale-110 transition duration-500"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Item 1 */}
+                  <div className="flex gap-6 group">
+                    <div className="w-16 h-16 rounded-2xl bg-[#2272FF]/10 dark:bg-[#48C6EF]/20 text-[#2272FF] dark:text-[#48C6EF] flex items-center justify-center text-xl font-black shrink-0 font-mono shadow-inner group-hover:scale-110 transition-transform">
+                      01
+                    </div>
+                    <div className="pt-2">
+                      <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-1 group-hover:text-[#2272FF] dark:group-hover:text-[#48C6EF] transition">
+                        ตัวช่วยละลายพฤติกรรม (The Ultimate Ice Breaker)
+                      </h4>
+                      <p className="text-gray-600 dark:text-white/70 leading-relaxed text-sm">
+                        ช่วงเริ่มงานที่แขกเพิ่งมาถึง บางคนอาจจะยังรู้สึกเกร็ง ๆ
+                        หรือยังไม่รู้จะทำอะไร การมีตู้ Photo Booth ชิค ๆ
+                        ตั้งอยู่พร้อมพร็อพสนุก ๆ
+                        จะช่วยดึงดูดให้แขกเดินเข้ามาจับกลุ่ม
+                        ถ่ายรูปเล่นหัวเราะไปด้วยกัน
+                        เป็นการสร้างบรรยากาศผ่อนคลายและละลายพฤติกรรมได้อย่างเป็นธรรมชาติที่สุด
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Item 2 */}
+                  <div className="flex gap-6 group">
+                    <div className="w-16 h-16 rounded-2xl bg-[#2272FF]/10 dark:bg-[#48C6EF]/20 text-[#2272FF] dark:text-[#48C6EF] flex items-center justify-center text-xl font-black shrink-0 font-mono shadow-inner group-hover:scale-110 transition-transform">
+                      02
+                    </div>
+                    <div className="pt-2">
+                      <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-1 group-hover:text-[#2272FF] dark:group-hover:text-[#48C6EF] transition">
+                        พื้นที่ปลดปล่อยความสนุกแบบไร้ขีดจำกัด
+                      </h4>
+                      <p className="text-gray-600 dark:text-white/70 leading-relaxed text-sm">
+                        เพราะ Photo Booth
+                        สามารถดีไซน์และปรับแต่งทุกอย่างให้เข้ากับธีมงานได้อย่างอิสระ
+                        ไม่ว่าจะเป็น:
+                      </p>
+                      <ul className="list-disc pl-5 mt-4 space-y-2 text-sm text-gray-600 dark:text-white/70">
+                        <li>
+                          <strong>กรอบรูป (Template):</strong> ใส่โลโก้งาน
+                          วันที่ หรือกราฟิกตามธีม
+                        </li>
+                        <li>
+                          <strong>พร็อพสุดเก๋ (Props):</strong> แว่นตาอันใหญ่
+                          หมวก คำพูดกวน ๆ หรือพร็อพสั่งทำพิเศษ
+                        </li>
+                        <li>
+                          <strong>พื้นหลัง (Background):</strong> จะเป็น
+                          Backdrop ผ้า ฉากกลิตเตอร์ หรือจอ Green Screen
+                          ดิจิทัลก็เลือกได้ตามใจชอบ
+                        </li>
+                      </ul>
+                      <p className="text-gray-600 dark:text-white/70 leading-relaxed text-sm mt-4">
+                        สิ่งเหล่านี้ช่วยให้แขกได้โพสต์ท่าทางสนุก ๆ
+                        หลุดจากมาดเดิม ๆ ที่หาไม่ได้จากการถ่ายภาพนิ่งทั่วไป
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Item 3 */}
+                  <div className="flex gap-6 group">
+                    <div className="w-16 h-16 rounded-2xl bg-[#2272FF]/10 dark:bg-[#48C6EF]/20 text-[#2272FF] dark:text-[#48C6EF] flex items-center justify-center text-xl font-black shrink-0 font-mono shadow-inner group-hover:scale-110 transition-transform">
+                      03
+                    </div>
+                    <div className="pt-2">
+                      <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-1 group-hover:text-[#2272FF] dark:group-hover:text-[#48C6EF] transition">
+                        ของชำร่วยที่มีคุณค่าทางจิตใจ (Souvenir with a Soul)
+                      </h4>
+                      <p className="text-gray-600 dark:text-white/70 leading-relaxed text-sm">
+                        แทนที่จะแจกของชำร่วยแบบเดิม ๆ
+                        ที่แขกอาจจะหลงลืมไว้หลังจบงาน แต่
+                        ภาพถ่ายที่พิมพ์ออกมาทันที
+                        คือของขวัญชิ้นพิเศษที่บันทึกช่วงเวลาความสุขของพวกเขาในงานของคุณ
+                        แขกสามารถนำกลับไปแปะตู้เย็น ใส่กรอบรูป หรือตั้งโต๊ะทำงาน
+                        ซึ่งทุกครั้งที่มองมา...
+                        พวกเขาจะนึกถึงค่ำคืนอันแสนพิเศษในงานของคุณเสมอ
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Item 4 */}
+                  <div className="flex gap-6 group">
+                    <div className="w-16 h-16 rounded-2xl bg-[#2272FF]/10 dark:bg-[#48C6EF]/20 text-[#2272FF] dark:text-[#48C6EF] flex items-center justify-center text-xl font-black shrink-0 font-mono shadow-inner group-hover:scale-110 transition-transform">
+                      04
+                    </div>
+                    <div className="pt-2">
+                      <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-1 group-hover:text-[#2272FF] dark:group-hover:text-[#48C6EF] transition">
+                        พลังแห่งการบอกต่อบนโลกออนไลน์ (Social Media Magnet)
+                      </h4>
+                      <p className="text-gray-600 dark:text-white/70 leading-relaxed text-sm">
+                        ในยุคดิจิทัล ทุกคนชอบแชร์เรื่องราวดี ๆ ลงโซเชียลมีเดีย
+                        ระบบ Photo Booth สมัยใหม่ไม่ได้มีดีแค่ปริ้นท์กระดาษ
+                        แต่สามารถสแกน QR Code เพื่อรับไฟล์รูปภาพ, ไฟล์ GIF
+                        หรือวิดีโอสั้นแบบ Boomerang นำไปอัปเดตลง Instagram,
+                        TikTok หรือ Facebook ได้ทันที
+                        เป็นการช่วยโปรโมตและสร้างกระแส (Buzz)
+                        ให้กับงานของคุณไปในตัว
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-12 p-8 bg-gradient-to-r from-blue-50 to-white dark:from-[#0a1930] dark:to-[#120b29] border border-blue-100 dark:border-white/10 rounded-2xl">
+                  <h4 className="text-xl font-bold text-[#2272FF] dark:text-[#48C6EF] mb-4">
+                    สรุป
+                  </h4>
+                  <p className="text-gray-700 dark:text-white/80 leading-relaxed">
+                    ไม่ว่าจะเป็นงานแต่งงานที่อบอวลด้วยความรัก,
+                    ปาร์ตี้บริษัทที่เต็มไปด้วยความมันส์
+                    หรืออีเวนท์เปิดตัวสินค้าที่ต้องการความปัง... Photo Booth
+                    คือคำตอบสุดท้ายที่จะเปลี่ยนมุมถ่ายรูปธรรมดา ๆ ให้กลายเป็น
+                    <strong className="text-[#2272FF] dark:text-[#48C6EF]">
+                      พื้นที่แห่งความทรงจำและความสนุก
+                    </strong>
+                    ที่แขกทุกคนจะประทับใจไม่รู้ลืม
+                  </p>
+                </div>
               </div>
             )}
 
             {category === "software" && (
-              <div className="py-20 text-center border border-gray-200 dark:border-white/10 rounded-2xl bg-white dark:bg-white/5 shadow-sm dark:shadow-none">
-                <h3 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">
-                  บทความ Software Event Management กำลังมาเร็วๆ นี้
-                </h3>
-                <p className="text-gray-500 dark:text-white/50">
-                  เคล็ดลับการใช้ระบบจัดการเพื่อให้งานของคุณเป็นมืออาชีพ
-                </p>
+              <div className="space-y-12">
+                <div className="prose prose-lg dark:prose-invert max-w-none">
+                  <p className="text-gray-700 dark:text-white/80 leading-relaxed text-lg font-bold">
+                    ทำไมจัดงานยุคนี้... ถึงต้องมี Event Management Software?
+                    เบื้องหลังความสำเร็จที่ราบรื่นและมืออาชีพ
+                  </p>
+                  <p className="text-gray-700 dark:text-white/80 leading-relaxed mt-4">
+                    ในการจัดงานอีเวนท์ ไม่ว่าจะเป็นงานสัมมนา คอนเสิร์ต
+                    งานเปิดตัวสินค้า หรือมหกรรมแสดงสินค้าขนาดใหญ่
+                    สิ่งที่ผู้จัดงานกลัวที่สุดคือ{" "}
+                    <span className="font-bold text-[#2272FF] dark:text-[#48C6EF]">
+                      ความวุ่นวายหน้างาน
+                    </span>
+                    แถวลงทะเบียนที่ยาวเหยียด เอกสารรายชื่อที่ตกหล่น
+                    หรือความล่าช้าที่ทำให้แขกเสียความรู้สึกตั้งแต่ยังไม่ทันเข้างาน
+                  </p>
+                  <p className="text-gray-700 dark:text-white/80 leading-relaxed mt-4">
+                    เพื่อเปลี่ยนความโกลาหลให้กลายเป็นความประทับใจ Event
+                    Management Software
+                    จึงเข้ามาเป็นกุญแจสำคัญที่คนทำอีเวนท์ยุคดิจิทัลต้องมี!
+                    และนี่คือเหตุผลหลักว่าทำไมระบบนี้ถึงคุ้มค่ากับการลงทุนครับ
+                  </p>
+                </div>
+
+                <div className="space-y-8">
+                  {/* Image Grid */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pb-6">
+                    <div className="aspect-[9/16] relative rounded-2xl overflow-hidden bg-gray-100 dark:bg-white/5 group">
+                      <Image
+                        src="/event1.png"
+                        alt="Software Image 1"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        className="object-cover group-hover:scale-110 transition duration-500"
+                      />
+                    </div>
+                    <div className="aspect-[9/16] relative rounded-2xl overflow-hidden bg-gray-100 dark:bg-white/5 group">
+                      <Image
+                        src="/event2.png"
+                        alt="Software Image 2"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        className="object-cover group-hover:scale-110 transition duration-500"
+                      />
+                    </div>
+                    <div className="aspect-[9/16] relative rounded-2xl overflow-hidden bg-gray-100 dark:bg-white/5 group">
+                      <Image
+                        src="/event5.png"
+                        alt="Software Image 3"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        className="object-cover group-hover:scale-110 transition duration-500"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Item 1 */}
+                  <div className="flex gap-6 group">
+                    <div className="w-16 h-16 rounded-2xl bg-[#2272FF]/10 dark:bg-[#48C6EF]/20 text-[#2272FF] dark:text-[#48C6EF] flex items-center justify-center text-xl font-black shrink-0 font-mono shadow-inner group-hover:scale-110 transition-transform">
+                      01
+                    </div>
+                    <div className="pt-2">
+                      <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-1 group-hover:text-[#2272FF] dark:group-hover:text-[#48C6EF] transition">
+                        ความประทับใจแรกพบที่ ราบรื่น ไร้รอยต่อ(First Impression
+                        Matter)
+                      </h4>
+                      <p className="text-gray-600 dark:text-white/70 leading-relaxed text-sm">
+                        หมดยุคของการเดินหาชื่อบนกระดาษแผ่นหนา ๆ
+                        หรือปล่อยให้แขกยืนรอคิวนานจนเหนื่อย
+                        ระบบจัดการอีเวนท์ที่ทันสมัยจะช่วยให้การเช็กอินหน้างานทำได้รวดเร็วผ่านการสแกน
+                        QR Code บนสมาร์ทโฟน เพียงแค่ ติ๊กเดียว
+                        แขกก็สามารถเข้างานได้ทันที แถมยังพิมพ์ป้ายชื่อ (Badge)
+                        ออกมาได้ในไม่กี่วินาที
+                        ช่วยยกระดับภาพลักษณ์ของงานให้ดูเป็นมืออาชีพและไฮเทคตั้งแต่วินาทีแรก
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Item 2 */}
+                  <div className="flex gap-6 group">
+                    <div className="w-16 h-16 rounded-2xl bg-[#2272FF]/10 dark:bg-[#48C6EF]/20 text-[#2272FF] dark:text-[#48C6EF] flex items-center justify-center text-xl font-black shrink-0 font-mono shadow-inner group-hover:scale-110 transition-transform">
+                      02
+                    </div>
+                    <div className="pt-2">
+                      <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-1 group-hover:text-[#2272FF] dark:group-hover:text-[#48C6EF] transition">
+                        ลดภาระการทำงาน ควบคุมทุกอย่างได้แบบ Real-time
+                      </h4>
+                      <p className="text-gray-600 dark:text-white/70 leading-relaxed text-sm">
+                        การบริหารงานอีเวนท์มีรายละเอียดซับซ้อน
+                        แต่ซอฟต์แวร์นี้จะช่วยรวบรวมข้อมูลทุกอย่างมาไว้ในที่เดียว
+                        (Centralized Dashboard)
+                        ผู้จัดงานสามารถเช็กยอดผู้เข้าร่วมงานได้แบบเรียลไทม์ว่าตอนนี้มีคนเข้างานมากน้อยแค่ไหน
+                        จัดการเรื่องการสำรองที่นั่ง
+                        หรือการจัดสรรเซสชันการบรรยายต่าง ๆ ได้อย่างแม่นยำ
+                        ช่วยลดความผิดพลาดจากคน (Human Error)
+                        และประหยัดเวลาการทำงานของทีมงานไปได้มหาศาล
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Item 3 */}
+                  <div className="flex gap-6 group">
+                    <div className="w-16 h-16 rounded-2xl bg-[#2272FF]/10 dark:bg-[#48C6EF]/20 text-[#2272FF] dark:text-[#48C6EF] flex items-center justify-center text-xl font-black shrink-0 font-mono shadow-inner group-hover:scale-110 transition-transform">
+                      03
+                    </div>
+                    <div className="pt-2">
+                      <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-1 group-hover:text-[#2272FF] dark:group-hover:text-[#48C6EF] transition">
+                        เปลี่ยน รายชื่อแขก ให้กลายเป็น ขุมทรัพย์ทางการตลาด
+                        (Data-Driven Insight)
+                      </h4>
+                      <p className="text-gray-600 dark:text-white/70 leading-relaxed text-sm">
+                        สิ่งที่มีค่าที่สุดหลังจากจบงานอีเวนท์ไม่ใช่แค่ยอดคนมางาน
+                        แต่คือ ข้อมูล (Data)
+                        ระบบจะช่วยจัดเก็บพฤติกรรมและความสนใจของผู้เข้าร่วมงานอย่างเป็นระบบ
+                        เช่น แขกคนไหนสนใจบูธไหนเป็นพิเศษ
+                        หรือเซสชันไหนที่มีคนฟังมากที่สุด
+                        ข้อมูลเชิงลึกเหล่านี้สามารถนำไปวิเคราะห์และต่อยอดในการทำ
+                        Marketing Campaign หรือติดต่อกลับหาผู้มุ่งหวัง (Lead
+                        Generation) เพื่อสร้างยอดขายได้อย่างแม่นยำในอนาคต
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Item 4 */}
+                  <div className="flex gap-6 group">
+                    <div className="w-16 h-16 rounded-2xl bg-[#2272FF]/10 dark:bg-[#48C6EF]/20 text-[#2272FF] dark:text-[#48C6EF] flex items-center justify-center text-xl font-black shrink-0 font-mono shadow-inner group-hover:scale-110 transition-transform">
+                      04
+                    </div>
+                    <div className="pt-2">
+                      <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-1 group-hover:text-[#2272FF] dark:group-hover:text-[#48C6EF] transition">
+                        สื่อสารกับผู้ร่วมงานได้ตรงจุดและทันท่วงที
+                      </h4>
+                      <p className="text-gray-600 dark:text-white/70 leading-relaxed text-sm">
+                        ไม่ว่าจะเป็นการแจ้งเตือนกำหนดการ การเปลี่ยนห้องสัมมนา
+                        หรือการส่งแบบสอบถามประเมินความพึงพอใจ (Feedback)
+                        หลังจบงาน ซอฟต์แวร์จัดการอีเวนท์สามารถส่งอีเมลหรือ SMS
+                        หาผู้ร่วมงานทุกคนพร้อมกันได้ในคลิกเดียว
+                        ทำให้การสื่อสารลื่นไหลและรักษาความสัมพันธ์กับผู้ร่วมงานได้อย่างมีประสิทธิภาพ
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-12 p-8 bg-gradient-to-r from-blue-50 to-white dark:from-[#0a1930] dark:to-[#120b29] border border-blue-100 dark:border-white/10 rounded-2xl">
+                  <h4 className="text-xl font-bold text-[#2272FF] dark:text-[#48C6EF] mb-4">
+                    สรุป
+                  </h4>
+                  <p className="text-gray-700 dark:text-white/80 leading-relaxed">
+                    Event Management Software ไม่ใช่แค่เครื่องมือทุ่นแรง
+                    แต่เป็นระบบหลังบ้านอัจฉริยะที่ช่วยเปลี่ยนงานอีเวนท์แบบเดิม ๆ
+                    ให้กลายเป็น{" "}
+                    <strong className="text-[#2272FF] dark:text-[#48C6EF]">
+                      ประสบการณ์ระดับพรีเมียม
+                    </strong>
+                    ที่ทั้งง่ายสำหรับผู้จัด
+                    และประทับใจสำหรับผู้ร่วมงานอย่างแท้จริง ครับ
+                  </p>
+                </div>
               </div>
             )}
+            {/* --- Next/Prev Article Navigation --- */}
+            <div className="flex justify-center gap-6 items-center pt-8 border-t border-gray-200 dark:border-white/10 mt-12 mb-12">
+              <Link
+                href={getHref(prevArticle)}
+                className={`flex items-center justify-center w-12 h-12 rounded-full border border-gray-200 dark:border-white/20 transition-all ${!prevArticle ? "opacity-30 cursor-not-allowed pointer-events-none" : "hover:bg-gray-100 dark:hover:bg-white/10 text-gray-700 dark:text-white"}`}
+              >
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </Link>
+
+              <Link
+                href={getHref(nextArticle)}
+                className={`flex items-center justify-center w-12 h-12 rounded-full border border-gray-200 dark:border-white/20 transition-all ${!nextArticle ? "opacity-30 cursor-not-allowed pointer-events-none" : "hover:bg-gray-100 dark:hover:bg-white/10 text-gray-700 dark:text-white"}`}
+              >
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </Link>
+            </div>
 
             {/* Final CTA Banner (Visible on all tabs) */}
             <div className="relative rounded-2xl bg-gradient-to-br from-blue-50 via-white to-blue-50 dark:from-[#1c0f3b] dark:via-[#0a1930] dark:to-black border border-blue-100 dark:border-[#2272FF]/30 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between overflow-hidden gap-8 text-center md:text-left mt-12 text-gray-900 dark:text-white shadow-md dark:shadow-none">
@@ -629,7 +957,13 @@ export default async function NewsArticlePage({ searchParams }: Props) {
                   ยังไม่รู้ว่าควรเลือกกิจกรรมไหนดี?
                 </h3>
                 <p className="text-gray-600 dark:text-white/80 leading-relaxed text-sm md:text-base">
-                  เปลี่ยนงานแต่งงานของคุณให้เป็นงานอีเวนท์ที่สนุกและน่าจดจำที่สุด สนใจบริการเช่าตู้เกมสำหรับงานแต่งงานและงานอีเวนท์ (Event) ทุกประเภท สามารถทักมาเช็คคิวงานและปรึกษาทีมงาน <span className="font-bold text-[#2272FF] dark:text-[#48C6EF]">JORJOY</span> ได้ฟรี! ติดต่อเราได้ตามช่องทางด้านล่างนี้เลยครับ
+                  เปลี่ยนงานแต่งงานของคุณให้เป็นงานอีเวนท์ที่สนุกและน่าจดจำที่สุด
+                  สนใจบริการเช่าตู้เกมสำหรับงานแต่งงานและงานอีเวนท์ (Event)
+                  ทุกประเภท สามารถทักมาเช็คคิวงานและปรึกษาทีมงาน{" "}
+                  <span className="font-bold text-[#2272FF] dark:text-[#48C6EF]">
+                    JORJOY
+                  </span>{" "}
+                  ได้ฟรี! ติดต่อเราได้ตามช่องทางด้านล่างนี้เลยครับ
                 </p>
                 <ul className="text-xs text-gray-500 dark:text-white/60 space-y-2 pt-2 flex flex-col md:block">
                   <li className="flex items-center gap-2">
@@ -661,7 +995,11 @@ export default async function NewsArticlePage({ searchParams }: Props) {
                   ปรึกษาฟรี คลิกเลย →
                 </a>
                 <p className="text-sm md:text-base font-bold text-gray-900 dark:text-white mt-2">
-                  ราคาเริ่มต้นเพียง <span className="text-[#2272FF] dark:text-[#48C6EF] font-black text-xl">9,000</span> บาท
+                  ราคาเริ่มต้นเพียง{" "}
+                  <span className="text-[#2272FF] dark:text-[#48C6EF] font-black text-xl">
+                    9,000
+                  </span>{" "}
+                  บาท
                 </p>
               </div>
             </div>
@@ -730,63 +1068,62 @@ export default async function NewsArticlePage({ searchParams }: Props) {
                 </div>
                 <p className="text-xs font-bold">Line OA: @jorjoy</p>
               </div>
-
               {/* Latest Articles */}
               <div className="bg-white dark:bg-[#0a0a0a] border border-gray-200 dark:border-white/10 rounded-2xl p-6 space-y-6 shadow-sm dark:shadow-none">
                 <h4 className="text-sm font-bold text-gray-900 dark:text-white">
                   บทความน่าสนใจ
                 </h4>
                 <div className="space-y-4">
-                  <Link
-                    href="?category=game&article=7-ways"
-                    className="flex gap-4 group"
-                  >
-                    <div className="w-20 aspect-square rounded-lg bg-gray-100 dark:bg-white/10 overflow-hidden relative shrink-0">
-                      <Image
-                        src="/matching.png"
-                        alt="thumbnail"
-                        fill
-                        sizes="80px"
-                        className="object-cover group-hover:scale-110 transition duration-500"
-                      />
-                    </div>
-                    <div className="flex flex-col justify-center gap-1">
-                      <h5 className="text-xs font-bold text-gray-800 dark:text-white group-hover:text-[#2272FF] dark:group-hover:text-[#48C6EF] transition line-clamp-2">
-                        7 วิธีดึงคนเข้าบูธด้วย Game Event
-                        เปลี่ยนงานออกบูธให้คนล้น!
-                      </h5>
-                      <span className="inline-block px-2 py-0.5 mt-1 bg-gray-100 dark:bg-white/10 rounded text-[9px] w-fit font-bold text-gray-500 dark:text-white/60">
-                        EXHIBITION
-                      </span>
-                    </div>
-                  </Link>
+                  {prevArticle && (
+                    <Link
+                      href={getHref(prevArticle)}
+                      className="flex gap-4 group"
+                    >
+                      <div className="w-20 aspect-square rounded-lg bg-gray-100 dark:bg-white/10 overflow-hidden relative shrink-0">
+                        <Image
+                          src={prevArticle.image}
+                          alt="thumbnail"
+                          fill
+                          sizes="80px"
+                          className="object-cover group-hover:scale-110 transition duration-500"
+                        />
+                      </div>
+                      <div className="flex flex-col justify-center gap-1">
+                        <span className="text-[10px] font-bold text-gray-400">
+                          บทความก่อนหน้า
+                        </span>
+                        <h5 className="text-xs font-bold text-gray-800 dark:text-white group-hover:text-[#2272FF] dark:group-hover:text-[#48C6EF] transition line-clamp-2">
+                          {prevArticle.title}
+                        </h5>
+                      </div>
+                    </Link>
+                  )}
 
-                  <Link
-                    href="?category=game&article=5-ideas"
-                    className="flex gap-4 group"
-                  >
-                    <div className="w-20 aspect-square rounded-lg bg-gray-100 dark:bg-white/10 overflow-hidden relative shrink-0">
-                      <Image
-                        src="/bubblebaby.png"
-                        alt="thumbnail"
-                        fill
-                        sizes="80px"
-                        className="object-cover group-hover:scale-110 transition duration-500"
-                      />
-                    </div>
-                    <div className="flex flex-col justify-center gap-1">
-                      <h5 className="text-xs font-bold text-gray-800 dark:text-white group-hover:text-[#2272FF] dark:group-hover:text-[#48C6EF] transition line-clamp-2">
-                        5 ไอเดียเลือกตู้เกมให้เข้ากับธีมงานแต่งงาน (Wedding)
-                      </h5>
-                      <span className="inline-block px-2 py-0.5 mt-1 bg-gray-100 dark:bg-white/10 rounded text-[9px] w-fit font-bold text-gray-500 dark:text-white/60">
-                        WEDDING
-                      </span>
-                    </div>
-                  </Link>
+                  {nextArticle && (
+                    <Link
+                      href={getHref(nextArticle)}
+                      className="flex gap-4 group"
+                    >
+                      <div className="w-20 aspect-square rounded-lg bg-gray-100 dark:bg-white/10 overflow-hidden relative shrink-0">
+                        <Image
+                          src={nextArticle.image}
+                          alt="thumbnail"
+                          fill
+                          sizes="80px"
+                          className="object-cover group-hover:scale-110 transition duration-500"
+                        />
+                      </div>
+                      <div className="flex flex-col justify-center gap-1">
+                        <span className="text-[10px] font-bold text-gray-400">
+                          บทความถัดไป
+                        </span>
+                        <h5 className="text-xs font-bold text-gray-800 dark:text-white group-hover:text-[#2272FF] dark:group-hover:text-[#48C6EF] transition line-clamp-2">
+                          {nextArticle.title}
+                        </h5>
+                      </div>
+                    </Link>
+                  )}
                 </div>
-                <button className="w-full py-3 rounded-lg border border-gray-200 dark:border-white/20 text-xs font-bold text-gray-700 dark:text-white hover:bg-gray-50 dark:hover:bg-white/5 transition mt-4">
-                  ดูบทความทั้งหมด
-                </button>
               </div>
             </div>
           </div>
